@@ -34,7 +34,7 @@ def read_input_files(input_dir):
     intersection_df = pd.read_csv(os.path.join(input_dir, 'Intersection_MSOA-TfSH_Prop.csv'))
     core_ca_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_ca_data.csv'))[['msoa_zone_id', 'car_ownership'] + years]
     core_planning_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_planning_data.csv'))[['msoa_zone_id', 'population'] + years]
-
+    intersection_df.rename(columns={'Proportions MSOA/Zones': 'Proportion'}, inplace=True)
     print("Input files read successfully!")
 
     return geodef_df, intersection_df, core_ca_df, core_planning_df
@@ -51,10 +51,30 @@ def convert_msoa_to_zonepfsh(intersection_df, core_planning_df):
         zonepfsh_planning_df[year] = 0
 
     # iterate through each row in the core_planning_df
-    
+    i=0
+    for _, row in core_planning_df.iterrows():
+        i += 1
+        print(f"working on row {i}")
+        msoa = row["msoa_zone_id"]
+        population = row["population"]
+
+        # determine how each msoa is split across the zonepfshs
+        msoa_split = {}
+        for _, r in intersection_df.iterrows():
+            if r["MSOA11CD"] == msoa:
+                msoa_split[r["ZonePfSH"]] = r["Proportion"]
+
+        # add the proportion of the msoa's population to the corresponding zonepfsh
+        
+        for zonepfsh, proportion in msoa_split.items():
+            for year in years:
+                zonepfsh_planning_df.loc[
+                    (zonepfsh_planning_df["ZonePfSH"] == zonepfsh) &
+                    (zonepfsh_planning_df["Population"] == population),
+                    year
+                ] += row[year] * proportion
 
     print(zonepfsh_planning_df)
-
     return zonepfsh_planning_df
 
 
