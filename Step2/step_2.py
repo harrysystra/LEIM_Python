@@ -1,9 +1,10 @@
 import csv
+from itertools import product
 import pandas as pd
 import os
 
-years = [2019, 2026, 2031, 2036, 2041] # must be between 2019 and 2046 inclusive
-scenarios = ['core', 'high', 'low', 'behavioural'] 
+years = ['2019', '2026', '2031', '2036', '2041'] # must be between 2019 and 2046 inclusive
+scenarios = ['core', 'high', 'low', 'behavioural'] # leave alone unless adding new scenarios
 
 input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Inputs'
 output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Outputs'
@@ -31,8 +32,8 @@ def read_input_files(input_dir):
     # read input files
     geodef_df = pd.read_csv(os.path.join(input_dir, 'geodef_GISCorrect.csv'))
     intersection_df = pd.read_csv(os.path.join(input_dir, 'Intersection_MSOA-TfSH_Prop.csv'))
-    core_ca_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_ca_data.csv'))
-    core_planning_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_planning_data.csv'))
+    core_ca_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_ca_data.csv'))[['msoa_zone_id', 'car_ownership'] + years]
+    core_planning_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_planning_data.csv'))[['msoa_zone_id', 'population'] + years]
 
     print("Input files read successfully!")
 
@@ -40,9 +41,21 @@ def read_input_files(input_dir):
 
 # - convert inputs from MSOA to ZonePfSH using proportions
 
+def convert_msoa_to_zonepfsh(intersection_df, core_planning_df):
 
+    #initialise dataframe to store converted data
+    population_categories = core_planning_df['population'].unique()
+    zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
+    zonepfsh_planning_df = pd.DataFrame(list(product(zonepfsh_numbers, population_categories)), columns=['ZonePfSH', 'Population'])
+    for year in years:
+        zonepfsh_planning_df[year] = 0
 
-# - format data by scenario (core, high, low)
+    # iterate through each row in the core_planning_df
+    
+
+    print(zonepfsh_planning_df)
+
+    return zonepfsh_planning_df
 
 
 # - aggregate data up to district level
@@ -59,3 +72,6 @@ if __name__ == "__main__":
 
     # read input files
     geodef_df, intersection_df, core_ca_df, core_planning_df = read_input_files(input_dir)
+
+
+    convert_msoa_to_zonepfsh(intersection_df, core_planning_df)
