@@ -3,8 +3,8 @@ import pandas as pd
 import os
 from rich.progress import track
 
-years = ['2019', '2026', '2031', '2036', '2041'] # must be between 2019 and 2046 inclusive
-scenarios = ['Core', 'High', 'Low', 'Behavioural'] # leave alone unless adding new scenarios
+years = ['2019', '2026', '2031', '2036', '2046'] # must be between 2019 and 2046 inclusive
+scenarios = ['Core', 'High'] # leave alone unless adding new scenarios
 
 input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Inputs'
 output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Outputs'
@@ -33,6 +33,7 @@ inputs = {'geodef': [
     'ntem_8.0_Behavioural_planning_data.csv'
 ]}
 
+
 def check_inputs(input_dir, scenarios, inputs):
     """Checks if input directory and input files exist for each scenario"""
 
@@ -44,10 +45,6 @@ def check_inputs(input_dir, scenarios, inputs):
             if not os.path.exists(os.path.join(input_dir, input_file)):
                 raise ValueError(f"Input file {input_file} does not exist in the input directory")
         
-
-"""for file in inputs:
-        if not os.path.exists(os.path.join(input_dir, file)):
-            raise ValueError(f"Input file {file} does not exist in the input directory")"""
 
 
 def read_input_files(input_dir, scenario):
@@ -90,117 +87,115 @@ def define_splits(inputs):
     return msoa_zonepfsh_lookup, intersection_df
 
 
-def convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
+def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                               working_data: pd.DataFrame, 
-                              intersection_df: pd.DataFrame, 
-                              mode: bool):
+                              intersection_df: pd.DataFrame):
 
-    """Converts MSOA-level population/car figures to TfSH zones, according to our lookup
-    Inputs: 
-        msoa_zonepfsh_lookup: DataFrame produced in define_splits function
-        working_data: Dataframe containing either population OR car data produced in read_input_files function
-        intersection_df: DataFrme containing proportional splits from MSOA to ZonePfSH
-        scenario: string - either: 'Core', 'High', 'Low' or 'Behavioural'
-        mode - bool: 1 for population, 0 for car
-    """
     zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
 
-    if mode:
-        population_categories = working_data['population'].unique()
-        planning_df = pd.DataFrame(list(product(zonepfsh_numbers, population_categories)), columns=['ZonePfSH', 'Population'])
-        for year in years:
-            planning_df[year] = 0.0
+    population_categories = working_data['population'].unique()
+    planning_df = pd.DataFrame(list(product(zonepfsh_numbers, population_categories)), columns=['ZonePfSH', 'Population'])
+    for year in years:
+        planning_df[year] = 0.0
 
-        for _, row in track(working_data.iterrows(),
-                            total=len(working_data),
-                            description="Allocating population to TfSH Zones..."):
-            msoa = row["msoa_zone_id"]
-            population = row["population"]
+    for _, row in track(working_data.iterrows(),
+                        total=len(working_data),
+                        description="Allocating population to TfSH Zones..."):
+        msoa = row["msoa_zone_id"]
+        population = row["population"]
 
-            if msoa in msoa_zonepfsh_lookup:
-                splits = msoa_zonepfsh_lookup[msoa]
-                for zonepfsh, proportion in splits.items():
-                    for year in years:
-                        additional_population = float(row[year]) * float(proportion)
-                        try:
-                            planning_df.loc[(planning_df['ZonePfSH'] == zonepfsh) 
-                                                    & (planning_df['Population'] == population), year] += additional_population
-                        except TypeError:
-                            print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
+        if msoa in msoa_zonepfsh_lookup:
+            splits = msoa_zonepfsh_lookup[msoa]
+            for zonepfsh, proportion in splits.items():
+                for year in years:
+                    additional_population = float(row[year]) * float(proportion)
+                    try:
+                        planning_df.loc[(planning_df['ZonePfSH'] == zonepfsh) 
+                                                & (planning_df['Population'] == population), year] += additional_population
+                    except TypeError:
+                        print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
                             
-        return planning_df
-    else:
-        car_categories = working_data['car_ownership'].unique()
-        car_df = pd.DataFrame(list(product(zonepfsh_numbers, car_categories)), columns=['ZonePfSH', 'CarOwnership'])
-        for year in years:
-            car_df[year] = 0.0
-
-        for _, row in track(working_data.iterrows(),
-                            total=len(working_data),
-                            description="Allocating car ownership figures to TfSH Zones..."):
-            msoa = row["msoa_zone_id"]
-            car = row["car_ownership"]
-
-            if msoa in msoa_zonepfsh_lookup:
-                splits = msoa_zonepfsh_lookup[msoa]
-                for zonepfsh, proportion in splits.items():
-                    for year in years:
-                        additional_cars = float(row[year]) * float(proportion)
-                        try:
-                            car_df.loc[(car_df['ZonePfSH'] == zonepfsh) 
-                                                    & (car_df['CarOwnership'] == car), year] += additional_cars
-                        except TypeError:
-                            print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
-                            
-        return car_df
+    return planning_df
 
 
-def aggregate_to_districts(zonepfsh_level_data: pd.DataFrame, 
-                           geodef_df: pd.DataFrame, 
-                           mode: bool):
-    """mode: 1 for population, 0 for car"""
+def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
+                              working_data: pd.DataFrame, 
+                              intersection_df: pd.DataFrame):
+
+    zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
+
+    car_categories = working_data['car_ownership'].unique()
+    car_df = pd.DataFrame(list(product(zonepfsh_numbers, car_categories)), columns=['ZonePfSH', 'CarOwnership'])
+    for year in years:
+        car_df[year] = 0.0
+
+    for _, row in track(working_data.iterrows(),
+                        total=len(working_data),
+                        description="Allocating car ownership figures to TfSH Zones..."):
+        msoa = row["msoa_zone_id"]
+        car = row["car_ownership"]
+
+        if msoa in msoa_zonepfsh_lookup:
+            splits = msoa_zonepfsh_lookup[msoa]
+            for zonepfsh, proportion in splits.items():
+                for year in years:
+                    additional_cars = float(row[year]) * float(proportion)
+                    try:
+                        car_df.loc[(car_df['ZonePfSH'] == zonepfsh) 
+                                                & (car_df['CarOwnership'] == car), year] += additional_cars
+                    except TypeError:
+                        print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
+                        
+    return car_df
+
+
+def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame, 
+                           geodef_df: pd.DataFrame):
 
     district_numbers = geodef_df['D30_Districts ID'].unique()
-    
-    if mode:
-        population_categories = zonepfsh_level_data['Population'].unique() 
-        zonepfsh_planning_districts_df = pd.DataFrame(list(product(district_numbers, population_categories)), columns=['District', 'Population'])
+
+    population_categories = zonepfsh_level_data['Population'].unique() 
+    zonepfsh_planning_districts_df = pd.DataFrame(list(product(district_numbers, population_categories)), columns=['District', 'Population'])
+    for year in years:
+        zonepfsh_planning_districts_df[year] = 0.0
+
+    for _, row in track(zonepfsh_level_data.iterrows(),
+                        total=len(zonepfsh_level_data),
+                        description="Aggregating ZonePfSH population data by D30 District"):
+        zonepfsh = row["ZonePfSH"]
+        population = row["Population"]
+
+        district = geodef_df.loc[geodef_df['Zone'] == zonepfsh, 'D30_Districts ID'].values[0]
+
         for year in years:
-            zonepfsh_planning_districts_df[year] = 0.0
+            additional_population = float(row[year])
+            zonepfsh_planning_districts_df.loc[(zonepfsh_planning_districts_df['District'] == district) 
+                                                & (zonepfsh_planning_districts_df['Population'] == population), year] += additional_population
+    return zonepfsh_planning_districts_df
 
-        for _, row in track(zonepfsh_level_data.iterrows(),
-                            total=len(zonepfsh_level_data),
-                            description="Aggregating ZonePfSH population data by D30 District"):
-            zonepfsh = row["ZonePfSH"]
-            population = row["Population"]
 
-            district = geodef_df.loc[geodef_df['Zone'] == zonepfsh, 'D30_Districts ID'].values[0]
+def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame, 
+                           geodef_df: pd.DataFrame):
 
-            for year in years:
-                additional_population = float(row[year])
-                zonepfsh_planning_districts_df.loc[(zonepfsh_planning_districts_df['District'] == district) 
-                                                    & (zonepfsh_planning_districts_df['Population'] == population), year] += additional_population
-        return zonepfsh_planning_districts_df
-
-    else:
-            car_categories = zonepfsh_level_data['CarOwnership'].unique() 
-            zonepfsh_car_districts_df = pd.DataFrame(list(product(district_numbers, car_categories)), columns=['District', 'CarOwnership'])
-            for year in years:
-                zonepfsh_car_districts_df[year] = 0.0
+    district_numbers = geodef_df['D30_Districts ID'].unique()
+    car_categories = zonepfsh_level_data['CarOwnership'].unique() 
+    zonepfsh_car_districts_df = pd.DataFrame(list(product(district_numbers, car_categories)), columns=['District', 'CarOwnership'])
+    for year in years:
+        zonepfsh_car_districts_df[year] = 0.0
     
-            for _, row in track(zonepfsh_level_data.iterrows(),
-                                total=len(zonepfsh_level_data),
-                                description="Aggregating ZonePfSH car ownership data by D30 District"):
-                zonepfsh = row["ZonePfSH"]
-                car = row["CarOwnership"]
+    for _, row in track(zonepfsh_level_data.iterrows(),
+                        total=len(zonepfsh_level_data),
+                        description="Aggregating ZonePfSH car ownership data by D30 District"):
+        zonepfsh = row["ZonePfSH"]
+        car = row["CarOwnership"]
+
+        district = geodef_df.loc[geodef_df['Zone'] == zonepfsh, 'D30_Districts ID'].values[0]
     
-                district = geodef_df.loc[geodef_df['Zone'] == zonepfsh, 'D30_Districts ID'].values[0]
-    
-                for year in years:
-                    additional_cars = float(row[year])
-                    zonepfsh_car_districts_df.loc[(zonepfsh_car_districts_df['District'] == district) 
-                                                        & (zonepfsh_car_districts_df['CarOwnership'] == car), year] += additional_cars
-            return zonepfsh_car_districts_df
+        for year in years:
+            additional_cars = float(row[year])
+            zonepfsh_car_districts_df.loc[(zonepfsh_car_districts_df['District'] == district) 
+                                                & (zonepfsh_car_districts_df['CarOwnership'] == car), year] += additional_cars
+    return zonepfsh_car_districts_df
 
 
 def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
@@ -219,34 +214,40 @@ def run_process_for_selected_scenarios(input_dir,
     msoa_zonepfsh_lookup, intersection_df = define_splits(inputs=inputs)
 
     for scenario in scenarios:
-        print(f"***WORKING ON SCENARIO: {scenario}***")
+        print(f"WORKING ON SCENARIO: {scenario}")
         geodef_df, planning_df, ca_df = read_input_files(input_dir=input_dir,
                                                                    scenario=scenario)
-        planning = convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
+        planning = convert_population_to_zonepfsh(msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
                                 working_data=planning_df,
-                                intersection_df=intersection_df,
-                                mode=1
+                                intersection_df=intersection_df
                                 )
-        planning_district_level = aggregate_to_districts(zonepfsh_level_data=planning,
-                                                         geodef_df=geodef_df,
-                                                         mode=1)
+        planning_district_level = aggregate_population_to_districts(zonepfsh_level_data=planning,
+                                                         geodef_df=geodef_df)
         planning_csv_filename = scenario + "_planning.csv"
-        export_df_as_csv(csv_name=planning_csv_filename, 
-                        table=planning_district_level,
-                        output_folder=output_dir)
+
+        try: 
+            export_df_as_csv(csv_name=planning_csv_filename, 
+                            table=planning_district_level,
+                            output_folder=output_dir)
+            print(f"{planning_csv_filename} exported successfully!")
+        except:
+            print(f"Export of file {planning_csv_filename} failed.")
         
-        car_ownership = convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
+        car_ownership = convert_car_to_zonepfsh(msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
                                 working_data=ca_df,
-                                intersection_df=intersection_df,
-                                mode=0
+                                intersection_df=intersection_df
                                 )
-        car_ownership_district_level = aggregate_to_districts(zonepfsh_level_data=car_ownership,
-                                                              geodef_df=geodef_df,
-                                                              mode=0)
+        car_ownership_district_level = aggregate_car_to_districts(zonepfsh_level_data=car_ownership,
+                                                              geodef_df=geodef_df)
         car_ownership_csv_filename = scenario + "_car_ownership.csv"
-        export_df_as_csv(csv_name=car_ownership_csv_filename,
-                         table=car_ownership_district_level,
-                         output_folder=output_dir)
+
+        try:
+            export_df_as_csv(csv_name=car_ownership_csv_filename,
+                            table=car_ownership_district_level,
+                            output_folder=output_dir)
+            print(f"{car_ownership_csv_filename} exported successfully!")
+        except:
+            print(f"Export of file {car_ownership_csv_filename} failed.")
         
 
 if __name__ == "__main__":
