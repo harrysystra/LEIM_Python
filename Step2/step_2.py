@@ -2,7 +2,7 @@ import csv
 from itertools import product
 import pandas as pd
 import os
-import tabulate
+from rich.progress import track
 
 years = ['2019', '2026', '2031', '2036', '2041'] # must be between 2019 and 2046 inclusive
 scenarios = ['core', 'high', 'low', 'behavioural'] # leave alone unless adding new scenarios
@@ -17,7 +17,6 @@ input_files = [
     'ntem_8.0_Core_planning_data.csv'
 ]
 
-# - read input files
 
 def check_inputs(input_dir):
     # check if input directory exists
@@ -28,6 +27,7 @@ def check_inputs(input_dir):
     for file in input_files:
         if not os.path.exists(os.path.join(input_dir, file)):
             raise ValueError(f"Input file {file} does not exist in the input directory")
+        
 
 def read_input_files(input_dir):
     # read input files
@@ -40,11 +40,16 @@ def read_input_files(input_dir):
 
     return geodef_df, intersection_df, core_ca_df, core_planning_df
 
-# - create proportion split lookup for MSOA to ZonePfSH
 
 def define_splits(intersection_df):
+
     msoa_zonepfsh_lookup = {}
-    for _, row in intersection_df.iterrows():
+    
+    for _, row in track(
+        intersection_df.iterrows(),
+        total=len(intersection_df),
+        description="Building MSOA/ZonePfSH lookup"
+    ):
         msoa = row["MSOA11CD"]
         zonepfsh = row["ZonePfSH"]
         proportion = row["Proportion"]
@@ -52,13 +57,9 @@ def define_splits(intersection_df):
         if msoa not in msoa_zonepfsh_lookup:
             msoa_zonepfsh_lookup[msoa] = {}
         msoa_zonepfsh_lookup[msoa][zonepfsh] = proportion
-    print("MSOA to ZonePfSH lookup built successfully")
-    #print(msoa_zonepfsh_lookup)
 
     return msoa_zonepfsh_lookup
 
-
-# - convert inputs from MSOA to ZonePfSH using proportions
 
 def convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup, core_planning_df, intersection_df):
 
@@ -70,10 +71,9 @@ def convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup, core_planning_df, intersectio
         zonepfsh_planning_df[year] = 0.0
 
     # iterate through each row in the core_planning_df
-    i=0
-    for _, row in core_planning_df.iterrows():
-        i += 1
-        print(f"working on row {i}")
+    for _, row in track(core_planning_df.iterrows(),
+                        total=len(core_planning_df),
+                        description="Calculating allocations per ZonePfSH"):
         msoa = row["msoa_zone_id"]
         population = row["population"]
 
@@ -89,12 +89,8 @@ def convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup, core_planning_df, intersectio
                     except TypeError:
                         print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
                         
-
-    print(zonepfsh_planning_df)
     return zonepfsh_planning_df
 
-
-# - aggregate data up to district level
 
 def aggregate_to_districts(zonepfsh_planning_df, geodef_df):
     zonepfsh_district_lookup = zip(geodef_df['Zone'], geodef_df['D30_Districts ID'])
@@ -107,7 +103,9 @@ def aggregate_to_districts(zonepfsh_planning_df, geodef_df):
         zonepfsh_planning_districts_df[year] = 0.0
 
     # iterate through each row in the zonepfsh_planning_df
-    for _, row in zonepfsh_planning_df.iterrows():
+    for _, row in track(zonepfsh_planning_df.iterrows(),
+                        total=len(zonepfsh_planning_df),
+                        description="Aggregating ZonePfSH data by D30 District"):
         zonepfsh = row["ZonePfSH"]
         population = row["Population"]
 
@@ -118,12 +116,14 @@ def aggregate_to_districts(zonepfsh_planning_df, geodef_df):
             additional_population = float(row[year])
             zonepfsh_planning_districts_df.loc[(zonepfsh_planning_districts_df['District'] == district) 
                                                 & (zonepfsh_planning_districts_df['Population'] == population), year] += additional_population
-
-    print(zonepfsh_planning_districts_df)
+    return zonepfsh_planning_districts_df
 
 
 # - format outputs into correct structure for inputting to step 3
 
+def export_output_as_csv(csv_name: str, table: pd.DataFrame):
+    output_path = os.path.join(output_dir, csv_name)
+    table.to_csv(output_path, index=None, header=True)
 
 # - output final csvs: 1_high-core, 2_low-core, 3_behavioural-core
 
@@ -136,4 +136,5 @@ if __name__ == "__main__":
 
     msoa_zonepfsh_lookup = define_splits(intersection_df)
     zonepfsh_planning_df = convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup, core_planning_df, intersection_df)
-    aggregate_to_districts(zonepfsh_planning_df, geodef_df)
+    dist_data = aggregate_to_districts(zonepfsh_planning_df, geodef_df)
+    export_output_as_csv(csv_name='test1.csv', table=dist_data)
