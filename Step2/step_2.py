@@ -2,6 +2,7 @@ import csv
 from itertools import product
 import pandas as pd
 import os
+import tabulate
 
 years = ['2019', '2026', '2031', '2036', '2041'] # must be between 2019 and 2046 inclusive
 scenarios = ['core', 'high', 'low', 'behavioural'] # leave alone unless adding new scenarios
@@ -35,20 +36,38 @@ def read_input_files(input_dir):
     core_ca_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_ca_data.csv'))[['msoa_zone_id', 'car_ownership'] + years]
     core_planning_df = pd.read_csv(os.path.join(input_dir, 'ntem_8.0_Core_planning_data.csv'))[['msoa_zone_id', 'population'] + years]
     intersection_df.rename(columns={'Proportions MSOA/Zones': 'Proportion'}, inplace=True)
-    print("Input files read successfully!")
+    print("input files read successfully")
 
     return geodef_df, intersection_df, core_ca_df, core_planning_df
 
+# - create proportion split lookup for MSOA to ZonePfSH
+
+def define_splits(intersection_df):
+    msoa_zonepfsh_lookup = {}
+    for _, row in intersection_df.iterrows():
+        msoa = row["MSOA11CD"]
+        zonepfsh = row["ZonePfSH"]
+        proportion = row["Proportion"]
+
+        if msoa not in msoa_zonepfsh_lookup:
+            msoa_zonepfsh_lookup[msoa] = {}
+        msoa_zonepfsh_lookup[msoa][zonepfsh] = proportion
+    print("MSOA to ZonePfSH lookup built successfully")
+    #print(msoa_zonepfsh_lookup)
+
+    return msoa_zonepfsh_lookup
+
+
 # - convert inputs from MSOA to ZonePfSH using proportions
 
-def convert_msoa_to_zonepfsh(intersection_df, core_planning_df):
+def convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup, core_planning_df, intersection_df):
 
     #initialise dataframe to store converted data
     population_categories = core_planning_df['population'].unique()
     zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
     zonepfsh_planning_df = pd.DataFrame(list(product(zonepfsh_numbers, population_categories)), columns=['ZonePfSH', 'Population'])
     for year in years:
-        zonepfsh_planning_df[year] = 0
+        zonepfsh_planning_df[year] = 0.0
 
     # iterate through each row in the core_planning_df
     i=0
@@ -58,27 +77,49 @@ def convert_msoa_to_zonepfsh(intersection_df, core_planning_df):
         msoa = row["msoa_zone_id"]
         population = row["population"]
 
-        # determine how each msoa is split across the zonepfshs
-        msoa_split = {}
-        for _, r in intersection_df.iterrows():
-            if r["MSOA11CD"] == msoa:
-                msoa_split[r["ZonePfSH"]] = r["Proportion"]
-
-        # add the proportion of the msoa's population to the corresponding zonepfsh
-        
-        for zonepfsh, proportion in msoa_split.items():
-            for year in years:
-                zonepfsh_planning_df.loc[
-                    (zonepfsh_planning_df["ZonePfSH"] == zonepfsh) &
-                    (zonepfsh_planning_df["Population"] == population),
-                    year
-                ] += row[year] * proportion
+    # retrieve split from msoa_zonepfsh_lookup
+        if msoa in msoa_zonepfsh_lookup:
+            splits = msoa_zonepfsh_lookup[msoa]
+            for zonepfsh, proportion in splits.items():
+                for year in years:
+                    additional_population = float(row[year]) * float(proportion)
+                    try:
+                        zonepfsh_planning_df.loc[(zonepfsh_planning_df['ZonePfSH'] == zonepfsh) 
+                                                 & (zonepfsh_planning_df['Population'] == population), year] += additional_population
+                    except TypeError:
+                        print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
+                        
 
     print(zonepfsh_planning_df)
     return zonepfsh_planning_df
 
 
 # - aggregate data up to district level
+
+def aggregate_to_districts(zonepfsh_planning_df, geodef_df):
+    zonepfsh_district_lookup = zip(geodef_df['Zone'], geodef_df['D30_Districts ID'])
+    
+    # initialise dataframe to store aggregated data
+    district_numbers = geodef_df['D30_Districts ID'].unique()
+    population_categories = zonepfsh_planning_df['Population'].unique() 
+    zonepfsh_planning_districts_df = pd.DataFrame(list(product(district_numbers, population_categories)), columns=['District', 'Population'])
+    for year in years:
+        zonepfsh_planning_districts_df[year] = 0.0
+
+    # iterate through each row in the zonepfsh_planning_df
+    for _, row in zonepfsh_planning_df.iterrows():
+        zonepfsh = row["ZonePfSH"]
+        population = row["Population"]
+
+        # retrieve district from zonepfsh_district_lookup
+        district = geodef_df.loc[geodef_df['Zone'] == zonepfsh, 'D30_Districts ID'].values[0]
+
+        for year in years:
+            additional_population = float(row[year])
+            zonepfsh_planning_districts_df.loc[(zonepfsh_planning_districts_df['District'] == district) 
+                                                & (zonepfsh_planning_districts_df['Population'] == population), year] += additional_population
+
+    print(zonepfsh_planning_districts_df)
 
 
 # - format outputs into correct structure for inputting to step 3
@@ -93,5 +134,6 @@ if __name__ == "__main__":
     # read input files
     geodef_df, intersection_df, core_ca_df, core_planning_df = read_input_files(input_dir)
 
-
-    convert_msoa_to_zonepfsh(intersection_df, core_planning_df)
+    msoa_zonepfsh_lookup = define_splits(intersection_df)
+    zonepfsh_planning_df = convert_msoa_to_zonepfsh(msoa_zonepfsh_lookup, core_planning_df, intersection_df)
+    aggregate_to_districts(zonepfsh_planning_df, geodef_df)
