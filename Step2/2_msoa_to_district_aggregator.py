@@ -60,6 +60,7 @@ def read_input_files(input_dir, scenario):
     return geodef_df, planning_df, ca_df
 
 
+
 def define_splits(inputs):
     """Reads the Intersection file and creates a lookup for proportional splits between 
     TfSH zones and MSOA"""
@@ -85,6 +86,7 @@ def define_splits(inputs):
         msoa_zonepfsh_lookup[msoa][zonepfsh] = proportion
 
     return msoa_zonepfsh_lookup, intersection_df
+
 
 
 def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
@@ -118,6 +120,7 @@ def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
     return planning_df
 
 
+
 def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                               working_data: pd.DataFrame, 
                               intersection_df: pd.DataFrame):
@@ -149,6 +152,7 @@ def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
     return car_df
 
 
+
 def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame, 
                            geodef_df: pd.DataFrame):
 
@@ -172,6 +176,7 @@ def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame,
             zonepfsh_planning_districts_df.loc[(zonepfsh_planning_districts_df['District'] == district) 
                                                 & (zonepfsh_planning_districts_df['Population'] == population), year] += additional_population
     return zonepfsh_planning_districts_df
+
 
 
 def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame, 
@@ -198,9 +203,11 @@ def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame,
     return zonepfsh_car_districts_df
 
 
+
 def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
     output_path = os.path.join(output_folder, csv_name)
     table.to_csv(output_path, index=None, header=True)
+
 
 
 def run_process_for_selected_scenarios(input_dir,
@@ -248,6 +255,7 @@ def run_process_for_selected_scenarios(input_dir,
             print(f"{car_ownership_csv_filename} exported successfully!")
         except:
             print(f"Export of file {car_ownership_csv_filename} failed.")
+
         
 
 if __name__ == "__main__":
