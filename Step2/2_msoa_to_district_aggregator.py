@@ -92,7 +92,14 @@ def define_splits(inputs):
 def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                               working_data: pd.DataFrame, 
                               intersection_df: pd.DataFrame):
-
+    """
+    Takes population data given on a per-MSOA basis, and allocates the data to ZonePfSH zones.
+    Utilises a lookup created in the define_splits function to define the relationships between ZonePfSH zones and MSOA. 
+    Inputs: 
+        - msoa_zonepfsh_lookup: DataFrame containing information on MSOA to model zone relationships derived rrom the intersection file
+        - working_data: DataFrame containing population data per MSOA
+        - intersection_df: DataFrame containing the proportion of MSOA population that is allocated to each ZonePfSH zone, derived from the intersection file
+    """
     zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
 
     population_categories = working_data['population'].unique()
@@ -124,7 +131,14 @@ def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
 def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                               working_data: pd.DataFrame, 
                               intersection_df: pd.DataFrame):
-
+    """
+    Takes car ownership data given on a per-MSOA basis, and allocates the data to ZonePfSH zones.
+    Utilises a lookup created in the define_splits function to define the relationships between ZonePfSH zones and MSOA. 
+    Inputs: 
+        - msoa_zonepfsh_lookup: DataFrame containing information on MSOA to model zone relationships derived rrom the intersection file
+        - working_data: DataFrame containing car ownership data per MSOA
+        - intersection_df: DataFrame containing the proportion of MSOA population that is allocated to each ZonePfSH zone, derived from the intersection file
+    """
     zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
 
     car_categories = working_data['car_ownership'].unique()
@@ -155,9 +169,15 @@ def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
 
 def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame, 
                            geodef_df: pd.DataFrame):
+    """
+    Aggregates population data from population-by-zone (ZonePfSH) up to population-by-district level (i.e. there are multiple zones per district).
+    This calculation is based on the zones-to-districts relationships outlined in the geodef_GISCorrect.csv file. 
+    Inputs:
+        - zonepfsh_level_data: DataFrame containing population data per ZonePfSH
+        - geodef_df: DataFrame containing zone to district allocations
+    """
 
     district_numbers = geodef_df['D30_Districts ID'].unique()
-
     population_categories = zonepfsh_level_data['Population'].unique() 
     zonepfsh_planning_districts_df = pd.DataFrame(list(product(district_numbers, population_categories)), columns=['District', 'Population'])
     for year in years:
@@ -181,6 +201,13 @@ def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame,
 
 def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame, 
                            geodef_df: pd.DataFrame):
+    """
+    Aggregates car ownership data from cars-by-zone (ZonePfSH) up to cars-by-district level (i.e. there are multiple zones per district).
+    This calculation is based on the zones-to-districts relationships outlined in the geodef_GISCorrect.csv file. 
+    Inputs:
+        - zonepfsh_level_data: DataFrame containing car ownership data per ZonePfSH
+        - geodef_df: DataFrame containing zone to district allocations
+    """
 
     district_numbers = geodef_df['D30_Districts ID'].unique()
     car_categories = zonepfsh_level_data['CarOwnership'].unique() 
@@ -205,16 +232,30 @@ def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame,
 
 
 def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
+    """
+    Exports df as a csv file and saves to output folder. 
+    Inputs: 
+        - csv_name: desired filename for output
+        - table: pandas DataFrame to convert to csv
+        - output_folder: full path to desired output location
+    """
     output_path = os.path.join(output_folder, csv_name)
     table.to_csv(output_path, index=None, header=True)
 
 
 
-def run_process_for_selected_scenarios(input_dir,
-                                       output_dir,
-                                       scenarios):
-    
-    """Orchestrator function: runs process for all configured scenarios and years"""
+def run_process_for_selected_scenarios(input_dir: str,
+                                       output_dir: str,
+                                       scenarios: list):
+    """
+    Main Orchestrator Function: runs process for all configured scenarios and years. 
+    To run the process, update the inputs and run this function. 
+    Inputs:
+        - input_dir: full path to the location of the input CSVs
+        - output_dir: full path to the desired output location
+        - scenarios: list containing any combination of the following strings: 
+            - 'Core', 'Low', 'High', 'Behavioural'
+            """
 
     check_inputs(input_dir, scenarios, inputs)
 
