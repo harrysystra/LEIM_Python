@@ -2,6 +2,7 @@ from itertools import product
 import pandas as pd
 import os
 from rich.progress import track
+from xlsxwriter import Workbook
 
 years = ['2019', '2026', '2031', '2036', '2046'] # can include any years included in input files (between 2019 and 2046 inclusive)
 scenarios = ['Core', 'Low', 'Behavioural','High'] # any combination of: 'Core', 'Low', 'High', 'Behavioural'
@@ -366,8 +367,46 @@ def run_process_for_selected_scenarios(input_dir: str,
 
 
 
+def format_excel_outputs(scenarios):
+    """
+    Formats the output CSVs into an Excel workbook with seperate sheets for each comparison scenario
+    with separate tables for each population category and car ownership category.
+    Args:
+        - scenarios: list containing scenario names
+    """
+    for scenario in ['Low', 'High', 'Behavioural']:
+        if scenario in scenarios:
+            with pd.ExcelWriter(os.path.join(output_dir, f"{scenario}_comparison.xlsx"), engine='xlsxwriter') as writer:
+                planning_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_planning_difference.csv"))
+                car_ownership_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_car_ownership_difference.csv"))
+
+                startcol = 0
+                startrow = 2
+                for population_category in planning_df['Population'].unique():
+                    planning_df[planning_df['Population'] == population_category].to_excel(writer, 
+                                                                                           sheet_name=f"{scenario}-Core",
+                                                                                           startcol=startcol, 
+                                                                                           startrow=startrow, 
+                                                                                           index=False)
+                    startcol += len(planning_df.columns) + 2
+
+                startcol = 0
+                startrow = 2
+                for car_category in car_ownership_df['CarOwnership'].unique():
+                    car_ownership_df[car_ownership_df['CarOwnership'] == car_category].to_excel(writer,
+                                                                                                sheet_name=f"{scenario}-Core", 
+                                                                                                startcol=startcol,
+                                                                                                startrow=startrow,
+                                                                                                index=False)
+                    startcol += len(car_ownership_df.columns) + 2
+
+
 if __name__ == "__main__":
 
+    # run the proces and export as CSVs for each scenario
     run_process_for_selected_scenarios(input_dir=input_dir,
                                        output_dir=output_dir,
                                        scenarios=scenarios)
+
+    # format the outputs into Excel workbooks for each comparison scenario
+    format_excel_outputs(scenarios=scenarios)
