@@ -3,8 +3,9 @@ import pandas as pd
 import os
 from rich.progress import track
 
-years = ['2019', '2026', '2031', '2036', '2046'] # must be between 2019 and 2046 inclusive
-scenarios = ['Core', 'High'] # leave alone unless adding new scenarios
+years = ['2019', '2026', '2031', '2036', '2046'] # can include any years included in input files (between 2019 and 2046 inclusive)
+scenarios = ['Core', 'Low', 'Behavioural','High'] # any combination of: 'Core', 'Low', 'High', 'Behavioural'
+#CORE MUST BE LISTED FIRST
 
 input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Inputs'
 output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Outputs'
@@ -35,10 +36,18 @@ inputs = {'geodef': [
 
 
 def check_inputs(input_dir, scenarios, inputs):
-    """Checks if input directory and input files exist for each scenario"""
+    """Checks if input directory and input files exist for each scenario
+    Args:
+        - input_dir: full path to the location of the input CSVs
+        - scenarios: list containing any combination of the following strings: 'Core', 'High', 'Low', 'Behavioural'
+        - inputs: dictionary containing the input files for each scenario
+            """
 
     if not os.path.exists(input_dir):
         raise ValueError("Input directory does not exist")
+
+    if scenarios[0] != 'Core':
+        raise ValueError("Core scenario must be listed first in the scenarios list")
 
     for scenario in scenarios + ['geodef'] + ['Intersection']:
         for input_file in inputs[scenario]:
@@ -48,7 +57,14 @@ def check_inputs(input_dir, scenarios, inputs):
 
 
 def read_input_files(input_dir, scenario):
-    """Reads input files and returns as DataFramas for a given scenario"""
+    """Reads input files and returns as DataFramas for a given scenario
+    Args:
+        - input_dir: full path to the location of the input CSVs
+        - scenario: string containing the scenario for which to read input files
+    Returns:
+        - geodef_df: DataFrame containing geodef data
+        - planning_df: DataFrame containing planning data
+        - ca_df: DataFrame containing community activity data"""
 
     geodef_df = pd.read_csv(os.path.join(input_dir, 'geodef_GISCorrect.csv'))
 
@@ -63,7 +79,12 @@ def read_input_files(input_dir, scenario):
 
 def define_splits(inputs):
     """Reads the Intersection file and creates a lookup for proportional splits between 
-    TfSH zones and MSOA"""
+    TfSH zones and MSOA
+    Args:
+        - inputs: dictionary containing the input files for each scenario
+    Returns:
+        - msoa_zonepfsh_lookup: dictionary containing the proportional splits between TfSH zones and MSOA
+        - intersection_df: DataFrame containing the intersection data"""
 
     filename = inputs['Intersection'][0]
     print(os.path.join(input_dir, filename))
@@ -95,11 +116,12 @@ def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
     """
     Takes population data given on a per-MSOA basis, and allocates the data to ZonePfSH zones.
     Utilises a lookup created in the define_splits function to define the relationships between ZonePfSH zones and MSOA. 
-    Inputs: 
+    Args:
         - msoa_zonepfsh_lookup: DataFrame containing information on MSOA to model zone relationships derived rrom the intersection file
         - working_data: DataFrame containing population data per MSOA
         - intersection_df: DataFrame containing the proportion of MSOA population that is allocated to each ZonePfSH zone, derived from the intersection file
-    """
+    Returns:
+        - planning_df: DataFrame containing population data per ZonePfSH"""
     zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
 
     population_categories = working_data['population'].unique()
@@ -134,10 +156,12 @@ def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
     """
     Takes car ownership data given on a per-MSOA basis, and allocates the data to ZonePfSH zones.
     Utilises a lookup created in the define_splits function to define the relationships between ZonePfSH zones and MSOA. 
-    Inputs: 
+    Args:
         - msoa_zonepfsh_lookup: DataFrame containing information on MSOA to model zone relationships derived rrom the intersection file
         - working_data: DataFrame containing car ownership data per MSOA
         - intersection_df: DataFrame containing the proportion of MSOA population that is allocated to each ZonePfSH zone, derived from the intersection file
+    Returns:
+        - car_df: DataFrame containing car ownership data per ZonePfSH
     """
     zonepfsh_numbers = intersection_df['ZonePfSH'].unique()
 
@@ -172,9 +196,11 @@ def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame,
     """
     Aggregates population data from population-by-zone (ZonePfSH) up to population-by-district level (i.e. there are multiple zones per district).
     This calculation is based on the zones-to-districts relationships outlined in the geodef_GISCorrect.csv file. 
-    Inputs:
+    Args:
         - zonepfsh_level_data: DataFrame containing population data per ZonePfSH
         - geodef_df: DataFrame containing zone to district allocations
+    Returns:
+        - zonepfsh_planning_districts_df: DataFrame containing population data per district
     """
 
     district_numbers = geodef_df['D30_Districts ID'].unique()
@@ -204,9 +230,11 @@ def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame,
     """
     Aggregates car ownership data from cars-by-zone (ZonePfSH) up to cars-by-district level (i.e. there are multiple zones per district).
     This calculation is based on the zones-to-districts relationships outlined in the geodef_GISCorrect.csv file. 
-    Inputs:
+    Args:
         - zonepfsh_level_data: DataFrame containing car ownership data per ZonePfSH
         - geodef_df: DataFrame containing zone to district allocations
+    Returns:
+        - zonepfsh_car_districts_df: DataFrame containing car ownership data per district
     """
 
     district_numbers = geodef_df['D30_Districts ID'].unique()
@@ -234,7 +262,7 @@ def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame,
 def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
     """
     Exports df as a csv file and saves to output folder. 
-    Inputs: 
+    Args:
         - csv_name: desired filename for output
         - table: pandas DataFrame to convert to csv
         - output_folder: full path to desired output location
@@ -244,18 +272,34 @@ def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
 
 
 
+def subtract_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
+    """
+    Subtracts the values of two dataframes with the same structure. 
+    Args:
+        - df1: pandas DataFrame to subtract from
+        - df2: pandas DataFrame to subtract
+    Returns:
+        - result_df: pandas DataFrame containing the result of the subtraction
+    """
+    result_df = df1.copy()
+    for year in years:
+        result_df[year] = df1[year] - df2[year]
+    return result_df
+
+
+
 def run_process_for_selected_scenarios(input_dir: str,
                                        output_dir: str,
                                        scenarios: list):
     """
     Main Orchestrator Function: runs process for all configured scenarios and years. 
     To run the process, update the inputs and run this function. 
-    Inputs:
+    Args:
         - input_dir: full path to the location of the input CSVs
         - output_dir: full path to the desired output location
         - scenarios: list containing any combination of the following strings: 
-            - 'Core', 'Low', 'High', 'Behavioural'
-            """
+        - 'Core', 'Low', 'High', 'Behavioural'
+    """
 
     check_inputs(input_dir, scenarios, inputs)
 
@@ -297,7 +341,30 @@ def run_process_for_selected_scenarios(input_dir: str,
         except:
             print(f"Export of file {car_ownership_csv_filename} failed.")
 
-        
+        if scenario != 'Core':
+            planning_difference = subtract_dataframes(df1=planning_district_level, 
+                                                      df2=pd.read_csv(os.path.join(output_dir, 'Core_planning.csv')))
+            planning_difference_csv_filename = scenario + "_planning_difference.csv"
+            try:
+                export_df_as_csv(csv_name=planning_difference_csv_filename,
+                                table=planning_difference,
+                                output_folder=output_dir)
+                print(f"{planning_difference_csv_filename} exported successfully!")
+            except:
+                print(f"Export of file {planning_difference_csv_filename} failed.")
+
+            car_ownership_difference = subtract_dataframes(df1=car_ownership_district_level, 
+                                                           df2=pd.read_csv(os.path.join(output_dir, 'Core_car_ownership.csv')))
+            car_ownership_difference_csv_filename = scenario + "_car_ownership_difference.csv"
+            try:
+                export_df_as_csv(csv_name=car_ownership_difference_csv_filename,
+                                table=car_ownership_difference,
+                                output_folder=output_dir)
+                print(f"{car_ownership_difference_csv_filename} exported successfully!")
+            except:
+                print(f"Export of file {car_ownership_difference_csv_filename} failed.")
+
+
 
 if __name__ == "__main__":
 
