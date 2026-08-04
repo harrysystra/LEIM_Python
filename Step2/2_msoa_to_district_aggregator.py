@@ -145,8 +145,7 @@ def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                         planning_df.loc[(planning_df['ZonePfSH'] == zonepfsh) 
                                                 & (planning_df['Population'] == population), year] += additional_population
                     except TypeError:
-                        print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")
-                            
+                        print(f"Type error encountered, value is {row[year]} and proportion is {proportion}")      
     return planning_df
 
 
@@ -301,7 +300,6 @@ def run_process_for_selected_scenarios(input_dir: str,
         - scenarios: list containing any combination of the following strings: 
         - 'Core', 'Low', 'High', 'Behavioural'
     """
-
     check_inputs(input_dir, scenarios, inputs)
 
     msoa_zonepfsh_lookup, intersection_df = define_splits(inputs=inputs)
