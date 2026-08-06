@@ -10,6 +10,7 @@ scenarios = ['Core', 'Low', 'Behavioural','High'] # any combination of: 'Core', 
 
 input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Inputs'
 output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Outputs'
+step_4_input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Inputs'
 
 
 inputs = {'geodef': [
@@ -288,7 +289,7 @@ def subtract_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
 
 
 
-def run_process_for_selected_scenarios(input_dir: str,
+def run_step2_for_selected_scenarios(input_dir: str,
                                        output_dir: str,
                                        scenarios: list):
     """
@@ -330,12 +331,15 @@ def run_process_for_selected_scenarios(input_dir: str,
                                 )
         car_ownership_district_level = aggregate_car_to_districts(zonepfsh_level_data=car_ownership,
                                                               geodef_df=geodef_df)
-        car_ownership_csv_filename = scenario + "_car_ownership.csv"
+        car_ownership_csv_filename = scenario + "_co.csv"
 
         try:
             export_df_as_csv(csv_name=car_ownership_csv_filename,
                             table=car_ownership_district_level,
                             output_folder=output_dir)
+            export_df_as_csv(csv_name=car_ownership_csv_filename,
+                            table=car_ownership_district_level,
+                            output_folder=step_4_input_dir)
             print(f"{car_ownership_csv_filename} exported successfully!")
         except:
             print(f"Export of file {car_ownership_csv_filename} failed.")
@@ -353,8 +357,8 @@ def run_process_for_selected_scenarios(input_dir: str,
                 print(f"Export of file {planning_difference_csv_filename} failed.")
 
             car_ownership_difference = subtract_dataframes(df1=car_ownership_district_level, 
-                                                           df2=pd.read_csv(os.path.join(output_dir, 'Core_car_ownership.csv')))
-            car_ownership_difference_csv_filename = scenario + "_car_ownership_difference.csv"
+                                                           df2=pd.read_csv(os.path.join(output_dir, 'Core_co.csv')))
+            car_ownership_difference_csv_filename = scenario + "_co_difference.csv"
             try:
                 export_df_as_csv(csv_name=car_ownership_difference_csv_filename,
                                 table=car_ownership_difference,
@@ -376,7 +380,7 @@ def format_excel_outputs(scenarios):
         if scenario in scenarios:
             with pd.ExcelWriter(os.path.join(output_dir, f"{scenario}_comparison.xlsx"), engine='xlsxwriter') as writer:
                 planning_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_planning_difference.csv"))
-                car_ownership_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_car_ownership_difference.csv"))
+                car_ownership_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_co_difference.csv"))
 
                 startcol = 0
                 startrow = 2
@@ -402,9 +406,12 @@ def format_excel_outputs(scenarios):
 if __name__ == "__main__":
 
     # run the proces and export as CSVs for each scenario
-    run_process_for_selected_scenarios(input_dir=input_dir,
+    run_step2_for_selected_scenarios(input_dir=input_dir,
                                        output_dir=output_dir,
                                        scenarios=scenarios)
 
     # format the outputs into Excel workbooks for each comparison scenario
     format_excel_outputs(scenarios=scenarios)
+
+
+# ADD FUNCTION TO COPY RELEVANT OUTPUTS TO STEP 4 INPUTS
