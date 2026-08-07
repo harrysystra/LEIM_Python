@@ -37,12 +37,26 @@ def read_cozn(path):
 
     data_start = dash_lines[1] + 1
 
-    data = "".join(lines[data_start:])
+    data_lines = []
+    for line in lines[data_start:]:
+        parts = line.split()
+        if len(parts) != 6:
+            break
+        data_lines.append(line)
+
+    data = "".join(data_lines)
 
     df = pd.read_csv(StringIO(data), sep=r"\s+", header=None, names=columns, engine="python")
 
     print(df)
     return df
+
+def read_geodef(path):
+    columns = ["Zone", "D30_Districts ID"]
+
+    geo_df = pd.read_csv(os.path.join(path, 'geodef_GISCorrect.csv'))
+    return geo_df
+
 """
 def read_avzn(path):
     columns = ["Actv", "Zone", "Quantity", "Category1", "Category2", "Category3", "Category4"]
@@ -90,12 +104,39 @@ def read_avzn_temp(path):
     print(df)
     return df
 
-def multiply_avzn_and_cozn(avzn_df, cozn_df):
+def multiply_avzn_and_cozn(avzn_df: pd.DataFrame, 
+                           cozn_df: pd.DataFrame):
+    """
+    Merge cozn proportions with avzn quantities on Actv and Zone,
+    then multiply each CO level by quantity 
+    Extra avzn-only Actv rows are exclued"""
 
-    pass
+    avzn_subset = avzn_df[['Actv', 'Zone', 'Quantity']].copy()
 
-def ntem_targets_and_scaling_factors():
-    pass
+    df = cozn_df.merge(avzn_subset, on=['Actv', 'Zone'], how='left', validate='one_to_one')
+
+    if df['Quantity'].isna().any():
+        missing = df.loc[df['Quantity'].isna(), ['Actv', 'Zone']]
+        raise ValueError(f"Missing Quantity for Actv-Zone pairs: {missing}")
+
+    for col in ['COLevel1', 'COLevel2', 'COLevel3', 'COLevel4']:
+        df[col] = df[col] * df['Quantity']
+
+    print(df)
+    return df
+
+def aggregate_to_district_level(multiplied_df: pd.DataFrame,
+                                geodef_df: pd.DataFrame):
+    """Aggregate zone-level multiplied CO output to district level using thr geodef file
+        removing activity from this step"""
+
+    df = multiplied_df.copy()
+    geo = geodef_df[['Zone', 'D30_Districts ID']].copy()
+
+    df["Zone"] = pd.to_numeric(df["Zone"], errors='coerce')
+    df["D30_Districts ID"] = pd.to_numeric(geo["D30_Districts ID"], errors='coerce')
+
+    
 
 def adjustment_one():
     pass
@@ -113,3 +154,6 @@ if __name__ == "__main__":
     read_step2_outputs(step2_output_dir, 'High')
     cozn_df = read_cozn(os.path.join(input_dir, 'cozn31ft.dat'))
     avzn_df = read_avzn_temp(os.path.join(input_dir))
+    multiplied_df = multiply_avzn_and_cozn(avzn_df, cozn_df)
+    geodef_df = read_geodef(os.path.join(input_dir))
+    result = aggregate_to_district_level(multiplied_df, geodef_df)
