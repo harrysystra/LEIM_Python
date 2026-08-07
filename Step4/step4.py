@@ -134,9 +134,37 @@ def aggregate_to_district_level(multiplied_df: pd.DataFrame,
     geo = geodef_df[['Zone', 'D30_Districts ID']].copy()
 
     df["Zone"] = pd.to_numeric(df["Zone"], errors='coerce')
-    df["D30_Districts ID"] = pd.to_numeric(geo["D30_Districts ID"], errors='coerce')
+    geo["Zone"] = pd.to_numeric(geo["Zone"], errors='coerce')
+    geo["D30_Districts ID"] =pd.to_numeric(geo["D30_Districts ID"], errors='coerce')
 
-    
+    df = df.dropna(subset=['Zone'])
+    geo = geo.dropna(subset=['Zone', 'D30_Districts ID'])
+
+    df["Zone"] = df["Zone"].astype(int)
+    geo["Zone"] = geo["Zone"].astype(int)
+    geo["D30_Districts ID"] = geo["D30_Districts ID"].astype(int)
+
+    if geo["Zone"].duplicated().any():
+        raise ValueError("Duplicate Zone entries found in geodef_df.")
+
+    merged = df.merge(geo, on="Zone", how="left", validate="many_to_one")
+
+    value_cols = ["COLevel1", "COLevel2", "COLevel3", "COLevel4"]
+
+    district_df = (
+        merged.groupby("D30_Districts ID", as_index=False)[value_cols]
+        .sum()
+        .rename(columns={"D30_District ID": "District"})
+    )
+    print(district_df)
+    return district_df
+
+def format_scenario_co_data(path):
+
+    df = pd.read_csv(path)
+    df = df[df["District"] != 30]
+
+    print(df)
 
 def adjustment_one():
     pass
@@ -157,3 +185,4 @@ if __name__ == "__main__":
     multiplied_df = multiply_avzn_and_cozn(avzn_df, cozn_df)
     geodef_df = read_geodef(os.path.join(input_dir))
     result = aggregate_to_district_level(multiplied_df, geodef_df)
+    format_scenario_co_data("Step4\\Inputs\\Core_co.csv")
