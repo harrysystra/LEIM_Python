@@ -2,7 +2,6 @@ from itertools import product
 import pandas as pd
 import os
 from rich.progress import track
-from xlsxwriter import Workbook
 
 years = ['2019', '2026', '2031', '2036', '2046'] # can include any years included in input files (between 2019 and 2046 inclusive)
 scenarios = ['Core', 'Low', 'Behavioural','High'] # any combination of: 'Core', 'Low', 'High', 'Behavioural'
