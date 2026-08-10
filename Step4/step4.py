@@ -28,7 +28,7 @@ def read_step2_outputs(path,
 def read_cozn(path):
     columns = ["Actv", "Zone", "COLevel1", "COLevel2", "COLevel3", "COLevel4"]
 
-    with open(path, "r", encoding="utf-8") as f:
+    with open(os.path.join(path, "cozn31ft.txt"), "r", encoding="utf-8") as f:
         lines = f.readlines()
     dash_lines = [i for i, line in enumerate(lines) if line.strip().startswith("-----")]
 
@@ -48,60 +48,19 @@ def read_cozn(path):
 
     df = pd.read_csv(StringIO(data), sep=r"\s+", header=None, names=columns, engine="python")
 
-    print(df)
     return df
 
 def read_geodef(path):
     columns = ["Zone", "D30_Districts ID"]
 
     geo_df = pd.read_csv(os.path.join(path, 'geodef_GISCorrect.csv'))
+
     return geo_df
 
-"""
-def read_avzn(path):
-    columns = ["Actv", "Zone", "Quantity", "Category1", "Category2", "Category3", "Category4"]
-
-    dash_count = 0
-    data_lines = []
-
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            if line.strip().startswith("-----"):
-                dash_count += 1
-                continue
-            elif line.strip().startswith("00000000"):
-                break        
-            if dash_count == 2:
-                if line.strip(): 
-                    data_lines.append(line)
-
-    if not data_lines:
-        raise ValueError(f"No data rows found in {path}")
-
-    df = pd.read_csv(
-        StringIO("".join(data_lines)),
-        sep=r"\s+",
-        header=None,
-        names=columns,
-        dtype={
-            "Actv": "int32",
-            "Zone": "int32",
-            "Quantity": "float64",
-            "Category1": "float64",
-            "Category2": "float64",
-            "Category3": "float64",
-            "Category4": "float64",
-        },
-        engine="python"
-    )
-    print(df)
-    return df
-"""
 
 def read_avzn_temp(path):
     df = pd.read_csv(os.path.join(path, 'avzn31ft.csv'))
-    
-    print(df)
+
     return df
 
 def multiply_avzn_and_cozn(avzn_df: pd.DataFrame, 
@@ -122,8 +81,9 @@ def multiply_avzn_and_cozn(avzn_df: pd.DataFrame,
     for col in ['COLevel1', 'COLevel2', 'COLevel3', 'COLevel4']:
         df[col] = df[col] * df['Quantity']
 
-    print(df)
     return df
+
+
 
 def aggregate_to_district_level(multiplied_df: pd.DataFrame,
                                 geodef_df: pd.DataFrame):
@@ -158,13 +118,13 @@ def aggregate_to_district_level(multiplied_df: pd.DataFrame,
     )
     colevel_cols = ["COLevel1", "COLevel2", "COLevel3", "COLevel4"]
     district_df["Total"] = district_df[colevel_cols].sum(axis=1)
-    print(district_df)
+
     return district_df
 
-import pandas as pd
+
 
 def format_scenario_co_data(path, target_year=2031):
-    df = pd.read_csv(path)
+    df = pd.read_csv(os.path.join(path, "High_co.csv"))
 
     year_col = str(target_year)
 
@@ -204,9 +164,9 @@ def format_scenario_co_data(path, target_year=2031):
 
     df_wide["Total"] = df_wide[colevel_cols].sum(axis=1)
 
-
-    print(df_wide)
     return df_wide
+
+
 
 def scale_totals_to_avzn_total(avzn_cozn_df, scenario_df):
 
@@ -251,12 +211,9 @@ def scale_totals_to_avzn_total(avzn_cozn_df, scenario_df):
 
     result["Total"] = result[colevel_cols].sum(axis=1)
 
-    print(result)
-
     return result
 
-import pandas as pd
-import numpy as np
+
 
 def calculate_scaling_factors(scaled_avzn_total_df, avzn_cozn_df):
 
@@ -295,14 +252,9 @@ def calculate_scaling_factors(scaled_avzn_total_df, avzn_cozn_df):
             np.nan
         )
 
-    print(result)
     return result
 
-import pandas as pd
-import numpy as np
 
-import pandas as pd
-import numpy as np
 
 def first_adjustment(avzn_cozn_df, scaling_factors_df, avzn_df, geodef_df):
     colevel_cols = ["COLevel1", "COLevel2", "COLevel3", "COLevel4"]
@@ -350,7 +302,6 @@ def first_adjustment(avzn_cozn_df, scaling_factors_df, avzn_df, geodef_df):
         bad = ac.loc[ac["District"].isna(), ["Zone"]].drop_duplicates()
         raise ValueError(f"Some zones in avzn_cozn_df could not be mapped to a District:\n{bad}")
 
-    # Rename before merge so the name is guaranteed to survive
     av_for_merge = av.rename(columns={"Quantity": "TotalHHAVZN"})
 
     if "Actv" in av_for_merge.columns and "Actv" in ac.columns:
@@ -406,30 +357,8 @@ def first_adjustment(avzn_cozn_df, scaling_factors_df, avzn_df, geodef_df):
     return ac[output_cols].copy()
 
 
+
 def second_adjustment(adjustment_1_df, avzn_df):
-    """
-    Apply the row-level ScalingFactor from adjustment_1 to each CO level.
-
-    Parameters
-    ----------
-    adjustment_1_df : pd.DataFrame
-        Output from first_adjustment with columns including:
-        ['Zone', 'COLevel1', 'COLevel2', 'COLevel3', 'COLevel4',
-         'TotalHH', 'TotalHHAVZN', 'ScalingFactor']
-        and optionally 'Actv', 'District'
-
-    avzn_df : pd.DataFrame
-        Original AVZN dataframe with at least:
-        ['Zone', 'Quantity']
-        and optionally 'Actv'
-
-    Returns
-    -------
-    pd.DataFrame
-        Columns:
-        ['COLevel1', 'COLevel2', 'COLevel3', 'COLevel4', 'TotalHH', 'TotalHHAVZN']
-        plus key columns such as 'Actv', 'Zone', and 'District' if present.
-    """
 
     colevel_cols = ["COLevel1", "COLevel2", "COLevel3", "COLevel4"]
 
@@ -441,7 +370,6 @@ def second_adjustment(adjustment_1_df, avzn_df):
     if missing_adj:
         raise ValueError(f"adjustment_1_df is missing required columns: {missing_adj}")
 
-    # Standardise key columns
     for df in [adj, av]:
         if "Zone" in df.columns:
             df["Zone"] = pd.to_numeric(df["Zone"], errors="coerce")
@@ -493,7 +421,6 @@ def second_adjustment(adjustment_1_df, avzn_df):
 
     result["TotalHH"] = result[colevel_cols].sum(axis=1)
 
-    # Exact check requested
     mismatch = ~np.isclose(result["TotalHH"], result["TotalHHAVZN"], rtol=0, atol=1e-9)
     if mismatch.any():
         key_cols = [c for c in ["Actv", "Zone", "District"] if c in result.columns]
@@ -506,13 +433,11 @@ def second_adjustment(adjustment_1_df, avzn_df):
 
     output_cols = [c for c in ["Actv", "Zone", "District"] if c in result.columns]
     output_cols += colevel_cols + ["TotalHH", "TotalHHAVZN"]
-    print(result[output_cols].copy())
     return result[output_cols].copy()
 
-import pandas as pd
-import numpy as np
 
-def calculate_new_cozn(adjustment_2_df):
+
+def calculate_new_cozn(adjustment_2_df, cozn_init):
 
     colevel_cols = ["COLevel1", "COLevel2", "COLevel3", "COLevel4"]
 
@@ -531,20 +456,48 @@ def calculate_new_cozn(adjustment_2_df):
             df[col] / df["TotalHH"],
             np.nan
         )
-    print(result)
+    result["Actv"] = cozn_init["Actv"]
+    result["Zone"] = cozn_init["Zone"]
+
     return result
 
 
+
+def iterate_for_fixed_i(input_dir: str,
+                        iter_limit: int,
+                        output_path: str):
+    cozn_df = read_cozn(path=input_dir)
+    cozn_init = read_cozn(path=input_dir)
+    avzn_df = read_avzn_temp(path=input_dir)
+    geodef_df = read_geodef(path=input_dir)
+
+    for i in range(iter_limit):
+        print(f"BEGINNING LOOP: {i}")
+        multiplied_df = multiply_avzn_and_cozn(avzn_df=avzn_df,
+                                               cozn_df=cozn_df)
+        avzn_cozn = aggregate_to_district_level(multiplied_df=multiplied_df,
+                                                geodef_df=geodef_df)
+        test_scenario_co = format_scenario_co_data(path=input_dir)
+        scaled_avzn_total = scale_totals_to_avzn_total(avzn_cozn_df=avzn_cozn,
+                                                       scenario_df=test_scenario_co)
+        scaling_factors = calculate_scaling_factors(scaled_avzn_total_df=scaled_avzn_total,
+                                                    avzn_cozn_df=avzn_cozn)
+        adjustment_1 = first_adjustment(avzn_cozn_df=multiplied_df,
+                                        scaling_factors_df=scaling_factors,
+                                        avzn_df=avzn_df,
+                                        geodef_df=geodef_df)
+        adjustment_2 = second_adjustment(adjustment_1_df=adjustment_1,
+                                         avzn_df=avzn_df)
+        cozn_df = calculate_new_cozn(adjustment_2_df=adjustment_2,
+                                     cozn_init=cozn_init)
+        print(f"COMPLETED LOOP: {i}")
+        i+=1
+
+    cozn_df.to_csv(os.path.join(output_path, "OUTPUT_COZN_TEST.csv"),index=None)
+
+
+
 if __name__ == "__main__":
-    read_step2_outputs(step2_output_dir, 'High')
-    cozn_df = read_cozn(os.path.join(input_dir, 'cozn31ft.dat'))
-    avzn_df = read_avzn_temp(os.path.join(input_dir))
-    multiplied_df = multiply_avzn_and_cozn(avzn_df, cozn_df)
-    geodef_df = read_geodef(os.path.join(input_dir))
-    avzn_cozn = aggregate_to_district_level(multiplied_df, geodef_df)
-    test_scenario_co = format_scenario_co_data("Step4\\Inputs\\High_co.csv", 2031)
-    scaled_avzn_total = scale_totals_to_avzn_total(avzn_cozn, test_scenario_co)
-    scaling_factors = calculate_scaling_factors(scaled_avzn_total, avzn_cozn)
-    adjustment_1 = first_adjustment(multiplied_df, scaling_factors, avzn_df, geodef_df)
-    adjustment_2 = second_adjustment(adjustment_1, avzn_df)
-    calculate_new_cozn(adjustment_2)
+    iterate_for_fixed_i(input_dir=input_dir,
+                        iter_limit=15,
+                        output_path='C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Outputs')
