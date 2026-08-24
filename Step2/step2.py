@@ -8,7 +8,7 @@ scenarios = ['Core', 'Low', 'Behavioural','High'] # any combination of: 'Core', 
 #CORE MUST BE LISTED FIRST
 
 input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Inputs'
-output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Outputs'
+output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Outputs\\2_Extended_NTEM_Targets'
 step_4_input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Inputs'
 
 
@@ -287,119 +287,225 @@ def subtract_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
     return result_df
 
 
-
 def run_step2_for_selected_scenarios(input_dir: str,
-                                       output_dir: str,
-                                       scenarios: list):
+                                     output_dir: str,
+                                     scenarios: list,
+                                     selected_years: list):
     """
     Main Orchestrator Function: runs process for all configured scenarios and years. 
     To run the process, update the inputs and run this function. 
+
     Args:
         - input_dir: full path to the location of the input CSVs
         - output_dir: full path to the desired output location
-        - scenarios: list containing any combination of the following strings: 
-        - 'Core', 'Low', 'High', 'Behavioural'
+        - scenarios: list containing any combination of:
+          'Core', 'Low', 'High', 'Behavioural'
+        - selected_years: list of years to export, e.g. [2019, 2026, 2031]
     """
     check_inputs(input_dir, scenarios, inputs)
 
     msoa_zonepfsh_lookup, intersection_df = define_splits(inputs=inputs)
 
+    core_planning_district_level = None
+    core_car_ownership_district_level = None
+
     for scenario in scenarios:
         print(f"WORKING ON SCENARIO: {scenario}")
-        geodef_df, planning_df, ca_df = read_input_files(input_dir=input_dir,
-                                                                   scenario=scenario)
-        planning = convert_population_to_zonepfsh(msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
-                                working_data=planning_df,
-                                intersection_df=intersection_df
-                                )
-        planning_district_level = aggregate_population_to_districts(zonepfsh_level_data=planning,
-                                                         geodef_df=geodef_df)
+
+        geodef_df, planning_df, ca_df = read_input_files(
+            input_dir=input_dir,
+            scenario=scenario
+        )
+
+        planning = convert_population_to_zonepfsh(
+            msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
+            working_data=planning_df,
+            intersection_df=intersection_df
+        )
+
+        planning_district_level = aggregate_population_to_districts(
+            zonepfsh_level_data=planning,
+            geodef_df=geodef_df
+        )
+
         planning_csv_filename = scenario + "_planning.csv"
 
-        try: 
-            export_df_as_csv(csv_name=planning_csv_filename, 
-                            table=planning_district_level,
-                            output_folder=output_dir)
+        try:
+            export_df_as_csv(
+                csv_name=planning_csv_filename,
+                table=planning_district_level,
+                output_folder=output_dir
+            )
             print(f"{planning_csv_filename} exported successfully!")
-        except:
-            print(f"Export of file {planning_csv_filename} failed.")
-        
-        car_ownership = convert_car_to_zonepfsh(msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
-                                working_data=ca_df,
-                                intersection_df=intersection_df
-                                )
-        car_ownership_district_level = aggregate_car_to_districts(zonepfsh_level_data=car_ownership,
-                                                              geodef_df=geodef_df)
+        except Exception as e:
+            print(f"Export of file {planning_csv_filename} failed: {e}")
+
+        car_ownership = convert_car_to_zonepfsh(
+            msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
+            working_data=ca_df,
+            intersection_df=intersection_df
+        )
+
+        car_ownership_district_level = aggregate_car_to_districts(
+            zonepfsh_level_data=car_ownership,
+            geodef_df=geodef_df
+        )
+
         car_ownership_csv_filename = scenario + "_co.csv"
 
         try:
-            export_df_as_csv(csv_name=car_ownership_csv_filename,
-                            table=car_ownership_district_level,
-                            output_folder=output_dir)
-            export_df_as_csv(csv_name=car_ownership_csv_filename,
-                            table=car_ownership_district_level,
-                            output_folder=step_4_input_dir)
+            export_df_as_csv(
+                csv_name=car_ownership_csv_filename,
+                table=car_ownership_district_level,
+                output_folder=output_dir
+            )
+            export_df_as_csv(
+                csv_name=car_ownership_csv_filename,
+                table=car_ownership_district_level,
+                output_folder=step_4_input_dir
+            )
             print(f"{car_ownership_csv_filename} exported successfully!")
-        except:
-            print(f"Export of file {car_ownership_csv_filename} failed.")
+        except Exception as e:
+            print(f"Export of file {car_ownership_csv_filename} failed: {e}")
 
-        if scenario != 'Core':
-            planning_difference = subtract_dataframes(df1=planning_district_level, 
-                                                      df2=pd.read_csv(os.path.join(output_dir, 'Core_planning.csv')))
+        # Store Core tables in memory for later comparisons
+        if scenario == "Core":
+            core_planning_district_level = planning_district_level.copy()
+            core_car_ownership_district_level = car_ownership_district_level.copy()
+
+        if scenario != "Core":
+            # fallback if Core wasn't run earlier in the same call
+            if core_planning_district_level is None:
+                core_planning_district_level = pd.read_csv(
+                    os.path.join(output_dir, "Core_planning.csv")
+                )
+            if core_car_ownership_district_level is None:
+                core_car_ownership_district_level = pd.read_csv(
+                    os.path.join(output_dir, "Core_co.csv")
+                )
+
+            planning_difference = subtract_dataframes(
+                df1=planning_district_level,
+                df2=core_planning_district_level
+            )
             planning_difference_csv_filename = scenario + "_planning_difference.csv"
+
             try:
-                export_df_as_csv(csv_name=planning_difference_csv_filename,
-                                table=planning_difference,
-                                output_folder=output_dir)
+                export_df_as_csv(
+                    csv_name=planning_difference_csv_filename,
+                    table=planning_difference,
+                    output_folder=output_dir
+                )
                 print(f"{planning_difference_csv_filename} exported successfully!")
-            except:
-                print(f"Export of file {planning_difference_csv_filename} failed.")
+            except Exception as e:
+                print(f"Export of file {planning_difference_csv_filename} failed: {e}")
 
-            car_ownership_difference = subtract_dataframes(df1=car_ownership_district_level, 
-                                                           df2=pd.read_csv(os.path.join(output_dir, 'Core_co.csv')))
+            car_ownership_difference = subtract_dataframes(
+                df1=car_ownership_district_level,
+                df2=core_car_ownership_district_level
+            )
             car_ownership_difference_csv_filename = scenario + "_co_difference.csv"
+
             try:
-                export_df_as_csv(csv_name=car_ownership_difference_csv_filename,
-                                table=car_ownership_difference,
-                                output_folder=output_dir)
+                export_df_as_csv(
+                    csv_name=car_ownership_difference_csv_filename,
+                    table=car_ownership_difference,
+                    output_folder=output_dir
+                )
                 print(f"{car_ownership_difference_csv_filename} exported successfully!")
-            except:
-                print(f"Export of file {car_ownership_difference_csv_filename} failed.")
+            except Exception as e:
+                print(f"Export of file {car_ownership_difference_csv_filename} failed: {e}")
 
+            # Export individual population category comparison CSVs
+            try:
+                planning_categories = planning_district_level["Population"].dropna().unique().tolist()
 
+                export_category_difference_csvs(
+                    scenario_df=planning_district_level,
+                    core_df=core_planning_district_level,
+                    category_col="Population",
+                    categories=planning_categories,
+                    selected_years=selected_years,
+                    scenario=scenario,
+                    prefix="planning",
+                    output_dir=output_dir
+                )
+            except Exception as e:
+                print(f"Export of planning category difference CSVs for {scenario} failed: {e}")
 
-def format_excel_outputs(scenarios):
+            # Export individual car ownership category comparison CSVs
+            try:
+                car_ownership_categories = ["no_car", "1_car", "2_cars", "3+_cars"]
+
+                export_category_difference_csvs(
+                    scenario_df=car_ownership_district_level,
+                    core_df=core_car_ownership_district_level,
+                    category_col="CarOwnership",
+                    categories=car_ownership_categories,
+                    selected_years=selected_years,
+                    scenario=scenario,
+                    prefix="co",
+                    output_dir=output_dir
+                )
+            except Exception as e:
+                print(f"Export of car ownership category difference CSVs for {scenario} failed: {e}")
+                
+
+def export_category_difference_csvs(scenario_df: pd.DataFrame,
+                                    core_df: pd.DataFrame,
+                                    category_col: str,
+                                    categories: list,
+                                    selected_years: list,
+                                    scenario: str,
+                                    prefix: str,
+                                    output_dir: str):
     """
-    Formats the output CSVs into an Excel workbook with seperate sheets for each comparison scenario
-    with separate tables for each population category and car ownership category.
+    Export one CSV per category containing scenario minus core, with columns:
+    District, Sum of <year1>, Sum of <year2>, ...
+
     Args:
-        - scenarios: list containing scenario names
+        scenario_df: district-level dataframe for current scenario
+        core_df: district-level dataframe for Core
+        category_col: category column name, e.g. 'Population' or 'CarOwnership'
+        categories: list of category values
+        selected_years: list like [2019, 2026, 2031]
+        scenario: scenario name, e.g. 'High'
+        prefix: 'planning' or 'co'
+        output_dir: export folder
     """
-    for scenario in ['Low', 'High', 'Behavioural']:
-        if scenario in scenarios:
-            with pd.ExcelWriter(os.path.join(output_dir, f"{scenario}_comparison.xlsx"), engine='xlsxwriter') as writer:
-                planning_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_planning_difference.csv"))
-                car_ownership_df = pd.read_csv(os.path.join(output_dir, f"{scenario}_co_difference.csv"))
+    year_cols = [str(y) for y in selected_years]
 
-                startcol = 0
-                startrow = 2
-                for population_category in planning_df['Population'].unique():
-                    planning_df[planning_df['Population'] == population_category].to_excel(writer, 
-                                                                                           sheet_name=f"{scenario}-Core",
-                                                                                           startcol=startcol, 
-                                                                                           startrow=startrow, 
-                                                                                           index=False)
-                    startcol += len(planning_df.columns) + 2
+    for category in categories:
+        scen_cat = scenario_df[scenario_df[category_col] == category].copy()
+        core_cat = core_df[core_df[category_col] == category].copy()
 
-                startcol = 0
-                startrow = 2
-                for car_category in car_ownership_df['CarOwnership'].unique():
-                    car_ownership_df[car_ownership_df['CarOwnership'] == car_category].to_excel(writer,
-                                                                                                sheet_name=f"{scenario}-Core", 
-                                                                                                startcol=startcol,
-                                                                                                startrow=startrow,
-                                                                                                index=False)
-                    startcol += len(car_ownership_df.columns) + 2
+        scen_cat = scen_cat[["District"] + year_cols]
+        core_cat = core_cat[["District"] + year_cols]
+
+        merged = scen_cat.merge(
+            core_cat,
+            on="District",
+            how="outer",
+            suffixes=("_scenario", "_core")
+        ).fillna(0)
+
+        result = pd.DataFrame()
+        result["District"] = merged["District"]
+
+        for y in year_cols:
+            result[f"Sum of {y}"] = merged[f"{y}_scenario"] - merged[f"{y}_core"]
+
+        safe_category = str(category).replace("+", "plus").replace(" ", "_")
+        csv_name = f"{scenario}_{prefix}_{safe_category}_difference.csv"
+
+        export_df_as_csv(
+            csv_name=csv_name,
+            table=result,
+            output_folder=output_dir
+        )
+
+        print(f"{csv_name} exported successfully!")
+
 
 
 if __name__ == "__main__":
@@ -407,10 +513,9 @@ if __name__ == "__main__":
     # run the proces and export as CSVs for each scenario
     run_step2_for_selected_scenarios(input_dir=input_dir,
                                        output_dir=output_dir,
-                                       scenarios=scenarios)
+                                       scenarios=scenarios,
+                                       selected_years=years)
 
-    # format the outputs into Excel workbooks for each comparison scenario
-    format_excel_outputs(scenarios=scenarios)
 
 
 # ADD FUNCTION TO COPY RELEVANT OUTPUTS TO STEP 4 INPUTS
