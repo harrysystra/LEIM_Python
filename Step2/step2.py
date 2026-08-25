@@ -515,7 +515,3 @@ if __name__ == "__main__":
                                        output_dir=output_dir,
                                        scenarios=scenarios,
                                        selected_years=years)
-
-
-
-# ADD FUNCTION TO COPY RELEVANT OUTPUTS TO STEP 4 INPUTS
