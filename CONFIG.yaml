@@ -1,18 +1,21 @@
-scenario:
-  base_scenario: "Core"
-  forecast_scenarios: ["High", "Low", "Behabioural"]
-  forecast_year: 2046
+general:
+  run_step2: True
+  run_step3: False
+  run_step4: False
 
-paths:
-  step2_outputs:
-    planning_households_difference_file: "Outputs/2_Extended_NTEM_Targets/High_planning_HHs_difference.csv"
-    planning_jobs_difference_file: "Outputs/2_Extended_NTEM_Targets/High_planning_jobs_difference.csv"
-    planning_under16_difference_file: "Outputs/2_Extended_NTEM_Targets/High_planning_under16_difference.csv"
 
-  step3_inputs:
-    avzn_file: "Step3/Inputs/avzn31ft.txt"
+step2_config:
+  input_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Inputs//Step2"
+  output_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Outputs//Step2"
+  years: ['2019', '2026', '2031', '2036', '2046'] 
+  scenarios: ['Core', 'Low', 'Behavioural','High'] 
 
-  step4_inputs:
-    cozn_file: "cozn31ft.txt"
-    core_car_ownership_file: "Core_co.csv"
-    high_car_ownership_file: "High_co.csv"
+
+step3_config:
+  input_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Inputs//Step3"
+  output_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Outputs//Step3"
+
+
+step4_config:
+  input_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Inputs//Step4"
+  output_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Outputs//Step4"

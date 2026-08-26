@@ -1,0 +1,2985 @@
+MSOA11CD,MSOA11NM,ZonePfSH,LAD,DELTA Macrozone,DELTA FMA+B?,Proportions MSOA/Zones
+E02003172,Bournemouth 001,851,Bournemouth,11,B,0.99999625
+E02003172,Bournemouth 001,849,Bournemouth,11,B,0.00000375
+E02003173,Bournemouth 002,851,Bournemouth,11,B,0.99998807
+E02003173,Bournemouth 002,850,Bournemouth,11,B,0.00001001
+E02003173,Bournemouth 002,849,Bournemouth,11,B,0.00000192
+E02003174,Bournemouth 003,852,Bournemouth,11,B,0.00000001
+E02003174,Bournemouth 003,851,Bournemouth,11,B,0.99999813
+E02003174,Bournemouth 003,849,Bournemouth,11,B,0.00000186
+E02003175,Bournemouth 004,852,Bournemouth,11,B,0.00000160
+E02003175,Bournemouth 004,851,Bournemouth,11,B,0.99999840
+E02003176,Bournemouth 005,851,Bournemouth,11,B,0.99998630
+E02003176,Bournemouth 005,850,Bournemouth,11,B,0.00001370
+E02003177,Bournemouth 006,852,Bournemouth,11,B,0.00000082
+E02003177,Bournemouth 006,851,Bournemouth,11,B,0.99999918
+E02003178,Bournemouth 007,851,Bournemouth,11,B,0.99999931
+E02003178,Bournemouth 007,850,Bournemouth,11,B,0.00000069
+E02003179,Bournemouth 008,852,Bournemouth,11,B,0.00000075
+E02003179,Bournemouth 008,851,Bournemouth,11,B,0.99999925
+E02003180,Bournemouth 009,851,Bournemouth,11,B,1.00000000
+E02003181,Bournemouth 010,851,Bournemouth,11,B,1.00000000
+E02003182,Bournemouth 011,852,Bournemouth,11,B,0.00000080
+E02003182,Bournemouth 011,851,Bournemouth,11,B,0.99999921
+E02003183,Bournemouth 012,851,Bournemouth,11,B,0.99999346
+E02003183,Bournemouth 012,850,Bournemouth,11,B,0.00000654
+E02003184,Bournemouth 013,851,Bournemouth,11,B,1.00000000
+E02003185,Bournemouth 014,853,Bournemouth,11,B,0.00000105
+E02003185,Bournemouth 014,852,Bournemouth,11,B,0.00000048
+E02003185,Bournemouth 014,851,Bournemouth,11,B,0.99999847
+E02003186,Bournemouth 015,851,Bournemouth,11,B,1.00000000
+E02003187,Bournemouth 016,851,Bournemouth,11,B,1.00000000
+E02003188,Bournemouth 017,851,Bournemouth,11,B,1.00000000
+E02003189,Bournemouth 018,851,Bournemouth,11,B,1.00000000
+E02003190,Bournemouth 019,851,Bournemouth,11,B,1.00000000
+E02003191,Bournemouth 020,853,Bournemouth,11,B,0.00000066
+E02003191,Bournemouth 020,851,Bournemouth,11,B,0.99999934
+E02003192,Bournemouth 021,851,Bournemouth,11,B,1.00000000
+E02003194,Poole 001,851,Poole,11,B,0.00000038
+E02003194,Poole 001,850,Poole,11,B,0.99988826
+E02003194,Poole 001,849,Poole,11,B,0.00011136
+E02003195,Poole 002,851,Poole,11,B,0.00000809
+E02003195,Poole 002,850,Poole,11,B,0.99999191
+E02003196,Poole 003,850,Poole,11,B,0.99999904
+E02003196,Poole 003,849,Poole,11,B,0.00000096
+E02003197,Poole 004,850,Poole,11,B,1.00000000
+E02003198,Poole 005,850,Poole,11,B,1.00000000
+E02003199,Poole 006,850,Poole,11,B,0.99999816
+E02003199,Poole 006,849,Poole,11,B,0.00000001
+E02003200,Poole 007,851,Poole,11,B,0.00000045
+E02003200,Poole 007,850,Poole,11,B,0.99999955
+E02003201,Poole 008,850,Poole,11,B,1.00000000
+E02003202,Poole 009,851,Poole,11,B,0.00001267
+E02003202,Poole 009,850,Poole,11,B,0.99998733
+E02003203,Poole 010,850,Poole,11,B,1.00000000
+E02003204,Poole 011,850,Poole,11,B,1.00000000
+E02003205,Poole 012,850,Poole,11,B,1.00000000
+E02003206,Poole 013,850,Poole,11,B,1.00000000
+E02003207,Poole 014,850,Poole,11,B,0.99999850
+E02003208,Poole 015,850,Poole,11,B,1.00000000
+E02003209,Poole 016,850,Poole,11,B,1.00000000
+E02003210,Poole 017,850,Poole,11,B,1.00000000
+E02003211,Poole 018,851,Poole,11,B,0.00000159
+E02003211,Poole 018,850,Poole,11,B,0.99999841
+E02003377,West Berkshire 011,840,West Berkshire,5,B,0.00000014
+E02003377,West Berkshire 011,839,West Berkshire,5,B,0.00000007
+E02003384,West Berkshire 018,843,West Berkshire,12,B,0.00000006
+E02003384,West Berkshire 018,842,West Berkshire,5,B,0.00000378
+E02003385,West Berkshire 019,842,West Berkshire,5,B,0.00000070
+E02003385,West Berkshire 019,840,West Berkshire,5,B,0.00000003
+E02003387,West Berkshire 021,842,West Berkshire,5,B,0.00000075
+E02003388,West Berkshire 022,839,West Berkshire,5,B,0.00000040
+E02003455,Wokingham 017,839,Wokingham,5,B,0.00000001
+E02003524,Portsmouth 001,490,Portsmouth,2,F,0.18127513
+E02003524,Portsmouth 001,489,Portsmouth,2,F,0.23477663
+E02003524,Portsmouth 001,488,Portsmouth,2,F,0.03415128
+E02003524,Portsmouth 001,487,Portsmouth,2,F,0.03054766
+E02003524,Portsmouth 001,577,Portsmouth,2,F,0.00000065
+E02003524,Portsmouth 001,576,Portsmouth,2,F,0.00000012
+E02003524,Portsmouth 001,571,Portsmouth,2,F,0.00000046
+E02003524,Portsmouth 001,369,Portsmouth,2,F,0.00000042
+E02003524,Portsmouth 001,590,Portsmouth,2,F,0.26739364
+E02003524,Portsmouth 001,589,Portsmouth,2,F,0.00000041
+E02003524,Portsmouth 001,588,Portsmouth,2,F,0.25185343
+E02003524,Portsmouth 001,587,Portsmouth,2,F,0.00000018
+E02003525,Portsmouth 002,490,Portsmouth,2,F,0.00000054
+E02003525,Portsmouth 002,579,Portsmouth,2,F,0.00000178
+E02003525,Portsmouth 002,578,Portsmouth,2,F,0.00000049
+E02003525,Portsmouth 002,577,Portsmouth,2,F,0.27235250
+E02003525,Portsmouth 002,576,Portsmouth,2,F,0.10316164
+E02003525,Portsmouth 002,575,Portsmouth,2,F,0.09130143
+E02003525,Portsmouth 002,574,Portsmouth,2,F,0.06510191
+E02003525,Portsmouth 002,573,Portsmouth,2,F,0.00000032
+E02003525,Portsmouth 002,572,Portsmouth,2,F,0.14443895
+E02003525,Portsmouth 002,571,Portsmouth,2,F,0.19216475
+E02003525,Portsmouth 002,570,Portsmouth,2,F,0.00000105
+E02003525,Portsmouth 002,369,Portsmouth,2,F,0.00000055
+E02003525,Portsmouth 002,946,Portsmouth,2,F,0.00000031
+E02003525,Portsmouth 002,590,Portsmouth,2,F,0.00000063
+E02003525,Portsmouth 002,589,Portsmouth,2,F,0.11025771
+E02003525,Portsmouth 002,588,Portsmouth,2,F,0.02121497
+E02003525,Portsmouth 002,587,Portsmouth,2,F,0.00000049
+E02003526,Portsmouth 003,574,Portsmouth,2,F,0.00000052
+E02003526,Portsmouth 003,573,Portsmouth,2,F,0.03543155
+E02003526,Portsmouth 003,572,Portsmouth,2,F,0.00000028
+E02003526,Portsmouth 003,571,Portsmouth,2,F,0.00000074
+E02003526,Portsmouth 003,570,Portsmouth,2,F,0.42322043
+E02003526,Portsmouth 003,569,Portsmouth,2,F,0.13391103
+E02003526,Portsmouth 003,568,Portsmouth,2,F,0.10842829
+E02003526,Portsmouth 003,567,Portsmouth,2,F,0.07853175
+E02003526,Portsmouth 003,566,Portsmouth,2,F,0.00000046
+E02003526,Portsmouth 003,565,Portsmouth,2,F,0.00000047
+E02003526,Portsmouth 003,564,Portsmouth,2,F,0.22047275
+E02003526,Portsmouth 003,563,Portsmouth,2,F,0.00000051
+E02003526,Portsmouth 003,369,Portsmouth,2,F,0.00000070
+E02003526,Portsmouth 003,645,Portsmouth,2,F,0.00000052
+E02003527,Portsmouth 004,490,Portsmouth,2,F,0.00000004
+E02003527,Portsmouth 004,489,Portsmouth,2,F,0.06018931
+E02003527,Portsmouth 004,488,Portsmouth,2,F,0.10858002
+E02003527,Portsmouth 004,487,Portsmouth,2,F,0.07114318
+E02003527,Portsmouth 004,582,Portsmouth,2,F,0.00000044
+E02003527,Portsmouth 004,580,Portsmouth,2,F,0.00000009
+E02003527,Portsmouth 004,579,Portsmouth,2,F,0.00725633
+E02003527,Portsmouth 004,578,Portsmouth,2,F,0.17779515
+E02003527,Portsmouth 004,577,Portsmouth,2,F,0.00000085
+E02003527,Portsmouth 004,575,Portsmouth,2,F,0.07511866
+E02003527,Portsmouth 004,574,Portsmouth,2,F,0.00000025
+E02003527,Portsmouth 004,572,Portsmouth,2,F,0.00000060
+E02003527,Portsmouth 004,369,Portsmouth,2,F,0.00000032
+E02003527,Portsmouth 004,296,Portsmouth,2,F,0.00462709
+E02003527,Portsmouth 004,293,Portsmouth,2,F,0.00175769
+E02003527,Portsmouth 004,291,Portsmouth,2,F,0.00000022
+E02003527,Portsmouth 004,290,Portsmouth,2,F,0.00000045
+E02003527,Portsmouth 004,288,Portsmouth,2,F,0.00086087
+E02003527,Portsmouth 004,287,Portsmouth,2,F,0.00254305
+E02003527,Portsmouth 004,286,Portsmouth,2,F,0.00115683
+E02003527,Portsmouth 004,946,Portsmouth,2,F,0.21645774
+E02003527,Portsmouth 004,588,Portsmouth,2,F,0.00000018
+E02003527,Portsmouth 004,587,Portsmouth,2,F,0.27251064
+E02003529,Portsmouth 006,581,Portsmouth,2,F,0.00000035
+E02003529,Portsmouth 006,580,Portsmouth,2,F,0.20327552
+E02003529,Portsmouth 006,579,Portsmouth,2,F,0.15837378
+E02003529,Portsmouth 006,578,Portsmouth,2,F,0.00000135
+E02003529,Portsmouth 006,574,Portsmouth,2,F,0.08209580
+E02003529,Portsmouth 006,573,Portsmouth,2,F,0.06825122
+E02003529,Portsmouth 006,572,Portsmouth,2,F,0.00000007
+E02003529,Portsmouth 006,570,Portsmouth,2,F,0.00000002
+E02003529,Portsmouth 006,569,Portsmouth,2,F,0.00000053
+E02003529,Portsmouth 006,567,Portsmouth,2,F,0.03182613
+E02003529,Portsmouth 006,566,Portsmouth,2,F,0.16042749
+E02003529,Portsmouth 006,565,Portsmouth,2,F,0.05475789
+E02003529,Portsmouth 006,561,Portsmouth,2,F,0.24098976
+E02003529,Portsmouth 006,552,Portsmouth,2,F,0.00000009
+E02003530,Portsmouth 007,582,Portsmouth,2,F,0.37096649
+E02003530,Portsmouth 007,581,Portsmouth,2,F,0.04887103
+E02003530,Portsmouth 007,580,Portsmouth,2,F,0.00000045
+E02003530,Portsmouth 007,578,Portsmouth,2,F,0.00000134
+E02003530,Portsmouth 007,551,Portsmouth,2,F,0.04533575
+E02003530,Portsmouth 007,550,Portsmouth,2,F,0.00000020
+E02003530,Portsmouth 007,548,Portsmouth,2,F,0.00000030
+E02003530,Portsmouth 007,541,Portsmouth,2,F,0.00000762
+E02003530,Portsmouth 007,946,Portsmouth,2,F,0.01457803
+E02003530,Portsmouth 007,944,Portsmouth,2,F,0.00000616
+E02003530,Portsmouth 007,907,Portsmouth,2,F,0.00001077
+E02003530,Portsmouth 007,586,Portsmouth,2,F,0.23625047
+E02003530,Portsmouth 007,585,Portsmouth,2,F,0.00001644
+E02003530,Portsmouth 007,584,Portsmouth,2,F,0.14622817
+E02003530,Portsmouth 007,583,Portsmouth,2,F,0.13772679
+E02003531,Portsmouth 008,582,Portsmouth,2,F,0.00000021
+E02003531,Portsmouth 008,581,Portsmouth,2,F,0.15899070
+E02003531,Portsmouth 008,580,Portsmouth,2,F,0.00000018
+E02003531,Portsmouth 008,561,Portsmouth,2,F,0.00000012
+E02003531,Portsmouth 008,560,Portsmouth,2,F,0.13748675
+E02003531,Portsmouth 008,555,Portsmouth,2,F,0.04213716
+E02003531,Portsmouth 008,554,Portsmouth,2,F,0.31286501
+E02003531,Portsmouth 008,553,Portsmouth,2,F,0.17622612
+E02003531,Portsmouth 008,552,Portsmouth,2,F,0.08225444
+E02003531,Portsmouth 008,551,Portsmouth,2,F,0.03487409
+E02003531,Portsmouth 008,550,Portsmouth,2,F,0.03293096
+E02003531,Portsmouth 008,549,Portsmouth,2,F,0.02223358
+E02003531,Portsmouth 008,547,Portsmouth,2,F,0.00000005
+E02003531,Portsmouth 008,524,Portsmouth,2,F,0.00000000
+E02003531,Portsmouth 008,584,Portsmouth,2,F,0.00000048
+E02003531,Portsmouth 008,583,Portsmouth,2,F,0.00000015
+E02003532,Portsmouth 009,548,Portsmouth,2,F,0.25751764
+E02003532,Portsmouth 009,547,Portsmouth,2,F,0.08829292
+E02003532,Portsmouth 009,545,Portsmouth,2,F,0.13036465
+E02003532,Portsmouth 009,542,Portsmouth,2,F,0.04093538
+E02003532,Portsmouth 009,541,Portsmouth,2,F,0.04640775
+E02003532,Portsmouth 009,907,Portsmouth,2,F,0.00000961
+E02003532,Portsmouth 009,586,Portsmouth,2,F,0.00000030
+E02003532,Portsmouth 009,585,Portsmouth,2,F,0.34258107
+E02003532,Portsmouth 009,584,Portsmouth,2,F,0.09389069
+E02003533,Portsmouth 010,545,Portsmouth,2,F,0.02788336
+E02003533,Portsmouth 010,543,Portsmouth,2,F,0.00000027
+E02003533,Portsmouth 010,542,Portsmouth,2,F,0.15981578
+E02003533,Portsmouth 010,541,Portsmouth,2,F,0.20089259
+E02003533,Portsmouth 010,540,Portsmouth,2,F,0.34631441
+E02003533,Portsmouth 010,946,Portsmouth,2,F,0.00007167
+E02003533,Portsmouth 010,945,Portsmouth,2,F,0.05992295
+E02003533,Portsmouth 010,944,Portsmouth,2,F,0.03406330
+E02003533,Portsmouth 010,908,Portsmouth,2,F,0.12836228
+E02003533,Portsmouth 010,907,Portsmouth,2,F,0.04267297
+E02003533,Portsmouth 010,585,Portsmouth,2,F,0.00000042
+E02003534,Portsmouth 011,551,Portsmouth,2,F,0.00000045
+E02003534,Portsmouth 011,550,Portsmouth,2,F,0.12240812
+E02003534,Portsmouth 011,549,Portsmouth,2,F,0.15381802
+E02003534,Portsmouth 011,548,Portsmouth,2,F,0.09542832
+E02003534,Portsmouth 011,547,Portsmouth,2,F,0.22805050
+E02003534,Portsmouth 011,546,Portsmouth,2,F,0.12641736
+E02003534,Portsmouth 011,545,Portsmouth,2,F,0.08603423
+E02003534,Portsmouth 011,544,Portsmouth,2,F,0.14930164
+E02003534,Portsmouth 011,543,Portsmouth,2,F,0.00000006
+E02003534,Portsmouth 011,542,Portsmouth,2,F,0.03854072
+E02003534,Portsmouth 011,526,Portsmouth,2,F,0.00000015
+E02003534,Portsmouth 011,524,Portsmouth,2,F,0.00000011
+E02003534,Portsmouth 011,584,Portsmouth,2,F,0.00000032
+E02003535,Portsmouth 012,556,Portsmouth,2,F,0.00000228
+E02003535,Portsmouth 012,555,Portsmouth,2,F,0.08615102
+E02003535,Portsmouth 012,549,Portsmouth,2,F,0.06715113
+E02003535,Portsmouth 012,546,Portsmouth,2,F,0.16544409
+E02003535,Portsmouth 012,544,Portsmouth,2,F,0.00000382
+E02003535,Portsmouth 012,526,Portsmouth,2,F,0.21185272
+E02003535,Portsmouth 012,525,Portsmouth,2,F,0.15278513
+E02003535,Portsmouth 012,524,Portsmouth,2,F,0.31660981
+E02003536,Portsmouth 013,544,Portsmouth,2,F,0.10321038
+E02003536,Portsmouth 013,543,Portsmouth,2,F,0.22841309
+E02003536,Portsmouth 013,542,Portsmouth,2,F,0.00000143
+E02003536,Portsmouth 013,540,Portsmouth,2,F,0.00000000
+E02003536,Portsmouth 013,539,Portsmouth,2,F,0.00019147
+E02003536,Portsmouth 013,537,Portsmouth,2,F,0.00000233
+E02003536,Portsmouth 013,535,Portsmouth,2,F,0.00001739
+E02003536,Portsmouth 013,534,Portsmouth,2,F,0.00000147
+E02003536,Portsmouth 013,533,Portsmouth,2,F,0.20368553
+E02003536,Portsmouth 013,532,Portsmouth,2,F,0.17654401
+E02003536,Portsmouth 013,531,Portsmouth,2,F,0.12784192
+E02003536,Portsmouth 013,527,Portsmouth,2,F,0.00000081
+E02003536,Portsmouth 013,526,Portsmouth,2,F,0.09859360
+E02003536,Portsmouth 013,932,Portsmouth,2,F,0.00154043
+E02003536,Portsmouth 013,931,Portsmouth,2,F,0.00000042
+E02003536,Portsmouth 013,930,Portsmouth,2,F,0.05995572
+E02003537,Portsmouth 014,560,Portsmouth,2,F,0.37632122
+E02003537,Portsmouth 014,559,Portsmouth,2,F,0.08343672
+E02003537,Portsmouth 014,558,Portsmouth,2,F,0.17409486
+E02003537,Portsmouth 014,557,Portsmouth,2,F,0.11595086
+E02003537,Portsmouth 014,556,Portsmouth,2,F,0.13872140
+E02003537,Portsmouth 014,555,Portsmouth,2,F,0.11147276
+E02003537,Portsmouth 014,524,Portsmouth,2,F,0.00000080
+E02003537,Portsmouth 014,523,Portsmouth,2,F,0.00000042
+E02003537,Portsmouth 014,521,Portsmouth,2,F,0.00000039
+E02003537,Portsmouth 014,519,Portsmouth,2,F,0.00000056
+E02003538,Portsmouth 015,516,Portsmouth,2,F,0.00000032
+E02003538,Portsmouth 015,557,Portsmouth,2,F,0.00000094
+E02003538,Portsmouth 015,556,Portsmouth,2,F,0.00000034
+E02003538,Portsmouth 015,528,Portsmouth,2,F,0.10974522
+E02003538,Portsmouth 015,527,Portsmouth,2,F,0.17114404
+E02003538,Portsmouth 015,526,Portsmouth,2,F,0.06912618
+E02003538,Portsmouth 015,525,Portsmouth,2,F,0.08923157
+E02003538,Portsmouth 015,524,Portsmouth,2,F,0.21146439
+E02003538,Portsmouth 015,523,Portsmouth,2,F,0.21622806
+E02003538,Portsmouth 015,522,Portsmouth,2,F,0.13305823
+E02003538,Portsmouth 015,521,Portsmouth,2,F,0.00000027
+E02003538,Portsmouth 015,520,Portsmouth,2,F,0.00000044
+E02003539,Portsmouth 016,516,Portsmouth,2,F,0.00000001
+E02003539,Portsmouth 016,513,Portsmouth,2,F,0.00000000
+E02003539,Portsmouth 016,510,Portsmouth,2,F,0.00000007
+E02003539,Portsmouth 016,509,Portsmouth,2,F,0.00000040
+E02003539,Portsmouth 016,507,Portsmouth,2,F,0.00000000
+E02003539,Portsmouth 016,543,Portsmouth,2,F,0.00000001
+E02003539,Portsmouth 016,539,Portsmouth,2,F,0.42126503
+E02003539,Portsmouth 016,538,Portsmouth,2,F,0.10105026
+E02003539,Portsmouth 016,537,Portsmouth,2,F,0.09464460
+E02003539,Portsmouth 016,536,Portsmouth,2,F,0.08570382
+E02003539,Portsmouth 016,535,Portsmouth,2,F,0.05720397
+E02003539,Portsmouth 016,534,Portsmouth,2,F,0.03771612
+E02003539,Portsmouth 016,533,Portsmouth,2,F,0.00088298
+E02003539,Portsmouth 016,531,Portsmouth,2,F,0.03279512
+E02003539,Portsmouth 016,530,Portsmouth,2,F,0.06592554
+E02003539,Portsmouth 016,529,Portsmouth,2,F,0.00000092
+E02003539,Portsmouth 016,528,Portsmouth,2,F,0.05851734
+E02003539,Portsmouth 016,527,Portsmouth,2,F,0.02749929
+E02003539,Portsmouth 016,526,Portsmouth,2,F,0.00000011
+E02003539,Portsmouth 016,932,Portsmouth,2,F,0.00615422
+E02003539,Portsmouth 016,931,Portsmouth,2,F,0.01064021
+E02003540,Portsmouth 017,518,Portsmouth,2,F,0.27993144
+E02003540,Portsmouth 017,517,Portsmouth,2,F,0.07098409
+E02003540,Portsmouth 017,516,Portsmouth,2,F,0.05330453
+E02003540,Portsmouth 017,513,Portsmouth,2,F,0.00000014
+E02003540,Portsmouth 017,493,Portsmouth,2,F,0.03391034
+E02003540,Portsmouth 017,492,Portsmouth,2,F,0.00000008
+E02003540,Portsmouth 017,491,Portsmouth,2,F,0.00000010
+E02003540,Portsmouth 017,560,Portsmouth,2,F,0.21506277
+E02003540,Portsmouth 017,559,Portsmouth,2,F,0.06701708
+E02003540,Portsmouth 017,558,Portsmouth,2,F,0.00000014
+E02003540,Portsmouth 017,557,Portsmouth,2,F,0.00000050
+E02003540,Portsmouth 017,528,Portsmouth,2,F,0.00000053
+E02003540,Portsmouth 017,523,Portsmouth,2,F,0.00000012
+E02003540,Portsmouth 017,522,Portsmouth,2,F,0.00000053
+E02003540,Portsmouth 017,521,Portsmouth,2,F,0.04467491
+E02003540,Portsmouth 017,520,Portsmouth,2,F,0.10874118
+E02003540,Portsmouth 017,519,Portsmouth,2,F,0.12637150
+E02003541,Portsmouth 018,513,Portsmouth,2,F,0.00000050
+E02003541,Portsmouth 018,512,Portsmouth,2,F,0.00000077
+E02003541,Portsmouth 018,511,Portsmouth,2,F,0.22510403
+E02003541,Portsmouth 018,510,Portsmouth,2,F,0.23474324
+E02003541,Portsmouth 018,509,Portsmouth,2,F,0.12665279
+E02003541,Portsmouth 018,506,Portsmouth,2,F,0.03397692
+E02003541,Portsmouth 018,501,Portsmouth,2,F,0.08534359
+E02003541,Portsmouth 018,500,Portsmouth,2,F,0.07927090
+E02003541,Portsmouth 018,536,Portsmouth,2,F,0.00000219
+E02003541,Portsmouth 018,530,Portsmouth,2,F,0.00000108
+E02003541,Portsmouth 018,529,Portsmouth,2,F,0.21490313
+E02003541,Portsmouth 018,528,Portsmouth,2,F,0.00000090
+E02003542,Portsmouth 019,516,Portsmouth,2,F,0.21783737
+E02003542,Portsmouth 019,515,Portsmouth,2,F,0.25140932
+E02003542,Portsmouth 019,514,Portsmouth,2,F,0.26650174
+E02003542,Portsmouth 019,513,Portsmouth,2,F,0.10473910
+E02003542,Portsmouth 019,512,Portsmouth,2,F,0.00000072
+E02003542,Portsmouth 019,498,Portsmouth,2,F,0.00000087
+E02003542,Portsmouth 019,495,Portsmouth,2,F,0.15951089
+E02003543,Portsmouth 020,516,Portsmouth,2,F,0.00000053
+E02003543,Portsmouth 020,514,Portsmouth,2,F,0.00000221
+E02003543,Portsmouth 020,513,Portsmouth,2,F,0.27911196
+E02003543,Portsmouth 020,512,Portsmouth,2,F,0.36823962
+E02003543,Portsmouth 020,511,Portsmouth,2,F,0.00000126
+E02003543,Portsmouth 020,500,Portsmouth,2,F,0.01559927
+E02003543,Portsmouth 020,499,Portsmouth,2,F,0.11339528
+E02003543,Portsmouth 020,498,Portsmouth,2,F,0.17152138
+E02003543,Portsmouth 020,495,Portsmouth,2,F,0.05212816
+E02003543,Portsmouth 020,529,Portsmouth,2,F,0.00000019
+E02003543,Portsmouth 020,528,Portsmouth,2,F,0.00000014
+E02003544,Portsmouth 021,518,Portsmouth,2,F,0.00000207
+E02003544,Portsmouth 021,517,Portsmouth,2,F,0.15839805
+E02003544,Portsmouth 021,516,Portsmouth,2,F,0.14693226
+E02003544,Portsmouth 021,515,Portsmouth,2,F,0.19251400
+E02003544,Portsmouth 021,495,Portsmouth,2,F,0.04339456
+E02003544,Portsmouth 021,494,Portsmouth,2,F,0.17023939
+E02003544,Portsmouth 021,493,Portsmouth,2,F,0.14949417
+E02003544,Portsmouth 021,519,Portsmouth,2,F,0.13902550
+E02003545,Portsmouth 022,512,Portsmouth,2,F,0.00000000
+E02003545,Portsmouth 022,506,Portsmouth,2,F,0.10024579
+E02003545,Portsmouth 022,505,Portsmouth,2,F,0.00000146
+E02003545,Portsmouth 022,504,Portsmouth,2,F,0.27071101
+E02003545,Portsmouth 022,503,Portsmouth,2,F,0.03966484
+E02003545,Portsmouth 022,502,Portsmouth,2,F,0.21436136
+E02003545,Portsmouth 022,501,Portsmouth,2,F,0.15959194
+E02003545,Portsmouth 022,500,Portsmouth,2,F,0.11918917
+E02003545,Portsmouth 022,499,Portsmouth,2,F,0.04634701
+E02003545,Portsmouth 022,497,Portsmouth,2,F,0.04988742
+E02003546,Portsmouth 023,517,Portsmouth,2,F,0.00000043
+E02003546,Portsmouth 023,497,Portsmouth,2,F,0.00000003
+E02003546,Portsmouth 023,496,Portsmouth,2,F,0.10878489
+E02003546,Portsmouth 023,495,Portsmouth,2,F,0.08535219
+E02003546,Portsmouth 023,494,Portsmouth,2,F,0.08644720
+E02003546,Portsmouth 023,493,Portsmouth,2,F,0.04294397
+E02003546,Portsmouth 023,492,Portsmouth,2,F,0.32325628
+E02003546,Portsmouth 023,491,Portsmouth,2,F,0.35321501
+E02003547,Portsmouth 024,509,Portsmouth,2,F,0.13950787
+E02003547,Portsmouth 024,508,Portsmouth,2,F,0.11935086
+E02003547,Portsmouth 024,507,Portsmouth,2,F,0.10596201
+E02003547,Portsmouth 024,506,Portsmouth,2,F,0.13303303
+E02003547,Portsmouth 024,505,Portsmouth,2,F,0.35367980
+E02003547,Portsmouth 024,504,Portsmouth,2,F,0.00000078
+E02003547,Portsmouth 024,503,Portsmouth,2,F,0.06477355
+E02003547,Portsmouth 024,502,Portsmouth,2,F,0.00000015
+E02003547,Portsmouth 024,497,Portsmouth,2,F,0.05264268
+E02003547,Portsmouth 024,496,Portsmouth,2,F,0.02561322
+E02003547,Portsmouth 024,539,Portsmouth,2,F,0.00535898
+E02003547,Portsmouth 024,538,Portsmouth,2,F,0.00000051
+E02003547,Portsmouth 024,536,Portsmouth,2,F,0.00000027
+E02003547,Portsmouth 024,438,Portsmouth,2,F,0.00007631
+E02003548,Portsmouth 025,512,Portsmouth,2,F,0.00000018
+E02003548,Portsmouth 025,505,Portsmouth,2,F,0.00000113
+E02003548,Portsmouth 025,502,Portsmouth,2,F,0.00000007
+E02003548,Portsmouth 025,499,Portsmouth,2,F,0.20057832
+E02003548,Portsmouth 025,498,Portsmouth,2,F,0.16972944
+E02003548,Portsmouth 025,497,Portsmouth,2,F,0.36177362
+E02003548,Portsmouth 025,496,Portsmouth,2,F,0.19252282
+E02003548,Portsmouth 025,495,Portsmouth,2,F,0.07539443
+E02003549,Southampton 001,262,Southampton,3,F,0.00000277
+E02003549,Southampton 001,114,Southampton,3,F,0.00000016
+E02003549,Southampton 001,113,Southampton,3,F,0.00000254
+E02003549,Southampton 001,112,Southampton,3,F,0.18594407
+E02003549,Southampton 001,111,Southampton,3,F,0.45284537
+E02003549,Southampton 001,110,Southampton,3,F,0.34186585
+E02003549,Southampton 001,104,Southampton,3,F,0.00000014
+E02003549,Southampton 001,103,Southampton,3,F,0.00000019
+E02003549,Southampton 001,101,Southampton,3,F,0.01933845
+E02003549,Southampton 001,99,Southampton,3,F,0.00000029
+E02003549,Southampton 001,155,Southampton,3,F,0.00000018
+E02003550,Southampton 002,262,Southampton,3,F,0.00000076
+E02003550,Southampton 002,273,Southampton,3,F,0.00000041
+E02003550,Southampton 002,272,Southampton,3,F,0.00000109
+E02003550,Southampton 002,117,Southampton,3,F,0.00000049
+E02003550,Southampton 002,116,Southampton,3,F,0.12155032
+E02003550,Southampton 002,114,Southampton,3,F,0.09379072
+E02003550,Southampton 002,111,Southampton,3,F,0.00000044
+E02003550,Southampton 002,155,Southampton,3,F,0.27527190
+E02003550,Southampton 002,154,Southampton,3,F,0.17318223
+E02003550,Southampton 002,153,Southampton,3,F,0.06930673
+E02003550,Southampton 002,152,Southampton,3,F,0.26689421
+E02003550,Southampton 002,151,Southampton,3,F,0.00000072
+E02003551,Southampton 003,262,Southampton,3,F,0.00000069
+E02003551,Southampton 003,244,Southampton,3,F,0.00000077
+E02003551,Southampton 003,243,Southampton,3,F,0.00000014
+E02003551,Southampton 003,223,Southampton,3,F,0.00000041
+E02003551,Southampton 003,110,Southampton,3,F,0.00000078
+E02003551,Southampton 003,102,Southampton,3,F,0.00000017
+E02003551,Southampton 003,101,Southampton,3,F,0.00000208
+E02003551,Southampton 003,100,Southampton,3,F,0.13122102
+E02003551,Southampton 003,99,Southampton,3,F,0.32976000
+E02003551,Southampton 003,98,Southampton,3,F,0.22849268
+E02003551,Southampton 003,97,Southampton,3,F,0.31041282
+E02003551,Southampton 003,96,Southampton,3,F,0.00000045
+E02003551,Southampton 003,94,Southampton,3,F,0.00000017
+E02003552,Southampton 004,274,Southampton,3,F,0.00000018
+E02003552,Southampton 004,273,Southampton,3,F,0.00000107
+E02003552,Southampton 004,122,Southampton,3,F,0.00000048
+E02003552,Southampton 004,117,Southampton,3,F,0.04256907
+E02003552,Southampton 004,116,Southampton,3,F,0.00000088
+E02003552,Southampton 004,153,Southampton,3,F,0.32126252
+E02003552,Southampton 004,152,Southampton,3,F,0.07388141
+E02003552,Southampton 004,151,Southampton,3,F,0.41441272
+E02003552,Southampton 004,150,Southampton,3,F,0.14787012
+E02003552,Southampton 004,149,Southampton,3,F,0.00000041
+E02003552,Southampton 004,148,Southampton,3,F,0.00000115
+E02003553,Southampton 005,112,Southampton,3,F,0.00000140
+E02003553,Southampton 005,105,Southampton,3,F,0.00000059
+E02003553,Southampton 005,104,Southampton,3,F,0.00000129
+E02003553,Southampton 005,103,Southampton,3,F,0.17070919
+E02003553,Southampton 005,102,Southampton,3,F,0.37700810
+E02003553,Southampton 005,101,Southampton,3,F,0.30806058
+E02003553,Southampton 005,100,Southampton,3,F,0.14421675
+E02003553,Southampton 005,99,Southampton,3,F,0.00000152
+E02003553,Southampton 005,94,Southampton,3,F,0.00000059
+E02003554,Southampton 006,119,Southampton,3,F,0.00000062
+E02003554,Southampton 006,118,Southampton,3,F,0.05669037
+E02003554,Southampton 006,117,Southampton,3,F,0.04669208
+E02003554,Southampton 006,116,Southampton,3,F,0.08700957
+E02003554,Southampton 006,115,Southampton,3,F,0.19462256
+E02003554,Southampton 006,114,Southampton,3,F,0.19385902
+E02003554,Southampton 006,113,Southampton,3,F,0.42112327
+E02003554,Southampton 006,112,Southampton,3,F,0.00000059
+E02003554,Southampton 006,111,Southampton,3,F,0.00000176
+E02003554,Southampton 006,104,Southampton,3,F,0.00000016
+E02003555,Southampton 007,276,Southampton,3,F,0.00000029
+E02003555,Southampton 007,275,Southampton,3,F,0.00000024
+E02003555,Southampton 007,274,Southampton,3,F,0.00000043
+E02003555,Southampton 007,122,Southampton,3,F,0.00000034
+E02003555,Southampton 007,151,Southampton,3,F,0.00000280
+E02003555,Southampton 007,150,Southampton,3,F,0.08037729
+E02003555,Southampton 007,149,Southampton,3,F,0.29458380
+E02003555,Southampton 007,148,Southampton,3,F,0.45438286
+E02003555,Southampton 007,147,Southampton,3,F,0.07552193
+E02003555,Southampton 007,146,Southampton,3,F,0.00000021
+E02003555,Southampton 007,144,Southampton,3,F,0.00000005
+E02003555,Southampton 007,143,Southampton,3,F,0.09512489
+E02003555,Southampton 007,142,Southampton,3,F,0.00000488
+E02003556,Southampton 008,223,Southampton,3,F,0.00000034
+E02003556,Southampton 008,221,Southampton,3,F,0.00000117
+E02003556,Southampton 008,100,Southampton,3,F,0.00000300
+E02003556,Southampton 008,98,Southampton,3,F,0.00000020
+E02003556,Southampton 008,97,Southampton,3,F,0.00000034
+E02003556,Southampton 008,96,Southampton,3,F,0.44032161
+E02003556,Southampton 008,95,Southampton,3,F,0.27774018
+E02003556,Southampton 008,94,Southampton,3,F,0.25172821
+E02003556,Southampton 008,93,Southampton,3,F,0.00000146
+E02003556,Southampton 008,92,Southampton,3,F,0.00000056
+E02003556,Southampton 008,50,Southampton,3,F,0.03020210
+E02003556,Southampton 008,49,Southampton,3,F,0.00000082
+E02003557,Southampton 009,120,Southampton,3,F,0.00000035
+E02003557,Southampton 009,119,Southampton,3,F,0.00000040
+E02003557,Southampton 009,113,Southampton,3,F,0.00000024
+E02003557,Southampton 009,112,Southampton,3,F,0.00000036
+E02003557,Southampton 009,109,Southampton,3,F,0.17703333
+E02003557,Southampton 009,108,Southampton,3,F,0.29652168
+E02003557,Southampton 009,107,Southampton,3,F,0.14488806
+E02003557,Southampton 009,105,Southampton,3,F,0.10861134
+E02003557,Southampton 009,104,Southampton,3,F,0.27294217
+E02003557,Southampton 009,103,Southampton,3,F,0.00000121
+E02003557,Southampton 009,102,Southampton,3,F,0.00000065
+E02003557,Southampton 009,85,Southampton,3,F,0.00000021
+E02003558,Southampton 010,128,Southampton,3,F,0.00009966
+E02003558,Southampton 010,127,Southampton,3,F,0.05786622
+E02003558,Southampton 010,126,Southampton,3,F,0.09360765
+E02003558,Southampton 010,125,Southampton,3,F,0.09666125
+E02003558,Southampton 010,124,Southampton,3,F,0.12032646
+E02003558,Southampton 010,123,Southampton,3,F,0.24792442
+E02003558,Southampton 010,122,Southampton,3,F,0.20907662
+E02003558,Southampton 010,118,Southampton,3,F,0.00000171
+E02003558,Southampton 010,117,Southampton,3,F,0.17443484
+E02003558,Southampton 010,116,Southampton,3,F,0.00000028
+E02003558,Southampton 010,153,Southampton,3,F,0.00000015
+E02003558,Southampton 010,150,Southampton,3,F,0.00000010
+E02003558,Southampton 010,149,Southampton,3,F,0.00000035
+E02003558,Southampton 010,143,Southampton,3,F,0.00000010
+E02003558,Southampton 010,139,Southampton,3,F,0.00000018
+E02003559,Southampton 011,133,Southampton,3,F,0.00000010
+E02003559,Southampton 011,131,Southampton,3,F,0.00000048
+E02003559,Southampton 011,130,Southampton,3,F,0.00000007
+E02003559,Southampton 011,129,Southampton,3,F,0.00000052
+E02003559,Southampton 011,128,Southampton,3,F,0.08148843
+E02003559,Southampton 011,127,Southampton,3,F,0.02478842
+E02003559,Southampton 011,126,Southampton,3,F,0.02073670
+E02003559,Southampton 011,124,Southampton,3,F,0.00000031
+E02003559,Southampton 011,121,Southampton,3,F,0.09055539
+E02003559,Southampton 011,120,Southampton,3,F,0.35717852
+E02003559,Southampton 011,119,Southampton,3,F,0.29420825
+E02003559,Southampton 011,118,Southampton,3,F,0.10638160
+E02003559,Southampton 011,117,Southampton,3,F,0.00000090
+E02003559,Southampton 011,115,Southampton,3,F,0.02462076
+E02003559,Southampton 011,113,Southampton,3,F,0.00000106
+E02003559,Southampton 011,109,Southampton,3,F,0.00000035
+E02003559,Southampton 011,108,Southampton,3,F,0.00000064
+E02003559,Southampton 011,104,Southampton,3,F,0.00003752
+E02003559,Southampton 011,84,Southampton,3,F,0.00000000
+E02003560,Southampton 012,276,Southampton,3,F,0.00000024
+E02003560,Southampton 012,178,Southampton,3,F,0.00000058
+E02003560,Southampton 012,172,Southampton,3,F,0.00000008
+E02003560,Southampton 012,148,Southampton,3,F,0.00000220
+E02003560,Southampton 012,147,Southampton,3,F,0.12020961
+E02003560,Southampton 012,146,Southampton,3,F,0.14617536
+E02003560,Southampton 012,145,Southampton,3,F,0.20860738
+E02003560,Southampton 012,144,Southampton,3,F,0.14920228
+E02003560,Southampton 012,143,Southampton,3,F,0.00000067
+E02003560,Southampton 012,142,Southampton,3,F,0.08015106
+E02003560,Southampton 012,141,Southampton,3,F,0.29565055
+E02003561,Southampton 013,107,Southampton,3,F,0.03599482
+E02003561,Southampton 013,106,Southampton,3,F,0.50344590
+E02003561,Southampton 013,105,Southampton,3,F,0.28312418
+E02003561,Southampton 013,102,Southampton,3,F,0.00000067
+E02003561,Southampton 013,93,Southampton,3,F,0.00021815
+E02003561,Southampton 013,91,Southampton,3,F,0.00027552
+E02003561,Southampton 013,90,Southampton,3,F,0.00027653
+E02003561,Southampton 013,87,Southampton,3,F,0.00000066
+E02003561,Southampton 013,85,Southampton,3,F,0.17666357
+E02003562,Southampton 014,95,Southampton,3,F,0.03387956
+E02003562,Southampton 014,94,Southampton,3,F,0.00015804
+E02003562,Southampton 014,93,Southampton,3,F,0.19484848
+E02003562,Southampton 014,92,Southampton,3,F,0.24132404
+E02003562,Southampton 014,91,Southampton,3,F,0.19897303
+E02003562,Southampton 014,90,Southampton,3,F,0.20977323
+E02003562,Southampton 014,88,Southampton,3,F,0.00033777
+E02003562,Southampton 014,56,Southampton,3,F,0.00000106
+E02003562,Southampton 014,54,Southampton,3,F,0.00490017
+E02003562,Southampton 014,53,Southampton,3,F,0.11580332
+E02003562,Southampton 014,52,Southampton,3,F,0.00000055
+E02003562,Southampton 014,50,Southampton,3,F,0.00000075
+E02003563,Southampton 015,127,Southampton,3,F,0.07374136
+E02003563,Southampton 015,125,Southampton,3,F,0.08737767
+E02003563,Southampton 015,124,Southampton,3,F,0.04596159
+E02003563,Southampton 015,123,Southampton,3,F,0.00000010
+E02003563,Southampton 015,122,Southampton,3,F,0.13650039
+E02003563,Southampton 015,149,Southampton,3,F,0.00000033
+E02003563,Southampton 015,143,Southampton,3,F,0.06342956
+E02003563,Southampton 015,142,Southampton,3,F,0.00000083
+E02003563,Southampton 015,140,Southampton,3,F,0.11301106
+E02003563,Southampton 015,139,Southampton,3,F,0.34327136
+E02003563,Southampton 015,138,Southampton,3,F,0.13670507
+E02003563,Southampton 015,137,Southampton,3,F,0.00000070
+E02003564,Southampton 016,221,Southampton,3,F,0.00000068
+E02003564,Southampton 016,220,Southampton,3,F,0.00000042
+E02003564,Southampton 016,96,Southampton,3,F,0.00000035
+E02003564,Southampton 016,95,Southampton,3,F,0.00000025
+E02003564,Southampton 016,92,Southampton,3,F,0.00000053
+E02003564,Southampton 016,53,Southampton,3,F,0.00000056
+E02003564,Southampton 016,52,Southampton,3,F,0.19124166
+E02003564,Southampton 016,51,Southampton,3,F,0.13521139
+E02003564,Southampton 016,50,Southampton,3,F,0.34354120
+E02003564,Southampton 016,49,Southampton,3,F,0.10461198
+E02003564,Southampton 016,48,Southampton,3,F,0.22535723
+E02003564,Southampton 016,47,Southampton,3,F,0.00003354
+E02003564,Southampton 016,38,Southampton,3,F,0.00000020
+E02003565,Southampton 017,130,Southampton,3,F,0.00000000
+E02003565,Southampton 017,120,Southampton,3,F,0.00000001
+E02003565,Southampton 017,109,Southampton,3,F,0.08033612
+E02003565,Southampton 017,107,Southampton,3,F,0.00000007
+E02003565,Southampton 017,106,Southampton,3,F,0.00000074
+E02003565,Southampton 017,87,Southampton,3,F,0.15783706
+E02003565,Southampton 017,86,Southampton,3,F,0.18356458
+E02003565,Southampton 017,85,Southampton,3,F,0.26207955
+E02003565,Southampton 017,84,Southampton,3,F,0.31617948
+E02003565,Southampton 017,82,Southampton,3,F,0.00000240
+E02003566,Southampton 018,220,Southampton,3,F,0.00000054
+E02003566,Southampton 018,218,Southampton,3,F,0.00000153
+E02003566,Southampton 018,217,Southampton,3,F,0.00000049
+E02003566,Southampton 018,52,Southampton,3,F,0.00000042
+E02003566,Southampton 018,51,Southampton,3,F,0.13148230
+E02003566,Southampton 018,48,Southampton,3,F,0.00000166
+E02003566,Southampton 018,47,Southampton,3,F,0.33923369
+E02003566,Southampton 018,46,Southampton,3,F,0.40351114
+E02003566,Southampton 018,45,Southampton,3,F,0.00000063
+E02003566,Southampton 018,43,Southampton,3,F,0.12576759
+E02003567,Southampton 019,122,Southampton,3,F,0.00000021
+E02003567,Southampton 019,143,Southampton,3,F,0.05289021
+E02003567,Southampton 019,142,Southampton,3,F,0.12178709
+E02003567,Southampton 019,141,Southampton,3,F,0.58986142
+E02003567,Southampton 019,140,Southampton,3,F,0.11796273
+E02003567,Southampton 019,139,Southampton,3,F,0.02934775
+E02003567,Southampton 019,138,Southampton,3,F,0.00000054
+E02003567,Southampton 019,137,Southampton,3,F,0.08814861
+E02003567,Southampton 019,136,Southampton,3,F,0.00000144
+E02003568,Southampton 020,134,Southampton,3,F,0.06025870
+E02003568,Southampton 020,133,Southampton,3,F,0.03636820
+E02003568,Southampton 020,132,Southampton,3,F,0.21868334
+E02003568,Southampton 020,131,Southampton,3,F,0.17579098
+E02003568,Southampton 020,130,Southampton,3,F,0.19098124
+E02003568,Southampton 020,129,Southampton,3,F,0.17338770
+E02003568,Southampton 020,128,Southampton,3,F,0.00000065
+E02003568,Southampton 020,127,Southampton,3,F,0.00000001
+E02003568,Southampton 020,121,Southampton,3,F,0.00000007
+E02003568,Southampton 020,120,Southampton,3,F,0.00000183
+E02003568,Southampton 020,84,Southampton,3,F,0.10555945
+E02003568,Southampton 020,82,Southampton,3,F,0.00000009
+E02003568,Southampton 020,79,Southampton,3,F,0.00000085
+E02003568,Southampton 020,78,Southampton,3,F,0.03896664
+E02003568,Southampton 020,135,Southampton,3,F,0.00000027
+E02003569,Southampton 021,134,Southampton,3,F,0.12177789
+E02003569,Southampton 021,133,Southampton,3,F,0.09515223
+E02003569,Southampton 021,132,Southampton,3,F,0.00000041
+E02003569,Southampton 021,131,Southampton,3,F,0.00000014
+E02003569,Southampton 021,127,Southampton,3,F,0.00000032
+E02003569,Southampton 021,78,Southampton,3,F,0.00000082
+E02003569,Southampton 021,77,Southampton,3,F,0.00000023
+E02003569,Southampton 021,76,Southampton,3,F,0.00000026
+E02003569,Southampton 021,141,Southampton,3,F,0.00085693
+E02003569,Southampton 021,138,Southampton,3,F,0.03462679
+E02003569,Southampton 021,137,Southampton,3,F,0.04923132
+E02003569,Southampton 021,136,Southampton,3,F,0.54461366
+E02003569,Southampton 021,135,Southampton,3,F,0.15373848
+E02003569,Southampton 021,66,Southampton,3,F,0.00000054
+E02003570,Southampton 022,130,Southampton,3,F,0.00000004
+E02003570,Southampton 022,106,Southampton,3,F,0.00000011
+E02003570,Southampton 022,89,Southampton,3,F,0.29340249
+E02003570,Southampton 022,88,Southampton,3,F,0.20064751
+E02003570,Southampton 022,87,Southampton,3,F,0.20021494
+E02003570,Southampton 022,86,Southampton,3,F,0.02182410
+E02003570,Southampton 022,84,Southampton,3,F,0.00000031
+E02003570,Southampton 022,83,Southampton,3,F,0.16371991
+E02003570,Southampton 022,82,Southampton,3,F,0.12018662
+E02003570,Southampton 022,81,Southampton,3,F,0.00000089
+E02003570,Southampton 022,79,Southampton,3,F,0.00000026
+E02003570,Southampton 022,77,Southampton,3,F,0.00000032
+E02003570,Southampton 022,64,Southampton,3,F,0.00000001
+E02003570,Southampton 022,63,Southampton,3,F,0.00000095
+E02003570,Southampton 022,62,Southampton,3,F,0.00000153
+E02003571,Southampton 023,134,Southampton,3,F,0.00000042
+E02003571,Southampton 023,132,Southampton,3,F,0.00000000
+E02003571,Southampton 023,130,Southampton,3,F,0.00000063
+E02003571,Southampton 023,83,Southampton,3,F,0.00000003
+E02003571,Southampton 023,82,Southampton,3,F,0.00000153
+E02003571,Southampton 023,81,Southampton,3,F,0.08489576
+E02003571,Southampton 023,80,Southampton,3,F,0.05160234
+E02003571,Southampton 023,79,Southampton,3,F,0.09631689
+E02003571,Southampton 023,78,Southampton,3,F,0.08645194
+E02003571,Southampton 023,77,Southampton,3,F,0.14099341
+E02003571,Southampton 023,76,Southampton,3,F,0.06851575
+E02003571,Southampton 023,75,Southampton,3,F,0.09284750
+E02003571,Southampton 023,74,Southampton,3,F,0.03881630
+E02003571,Southampton 023,73,Southampton,3,F,0.00000120
+E02003571,Southampton 023,72,Southampton,3,F,0.00000028
+E02003571,Southampton 023,71,Southampton,3,F,0.05460294
+E02003571,Southampton 023,136,Southampton,3,F,0.00000029
+E02003571,Southampton 023,70,Southampton,3,F,0.03834478
+E02003571,Southampton 023,69,Southampton,3,F,0.01828122
+E02003571,Southampton 023,68,Southampton,3,F,0.04154989
+E02003571,Southampton 023,67,Southampton,3,F,0.01515672
+E02003571,Southampton 023,66,Southampton,3,F,0.17161934
+E02003571,Southampton 023,65,Southampton,3,F,0.00000052
+E02003571,Southampton 023,63,Southampton,3,F,0.00000009
+E02003571,Southampton 023,61,Southampton,3,F,0.00000025
+E02003572,Southampton 024,91,Southampton,3,F,0.05198686
+E02003572,Southampton 024,90,Southampton,3,F,0.00000031
+E02003572,Southampton 024,59,Southampton,3,F,0.11580826
+E02003572,Southampton 024,56,Southampton,3,F,0.22869803
+E02003572,Southampton 024,55,Southampton,3,F,0.09941063
+E02003572,Southampton 024,54,Southampton,3,F,0.21893047
+E02003572,Southampton 024,53,Southampton,3,F,0.08240321
+E02003572,Southampton 024,52,Southampton,3,F,0.20276108
+E02003572,Southampton 024,51,Southampton,3,F,0.00000018
+E02003572,Southampton 024,38,Southampton,3,F,0.00000057
+E02003572,Southampton 024,34,Southampton,3,F,0.00000041
+E02003573,Southampton 025,217,Southampton,3,F,0.00000234
+E02003573,Southampton 025,51,Southampton,3,F,0.05103447
+E02003573,Southampton 025,46,Southampton,3,F,0.00000173
+E02003573,Southampton 025,45,Southampton,3,F,0.26196856
+E02003573,Southampton 025,44,Southampton,3,F,0.26364955
+E02003573,Southampton 025,43,Southampton,3,F,0.19344540
+E02003573,Southampton 025,42,Southampton,3,F,0.18654491
+E02003573,Southampton 025,41,Southampton,3,F,0.04330466
+E02003573,Southampton 025,40,Southampton,3,F,0.00004731
+E02003573,Southampton 025,38,Southampton,3,F,0.00000031
+E02003573,Southampton 025,37,Southampton,3,F,0.00000075
+E02003574,Southampton 026,194,Southampton,3,F,0.00000073
+E02003574,Southampton 026,55,Southampton,3,F,0.00000056
+E02003574,Southampton 026,52,Southampton,3,F,0.00000011
+E02003574,Southampton 026,51,Southampton,3,F,0.00000030
+E02003574,Southampton 026,45,Southampton,3,F,0.00000063
+E02003574,Southampton 026,44,Southampton,3,F,0.00000029
+E02003574,Southampton 026,40,Southampton,3,F,0.03177569
+E02003574,Southampton 026,39,Southampton,3,F,0.00000049
+E02003574,Southampton 026,38,Southampton,3,F,0.19591358
+E02003574,Southampton 026,37,Southampton,3,F,0.15996867
+E02003574,Southampton 026,36,Southampton,3,F,0.10803906
+E02003574,Southampton 026,35,Southampton,3,F,0.11773333
+E02003574,Southampton 026,34,Southampton,3,F,0.00000100
+E02003574,Southampton 026,33,Southampton,3,F,0.00000060
+E02003574,Southampton 026,32,Southampton,3,F,0.19426687
+E02003574,Southampton 026,31,Southampton,3,F,0.19229810
+E02003575,Southampton 027,217,Southampton,3,F,0.00000065
+E02003575,Southampton 027,194,Southampton,3,F,0.00000162
+E02003575,Southampton 027,44,Southampton,3,F,0.00000151
+E02003575,Southampton 027,42,Southampton,3,F,0.00000011
+E02003575,Southampton 027,41,Southampton,3,F,0.33806116
+E02003575,Southampton 027,40,Southampton,3,F,0.24381953
+E02003575,Southampton 027,39,Southampton,3,F,0.38238567
+E02003575,Southampton 027,36,Southampton,3,F,0.03572805
+E02003575,Southampton 027,32,Southampton,3,F,0.00000093
+E02003575,Southampton 027,31,Southampton,3,F,0.00000078
+E02003576,Southampton 028,60,Southampton,3,F,0.24661411
+E02003576,Southampton 028,59,Southampton,3,F,0.14072128
+E02003576,Southampton 028,58,Southampton,3,F,0.22384943
+E02003576,Southampton 028,57,Southampton,3,F,0.22400907
+E02003576,Southampton 028,56,Southampton,3,F,0.05197226
+E02003576,Southampton 028,55,Southampton,3,F,0.11283047
+E02003576,Southampton 028,54,Southampton,3,F,0.00000000
+E02003576,Southampton 028,34,Southampton,3,F,0.00000063
+E02003576,Southampton 028,33,Southampton,3,F,0.00000207
+E02003576,Southampton 028,28,Southampton,3,F,0.00000067
+E02003577,Southampton 029,89,Southampton,3,F,0.00000027
+E02003577,Southampton 029,88,Southampton,3,F,0.00000008
+E02003577,Southampton 029,83,Southampton,3,F,0.00000025
+E02003577,Southampton 029,77,Southampton,3,F,0.00000026
+E02003577,Southampton 029,75,Southampton,3,F,0.00000025
+E02003577,Southampton 029,73,Southampton,3,F,0.06126961
+E02003577,Southampton 029,72,Southampton,3,F,0.05836840
+E02003577,Southampton 029,71,Southampton,3,F,0.00555415
+E02003577,Southampton 029,70,Southampton,3,F,0.00000018
+E02003577,Southampton 029,66,Southampton,3,F,0.00000010
+E02003577,Southampton 029,65,Southampton,3,F,0.10168975
+E02003577,Southampton 029,64,Southampton,3,F,0.15631978
+E02003577,Southampton 029,63,Southampton,3,F,0.12205546
+E02003577,Southampton 029,62,Southampton,3,F,0.11540246
+E02003577,Southampton 029,61,Southampton,3,F,0.37927121
+E02003577,Southampton 029,60,Southampton,3,F,0.00006779
+E02003578,Southampton 030,194,Southampton,3,F,0.00000027
+E02003578,Southampton 030,57,Southampton,3,F,0.00000106
+E02003578,Southampton 030,55,Southampton,3,F,0.00000049
+E02003578,Southampton 030,38,Southampton,3,F,0.00000075
+E02003578,Southampton 030,37,Southampton,3,F,0.00000124
+E02003578,Southampton 030,35,Southampton,3,F,0.11633248
+E02003578,Southampton 030,34,Southampton,3,F,0.19222723
+E02003578,Southampton 030,33,Southampton,3,F,0.42805233
+E02003578,Southampton 030,32,Southampton,3,F,0.16667883
+E02003578,Southampton 030,31,Southampton,3,F,0.09670404
+E02003578,Southampton 030,30,Southampton,3,F,0.00000039
+E02003578,Southampton 030,29,Southampton,3,F,0.00000071
+E02003578,Southampton 030,28,Southampton,3,F,0.00000019
+E02003579,Southampton 031,60,Southampton,3,F,0.07558404
+E02003579,Southampton 031,58,Southampton,3,F,0.00000042
+E02003579,Southampton 031,57,Southampton,3,F,0.00000035
+E02003579,Southampton 031,33,Southampton,3,F,0.00000057
+E02003579,Southampton 031,30,Southampton,3,F,0.00000033
+E02003579,Southampton 031,29,Southampton,3,F,0.20752959
+E02003579,Southampton 031,28,Southampton,3,F,0.21566149
+E02003579,Southampton 031,27,Southampton,3,F,0.22844791
+E02003579,Southampton 031,26,Southampton,3,F,0.27277423
+E02003579,Southampton 031,25,Southampton,3,F,0.00000107
+E02003580,Southampton 032,193,Southampton,3,F,0.00172753
+E02003580,Southampton 032,33,Southampton,3,F,0.00000009
+E02003580,Southampton 032,32,Southampton,3,F,0.00000033
+E02003580,Southampton 032,31,Southampton,3,F,0.00000024
+E02003580,Southampton 032,30,Southampton,3,F,0.33159526
+E02003580,Southampton 032,29,Southampton,3,F,0.10075389
+E02003580,Southampton 032,26,Southampton,3,F,0.00552549
+E02003580,Southampton 032,25,Southampton,3,F,0.56039717
+E02003581,Isle of Wight 001,731,Isle of Wight,4,F,0.00001967
+E02003581,Isle of Wight 001,724,Isle of Wight,4,F,0.02957264
+E02003581,Isle of Wight 001,722,Isle of Wight,4,F,0.12764395
+E02003581,Isle of Wight 001,721,Isle of Wight,4,F,0.00000000
+E02003581,Isle of Wight 001,720,Isle of Wight,4,F,0.11289453
+E02003581,Isle of Wight 001,719,Isle of Wight,4,F,0.10722912
+E02003581,Isle of Wight 001,718,Isle of Wight,4,F,0.16053577
+E02003581,Isle of Wight 001,717,Isle of Wight,4,F,0.02362112
+E02003581,Isle of Wight 001,716,Isle of Wight,4,F,0.06629995
+E02003581,Isle of Wight 001,715,Isle of Wight,4,F,0.11073500
+E02003581,Isle of Wight 001,714,Isle of Wight,4,F,0.00000011
+E02003581,Isle of Wight 001,713,Isle of Wight,4,F,0.00000004
+E02003581,Isle of Wight 001,712,Isle of Wight,4,F,0.26144811
+E02003582,Isle of Wight 002,685,Isle of Wight,4,F,0.00000000
+E02003582,Isle of Wight 002,683,Isle of Wight,4,F,0.00000009
+E02003582,Isle of Wight 002,731,Isle of Wight,4,F,0.44329185
+E02003582,Isle of Wight 002,730,Isle of Wight,4,F,0.00000005
+E02003582,Isle of Wight 002,720,Isle of Wight,4,F,0.00000000
+E02003582,Isle of Wight 002,718,Isle of Wight,4,F,0.00000002
+E02003582,Isle of Wight 002,717,Isle of Wight,4,F,0.01438193
+E02003582,Isle of Wight 002,716,Isle of Wight,4,F,0.00908453
+E02003582,Isle of Wight 002,715,Isle of Wight,4,F,0.00000037
+E02003582,Isle of Wight 002,714,Isle of Wight,4,F,0.19425503
+E02003582,Isle of Wight 002,713,Isle of Wight,4,F,0.06124708
+E02003582,Isle of Wight 002,712,Isle of Wight,4,F,0.07246992
+E02003582,Isle of Wight 002,711,Isle of Wight,4,F,0.20526914
+E02003583,Isle of Wight 003,689,Isle of Wight,4,F,0.00000000
+E02003583,Isle of Wight 003,688,Isle of Wight,4,F,0.32795383
+E02003583,Isle of Wight 003,726,Isle of Wight,4,F,0.23745871
+E02003583,Isle of Wight 003,725,Isle of Wight,4,F,0.17438118
+E02003583,Isle of Wight 003,724,Isle of Wight,4,F,0.01869843
+E02003583,Isle of Wight 003,723,Isle of Wight,4,F,0.07139576
+E02003583,Isle of Wight 003,722,Isle of Wight,4,F,0.00604401
+E02003583,Isle of Wight 003,721,Isle of Wight,4,F,0.16406803
+E02003583,Isle of Wight 003,692,Isle of Wight,4,F,0.00000005
+E02003584,Isle of Wight 004,675,Isle of Wight,4,F,0.17877013
+E02003584,Isle of Wight 004,674,Isle of Wight,4,F,0.00000000
+E02003584,Isle of Wight 004,673,Isle of Wight,4,F,0.00000058
+E02003584,Isle of Wight 004,672,Isle of Wight,4,F,0.22789016
+E02003584,Isle of Wight 004,671,Isle of Wight,4,F,0.19399663
+E02003584,Isle of Wight 004,669,Isle of Wight,4,F,0.00000010
+E02003584,Isle of Wight 004,668,Isle of Wight,4,F,0.15157434
+E02003584,Isle of Wight 004,667,Isle of Wight,4,F,0.15886282
+E02003584,Isle of Wight 004,666,Isle of Wight,4,F,0.05949155
+E02003584,Isle of Wight 004,665,Isle of Wight,4,F,0.02941367
+E02003584,Isle of Wight 004,663,Isle of Wight,4,F,0.00000003
+E02003585,Isle of Wight 005,689,Isle of Wight,4,F,0.00000017
+E02003585,Isle of Wight 005,688,Isle of Wight,4,F,0.00000021
+E02003585,Isle of Wight 005,663,Isle of Wight,4,F,0.00000000
+E02003585,Isle of Wight 005,662,Isle of Wight,4,F,0.00000007
+E02003585,Isle of Wight 005,736,Isle of Wight,4,F,0.12459466
+E02003585,Isle of Wight 005,734,Isle of Wight,4,F,0.00000018
+E02003585,Isle of Wight 005,733,Isle of Wight,4,F,0.11722817
+E02003585,Isle of Wight 005,732,Isle of Wight,4,F,0.18435529
+E02003585,Isle of Wight 005,726,Isle of Wight,4,F,0.00000002
+E02003585,Isle of Wight 005,692,Isle of Wight,4,F,0.57382123
+E02003586,Isle of Wight 006,689,Isle of Wight,4,F,0.00000003
+E02003586,Isle of Wight 006,674,Isle of Wight,4,F,0.00000000
+E02003586,Isle of Wight 006,670,Isle of Wight,4,F,0.00000000
+E02003586,Isle of Wight 006,669,Isle of Wight,4,F,0.00000001
+E02003586,Isle of Wight 006,668,Isle of Wight,4,F,0.00000002
+E02003586,Isle of Wight 006,666,Isle of Wight,4,F,0.00711169
+E02003586,Isle of Wight 006,665,Isle of Wight,4,F,0.01350069
+E02003586,Isle of Wight 006,664,Isle of Wight,4,F,0.05521761
+E02003586,Isle of Wight 006,663,Isle of Wight,4,F,0.04722612
+E02003586,Isle of Wight 006,662,Isle of Wight,4,F,0.06946259
+E02003586,Isle of Wight 006,737,Isle of Wight,4,F,0.00000001
+E02003586,Isle of Wight 006,736,Isle of Wight,4,F,0.00000006
+E02003586,Isle of Wight 006,735,Isle of Wight,4,F,0.00000001
+E02003586,Isle of Wight 006,734,Isle of Wight,4,F,0.80748104
+E02003586,Isle of Wight 006,733,Isle of Wight,4,F,0.00000005
+E02003586,Isle of Wight 006,732,Isle of Wight,4,F,0.00000000
+E02003586,Isle of Wight 006,692,Isle of Wight,4,F,0.00000008
+E02003587,Isle of Wight 007,676,Isle of Wight,4,F,0.20907725
+E02003587,Isle of Wight 007,675,Isle of Wight,4,F,0.16875597
+E02003587,Isle of Wight 007,674,Isle of Wight,4,F,0.34212927
+E02003587,Isle of Wight 007,673,Isle of Wight,4,F,0.05347015
+E02003587,Isle of Wight 007,672,Isle of Wight,4,F,0.02208563
+E02003587,Isle of Wight 007,671,Isle of Wight,4,F,0.00000013
+E02003587,Isle of Wight 007,670,Isle of Wight,4,F,0.08009796
+E02003587,Isle of Wight 007,669,Isle of Wight,4,F,0.12438283
+E02003587,Isle of Wight 007,668,Isle of Wight,4,F,0.00000013
+E02003587,Isle of Wight 007,664,Isle of Wight,4,F,0.00000005
+E02003587,Isle of Wight 007,663,Isle of Wight,4,F,0.00000040
+E02003587,Isle of Wight 007,741,Isle of Wight,4,F,0.00000004
+E02003587,Isle of Wight 007,740,Isle of Wight,4,F,0.00000005
+E02003587,Isle of Wight 007,737,Isle of Wight,4,F,0.00000007
+E02003587,Isle of Wight 007,734,Isle of Wight,4,F,0.00000008
+E02003588,Isle of Wight 008,689,Isle of Wight,4,F,0.58737198
+E02003588,Isle of Wight 008,688,Isle of Wight,4,F,0.00000000
+E02003588,Isle of Wight 008,685,Isle of Wight,4,F,0.10901499
+E02003588,Isle of Wight 008,683,Isle of Wight,4,F,0.11855331
+E02003588,Isle of Wight 008,774,Isle of Wight,4,F,0.00000001
+E02003588,Isle of Wight 008,771,Isle of Wight,4,F,0.00000004
+E02003588,Isle of Wight 008,734,Isle of Wight,4,F,0.00000004
+E02003588,Isle of Wight 008,731,Isle of Wight,4,F,0.00001513
+E02003588,Isle of Wight 008,779,Isle of Wight,4,F,0.03590010
+E02003588,Isle of Wight 008,778,Isle of Wight,4,F,0.02224028
+E02003588,Isle of Wight 008,777,Isle of Wight,4,F,0.05498465
+E02003588,Isle of Wight 008,776,Isle of Wight,4,F,0.00011007
+E02003588,Isle of Wight 008,775,Isle of Wight,4,F,0.00000353
+E02003588,Isle of Wight 008,692,Isle of Wight,4,F,0.00000007
+E02003588,Isle of Wight 008,691,Isle of Wight,4,F,0.00000001
+E02003588,Isle of Wight 008,690,Isle of Wight,4,F,0.07180580
+E02003589,Isle of Wight 009,685,Isle of Wight,4,F,0.00000034
+E02003589,Isle of Wight 009,683,Isle of Wight,4,F,0.70030791
+E02003589,Isle of Wight 009,681,Isle of Wight,4,F,0.00000006
+E02003589,Isle of Wight 009,774,Isle of Wight,4,F,0.00000016
+E02003589,Isle of Wight 009,773,Isle of Wight,4,F,0.01444522
+E02003589,Isle of Wight 009,772,Isle of Wight,4,F,0.03752894
+E02003589,Isle of Wight 009,771,Isle of Wight,4,F,0.09413322
+E02003589,Isle of Wight 009,770,Isle of Wight,4,F,0.00000009
+E02003589,Isle of Wight 009,769,Isle of Wight,4,F,0.00000013
+E02003589,Isle of Wight 009,768,Isle of Wight,4,F,0.00000002
+E02003589,Isle of Wight 009,767,Isle of Wight,4,F,0.00000001
+E02003589,Isle of Wight 009,766,Isle of Wight,4,F,0.08753013
+E02003589,Isle of Wight 009,731,Isle of Wight,4,F,0.00000081
+E02003589,Isle of Wight 009,730,Isle of Wight,4,F,0.00000002
+E02003589,Isle of Wight 009,779,Isle of Wight,4,F,0.00000000
+E02003589,Isle of Wight 009,777,Isle of Wight,4,F,0.00000958
+E02003589,Isle of Wight 009,776,Isle of Wight,4,F,0.02792971
+E02003589,Isle of Wight 009,775,Isle of Wight,4,F,0.02135819
+E02003589,Isle of Wight 009,696,Isle of Wight,4,F,0.01675547
+E02003590,Isle of Wight 010,676,Isle of Wight,4,F,0.00000000
+E02003590,Isle of Wight 010,675,Isle of Wight,4,F,0.00000000
+E02003590,Isle of Wight 010,674,Isle of Wight,4,F,0.00000000
+E02003590,Isle of Wight 010,743,Isle of Wight,4,F,0.01769321
+E02003590,Isle of Wight 010,742,Isle of Wight,4,F,0.10911874
+E02003590,Isle of Wight 010,741,Isle of Wight,4,F,0.26453740
+E02003590,Isle of Wight 010,740,Isle of Wight,4,F,0.05041058
+E02003590,Isle of Wight 010,739,Isle of Wight,4,F,0.00000000
+E02003590,Isle of Wight 010,738,Isle of Wight,4,F,0.00000001
+E02003590,Isle of Wight 010,737,Isle of Wight,4,F,0.00000004
+E02003590,Isle of Wight 010,710,Isle of Wight,4,F,0.00000000
+E02003590,Isle of Wight 010,695,Isle of Wight,4,F,0.07007339
+E02003590,Isle of Wight 010,694,Isle of Wight,4,F,0.23882677
+E02003590,Isle of Wight 010,693,Isle of Wight,4,F,0.24933985
+E02003591,Isle of Wight 011,689,Isle of Wight,4,F,0.00000000
+E02003591,Isle of Wight 011,687,Isle of Wight,4,F,0.03349273
+E02003591,Isle of Wight 011,686,Isle of Wight,4,F,0.10451811
+E02003591,Isle of Wight 011,684,Isle of Wight,4,F,0.00000001
+E02003591,Isle of Wight 011,683,Isle of Wight,4,F,0.00000004
+E02003591,Isle of Wight 011,681,Isle of Wight,4,F,0.00000000
+E02003591,Isle of Wight 011,774,Isle of Wight,4,F,0.02341628
+E02003591,Isle of Wight 011,773,Isle of Wight,4,F,0.00432439
+E02003591,Isle of Wight 011,772,Isle of Wight,4,F,0.00000000
+E02003591,Isle of Wight 011,770,Isle of Wight,4,F,0.02484101
+E02003591,Isle of Wight 011,769,Isle of Wight,4,F,0.01543390
+E02003591,Isle of Wight 011,768,Isle of Wight,4,F,0.01639800
+E02003591,Isle of Wight 011,767,Isle of Wight,4,F,0.00000008
+E02003591,Isle of Wight 011,766,Isle of Wight,4,F,0.00000000
+E02003591,Isle of Wight 011,759,Isle of Wight,4,F,0.00000000
+E02003591,Isle of Wight 011,756,Isle of Wight,4,F,0.00000005
+E02003591,Isle of Wight 011,735,Isle of Wight,4,F,0.00000001
+E02003591,Isle of Wight 011,779,Isle of Wight,4,F,0.00000000
+E02003591,Isle of Wight 011,776,Isle of Wight,4,F,0.00417966
+E02003591,Isle of Wight 011,696,Isle of Wight,4,F,0.00000007
+E02003591,Isle of Wight 011,691,Isle of Wight,4,F,0.77339567
+E02003591,Isle of Wight 011,690,Isle of Wight,4,F,0.00000000
+E02003592,Isle of Wight 012,677,Isle of Wight,4,F,0.00000001
+E02003592,Isle of Wight 012,754,Isle of Wight,4,F,0.24760576
+E02003592,Isle of Wight 012,753,Isle of Wight,4,F,0.03193908
+E02003592,Isle of Wight 012,752,Isle of Wight,4,F,0.02915783
+E02003592,Isle of Wight 012,751,Isle of Wight,4,F,0.06330002
+E02003592,Isle of Wight 012,750,Isle of Wight,4,F,0.04779912
+E02003592,Isle of Wight 012,749,Isle of Wight,4,F,0.07378775
+E02003592,Isle of Wight 012,748,Isle of Wight,4,F,0.01480419
+E02003592,Isle of Wight 012,747,Isle of Wight,4,F,0.06286583
+E02003592,Isle of Wight 012,746,Isle of Wight,4,F,0.01594972
+E02003592,Isle of Wight 012,745,Isle of Wight,4,F,0.02306231
+E02003592,Isle of Wight 012,744,Isle of Wight,4,F,0.13445747
+E02003592,Isle of Wight 012,729,Isle of Wight,4,F,0.00000002
+E02003592,Isle of Wight 012,728,Isle of Wight,4,F,0.22090343
+E02003592,Isle of Wight 012,727,Isle of Wight,4,F,0.03436744
+E02003593,Isle of Wight 013,686,Isle of Wight,4,F,0.00000000
+E02003593,Isle of Wight 013,684,Isle of Wight,4,F,0.00000001
+E02003593,Isle of Wight 013,683,Isle of Wight,4,F,0.00000004
+E02003593,Isle of Wight 013,682,Isle of Wight,4,F,0.00000000
+E02003593,Isle of Wight 013,681,Isle of Wight,4,F,0.19752357
+E02003593,Isle of Wight 013,680,Isle of Wight,4,F,0.15763431
+E02003593,Isle of Wight 013,679,Isle of Wight,4,F,0.15644832
+E02003593,Isle of Wight 013,678,Isle of Wight,4,F,0.05899594
+E02003593,Isle of Wight 013,677,Isle of Wight,4,F,0.09813533
+E02003593,Isle of Wight 013,770,Isle of Wight,4,F,0.00000000
+E02003593,Isle of Wight 013,769,Isle of Wight,4,F,0.00000000
+E02003593,Isle of Wight 013,767,Isle of Wight,4,F,0.02260850
+E02003593,Isle of Wight 013,766,Isle of Wight,4,F,0.00000000
+E02003593,Isle of Wight 013,754,Isle of Wight,4,F,0.00000000
+E02003593,Isle of Wight 013,731,Isle of Wight,4,F,0.00000001
+E02003593,Isle of Wight 013,730,Isle of Wight,4,F,0.19191721
+E02003593,Isle of Wight 013,729,Isle of Wight,4,F,0.11673675
+E02003593,Isle of Wight 013,728,Isle of Wight,4,F,0.00000001
+E02003593,Isle of Wight 013,727,Isle of Wight,4,F,0.00000000
+E02003594,Isle of Wight 014,674,Isle of Wight,4,F,0.00000000
+E02003594,Isle of Wight 014,742,Isle of Wight,4,F,0.00000003
+E02003594,Isle of Wight 014,741,Isle of Wight,4,F,0.00000001
+E02003594,Isle of Wight 014,739,Isle of Wight,4,F,0.04936212
+E02003594,Isle of Wight 014,738,Isle of Wight,4,F,0.06437099
+E02003594,Isle of Wight 014,737,Isle of Wight,4,F,0.65631827
+E02003594,Isle of Wight 014,735,Isle of Wight,4,F,0.00000001
+E02003594,Isle of Wight 014,734,Isle of Wight,4,F,0.00000005
+E02003594,Isle of Wight 014,710,Isle of Wight,4,F,0.11171708
+E02003594,Isle of Wight 014,709,Isle of Wight,4,F,0.02976541
+E02003594,Isle of Wight 014,708,Isle of Wight,4,F,0.03032844
+E02003594,Isle of Wight 014,707,Isle of Wight,4,F,0.04831457
+E02003594,Isle of Wight 014,706,Isle of Wight,4,F,0.00000595
+E02003594,Isle of Wight 014,705,Isle of Wight,4,F,0.00981703
+E02003594,Isle of Wight 014,694,Isle of Wight,4,F,0.00000005
+E02003594,Isle of Wight 014,693,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,689,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,760,Isle of Wight,4,F,0.00000006
+E02003595,Isle of Wight 015,759,Isle of Wight,4,F,0.20932274
+E02003595,Isle of Wight 015,756,Isle of Wight,4,F,0.00000004
+E02003595,Isle of Wight 015,737,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,735,Isle of Wight,4,F,0.59306316
+E02003595,Isle of Wight 015,734,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,707,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,706,Isle of Wight,4,F,0.00516951
+E02003595,Isle of Wight 015,705,Isle of Wight,4,F,0.05504290
+E02003595,Isle of Wight 015,704,Isle of Wight,4,F,0.00000009
+E02003595,Isle of Wight 015,703,Isle of Wight,4,F,0.03022983
+E02003595,Isle of Wight 015,702,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,701,Isle of Wight,4,F,0.06504635
+E02003595,Isle of Wight 015,700,Isle of Wight,4,F,0.00000004
+E02003595,Isle of Wight 015,699,Isle of Wight,4,F,0.00000000
+E02003595,Isle of Wight 015,698,Isle of Wight,4,F,0.04212524
+E02003595,Isle of Wight 015,691,Isle of Wight,4,F,0.00000004
+E02003596,Isle of Wight 016,760,Isle of Wight,4,F,0.00000025
+E02003596,Isle of Wight 016,759,Isle of Wight,4,F,0.00000000
+E02003596,Isle of Wight 016,735,Isle of Wight,4,F,0.00000001
+E02003596,Isle of Wight 016,709,Isle of Wight,4,F,0.00006145
+E02003596,Isle of Wight 016,706,Isle of Wight,4,F,0.05068062
+E02003596,Isle of Wight 016,705,Isle of Wight,4,F,0.04207940
+E02003596,Isle of Wight 016,704,Isle of Wight,4,F,0.05705787
+E02003596,Isle of Wight 016,703,Isle of Wight,4,F,0.00998749
+E02003596,Isle of Wight 016,702,Isle of Wight,4,F,0.07959934
+E02003596,Isle of Wight 016,701,Isle of Wight,4,F,0.00718296
+E02003596,Isle of Wight 016,700,Isle of Wight,4,F,0.69854472
+E02003596,Isle of Wight 016,699,Isle of Wight,4,F,0.05467832
+E02003596,Isle of Wight 016,698,Isle of Wight,4,F,0.00000004
+E02003596,Isle of Wight 016,697,Isle of Wight,4,F,0.00012755
+E02003597,Isle of Wight 017,687,Isle of Wight,4,F,0.04000040
+E02003597,Isle of Wight 017,686,Isle of Wight,4,F,0.00000000
+E02003597,Isle of Wight 017,684,Isle of Wight,4,F,0.15033232
+E02003597,Isle of Wight 017,682,Isle of Wight,4,F,0.25790969
+E02003597,Isle of Wight 017,681,Isle of Wight,4,F,0.00000002
+E02003597,Isle of Wight 017,680,Isle of Wight,4,F,0.00000001
+E02003597,Isle of Wight 017,762,Isle of Wight,4,F,0.00000000
+E02003597,Isle of Wight 017,761,Isle of Wight,4,F,0.00000000
+E02003597,Isle of Wight 017,760,Isle of Wight,4,F,0.00000001
+E02003597,Isle of Wight 017,759,Isle of Wight,4,F,0.00000001
+E02003597,Isle of Wight 017,758,Isle of Wight,4,F,0.03631224
+E02003597,Isle of Wight 017,757,Isle of Wight,4,F,0.13203901
+E02003597,Isle of Wight 017,756,Isle of Wight,4,F,0.26457292
+E02003597,Isle of Wight 017,755,Isle of Wight,4,F,0.11883335
+E02003597,Isle of Wight 017,691,Isle of Wight,4,F,0.00000003
+E02003598,Isle of Wight 018,765,Isle of Wight,4,F,0.01349489
+E02003598,Isle of Wight 018,764,Isle of Wight,4,F,0.03093724
+E02003598,Isle of Wight 018,763,Isle of Wight,4,F,0.06946131
+E02003598,Isle of Wight 018,762,Isle of Wight,4,F,0.10459973
+E02003598,Isle of Wight 018,761,Isle of Wight,4,F,0.19998053
+E02003598,Isle of Wight 018,760,Isle of Wight,4,F,0.47838518
+E02003598,Isle of Wight 018,759,Isle of Wight,4,F,0.00000000
+E02003598,Isle of Wight 018,757,Isle of Wight,4,F,0.00000003
+E02003598,Isle of Wight 018,756,Isle of Wight,4,F,0.00000002
+E02003598,Isle of Wight 018,700,Isle of Wight,4,F,0.00002158
+E02003598,Isle of Wight 018,697,Isle of Wight,4,F,0.10311949
+E02004236,Christchurch 001,854,Christchurch,11,B,0.00000054
+E02004236,Christchurch 001,853,Christchurch,11,B,0.25621950
+E02004236,Christchurch 001,852,Christchurch,11,B,0.74377804
+E02004236,Christchurch 001,851,Christchurch,11,B,0.00000028
+E02004236,Christchurch 001,849,Christchurch,11,B,0.00000164
+E02004237,Christchurch 002,853,Christchurch,11,B,0.55995955
+E02004237,Christchurch 002,852,Christchurch,11,B,0.44003997
+E02004237,Christchurch 002,851,Christchurch,11,B,0.00000049
+E02004238,Christchurch 003,854,Christchurch,11,B,0.00000059
+E02004238,Christchurch 003,853,Christchurch,11,B,0.99999868
+E02004238,Christchurch 003,824,Christchurch,1,F,0.00000073
+E02004239,Christchurch 004,854,Christchurch,11,B,0.00000092
+E02004239,Christchurch 004,853,Christchurch,11,B,0.99999908
+E02004240,Christchurch 005,853,Christchurch,11,B,1.00000000
+E02004241,Christchurch 006,853,Christchurch,11,B,0.99999882
+E02004241,Christchurch 006,852,Christchurch,11,B,0.00000017
+E02004241,Christchurch 006,851,Christchurch,11,B,0.00000101
+E02004242,Christchurch 007,853,Christchurch,11,B,1.00000000
+E02004243,East Dorset 001,849,East Dorset,11,B,0.99999944
+E02004243,East Dorset 001,848,East Dorset,11,B,0.00000009
+E02004243,East Dorset 001,847,East Dorset,10,B,0.00000023
+E02004244,East Dorset 002,849,East Dorset,11,B,0.99999979
+E02004244,East Dorset 002,848,East Dorset,11,B,0.00000021
+E02004245,East Dorset 003,849,East Dorset,11,B,1.00000000
+E02004245,East Dorset 003,848,East Dorset,11,B,0.00000000
+E02004246,East Dorset 004,854,East Dorset,11,B,0.00000057
+E02004246,East Dorset 004,852,East Dorset,11,B,0.00000021
+E02004246,East Dorset 004,849,East Dorset,11,B,0.99999916
+E02004246,East Dorset 004,848,East Dorset,11,B,0.00000006
+E02004247,East Dorset 005,850,East Dorset,11,B,0.00000005
+E02004247,East Dorset 005,849,East Dorset,11,B,0.99999704
+E02004248,East Dorset 006,849,East Dorset,11,B,1.00000000
+E02004249,East Dorset 007,849,East Dorset,11,B,1.00000000
+E02004250,East Dorset 008,852,East Dorset,11,B,0.00000011
+E02004250,East Dorset 008,849,East Dorset,11,B,0.99999989
+E02004251,East Dorset 009,850,East Dorset,11,B,0.00000259
+E02004251,East Dorset 009,849,East Dorset,11,B,0.99999741
+E02004252,East Dorset 010,850,East Dorset,11,B,0.00001320
+E02004252,East Dorset 010,849,East Dorset,11,B,0.99998680
+E02004253,East Dorset 011,852,East Dorset,11,B,0.00000021
+E02004253,East Dorset 011,851,East Dorset,11,B,0.00000448
+E02004253,East Dorset 011,850,East Dorset,11,B,0.00000286
+E02004253,East Dorset 011,849,East Dorset,11,B,0.99999245
+E02004254,East Dorset 012,850,East Dorset,11,B,0.00002227
+E02004254,East Dorset 012,849,East Dorset,11,B,0.99997269
+E02004256,North Dorset 002,847,North Dorset,10,B,0.00000063
+E02004257,North Dorset 003,847,North Dorset,10,B,0.00000266
+E02004259,North Dorset 005,847,North Dorset,10,B,0.00000011
+E02004260,North Dorset 006,849,North Dorset,11,B,0.00000181
+E02004260,North Dorset 006,847,North Dorset,10,B,0.00000021
+E02004262,North Dorset 008,849,North Dorset,11,B,0.00000014
+E02004263,Purbeck 001,849,Purbeck,11,B,0.00000113
+E02004264,Purbeck 002,850,Purbeck,11,B,0.00000139
+E02004264,Purbeck 002,849,Purbeck,11,B,0.00000070
+E02004265,Purbeck 003,850,Purbeck,11,B,0.00000000
+E02004675,Basingstoke and Deane 001,840,Basingstoke and Deane,5,B,0.00000099
+E02004675,Basingstoke and Deane 001,839,Basingstoke and Deane,5,B,0.99999867
+E02004676,Basingstoke and Deane 002,839,Basingstoke and Deane,5,B,0.99999939
+E02004677,Basingstoke and Deane 003,843,Basingstoke and Deane,12,B,0.00000001
+E02004677,Basingstoke and Deane 003,842,Basingstoke and Deane,5,B,0.99999951
+E02004677,Basingstoke and Deane 003,841,Basingstoke and Deane,5,B,0.00000002
+E02004677,Basingstoke and Deane 003,840,Basingstoke and Deane,5,B,0.00000020
+E02004678,Basingstoke and Deane 004,842,Basingstoke and Deane,5,B,0.00000021
+E02004678,Basingstoke and Deane 004,841,Basingstoke and Deane,5,B,0.00000021
+E02004678,Basingstoke and Deane 004,840,Basingstoke and Deane,5,B,0.99999775
+E02004678,Basingstoke and Deane 004,839,Basingstoke and Deane,5,B,0.00000018
+E02004679,Basingstoke and Deane 005,841,Basingstoke and Deane,5,B,0.00000010
+E02004679,Basingstoke and Deane 005,840,Basingstoke and Deane,5,B,0.00000010
+E02004679,Basingstoke and Deane 005,839,Basingstoke and Deane,5,B,0.99999773
+E02004679,Basingstoke and Deane 005,838,Basingstoke and Deane,5,B,0.00000072
+E02004680,Basingstoke and Deane 006,839,Basingstoke and Deane,5,B,0.00000227
+E02004680,Basingstoke and Deane 006,838,Basingstoke and Deane,5,B,0.99999773
+E02004681,Basingstoke and Deane 007,839,Basingstoke and Deane,5,B,0.00016872
+E02004681,Basingstoke and Deane 007,838,Basingstoke and Deane,5,B,0.99983128
+E02004682,Basingstoke and Deane 008,839,Basingstoke and Deane,5,B,0.00000022
+E02004682,Basingstoke and Deane 008,838,Basingstoke and Deane,5,B,0.99999978
+E02004683,Basingstoke and Deane 009,838,Basingstoke and Deane,5,B,1.00000000
+E02004684,Basingstoke and Deane 010,841,Basingstoke and Deane,5,B,0.00000060
+E02004684,Basingstoke and Deane 010,839,Basingstoke and Deane,5,B,0.00000123
+E02004684,Basingstoke and Deane 010,838,Basingstoke and Deane,5,B,0.99999816
+E02004685,Basingstoke and Deane 011,838,Basingstoke and Deane,5,B,0.99999969
+E02004685,Basingstoke and Deane 011,837,Basingstoke and Deane,13,B,0.00000031
+E02004686,Basingstoke and Deane 012,838,Basingstoke and Deane,5,B,1.00000000
+E02004687,Basingstoke and Deane 013,841,Basingstoke and Deane,5,B,0.00000158
+E02004687,Basingstoke and Deane 013,838,Basingstoke and Deane,5,B,0.99999842
+E02004688,Basingstoke and Deane 014,838,Basingstoke and Deane,5,B,1.00000000
+E02004689,Basingstoke and Deane 015,841,Basingstoke and Deane,5,B,0.99999519
+E02004689,Basingstoke and Deane 015,840,Basingstoke and Deane,5,B,0.00000023
+E02004689,Basingstoke and Deane 015,839,Basingstoke and Deane,5,B,0.00000417
+E02004689,Basingstoke and Deane 015,838,Basingstoke and Deane,5,B,0.00000040
+E02004690,Basingstoke and Deane 016,838,Basingstoke and Deane,5,B,0.99999890
+E02004690,Basingstoke and Deane 016,837,Basingstoke and Deane,13,B,0.00000110
+E02004691,Basingstoke and Deane 017,424,Basingstoke and Deane,3,F,0.00000740
+E02004691,Basingstoke and Deane 017,423,Basingstoke and Deane,3,F,0.00000005
+E02004691,Basingstoke and Deane 017,841,Basingstoke and Deane,5,B,0.00000008
+E02004691,Basingstoke and Deane 017,839,Basingstoke and Deane,5,B,0.00000005
+E02004691,Basingstoke and Deane 017,838,Basingstoke and Deane,5,B,0.19323328
+E02004691,Basingstoke and Deane 017,837,Basingstoke and Deane,13,B,0.80675758
+E02004691,Basingstoke and Deane 017,836,Basingstoke and Deane,13,B,0.00000017
+E02004691,Basingstoke and Deane 017,806,Basingstoke and Deane,3,F,0.00000002
+E02004692,Basingstoke and Deane 018,841,Basingstoke and Deane,5,B,0.00000102
+E02004692,Basingstoke and Deane 018,838,Basingstoke and Deane,5,B,0.99999898
+E02004693,Basingstoke and Deane 019,838,Basingstoke and Deane,5,B,0.99999944
+E02004693,Basingstoke and Deane 019,837,Basingstoke and Deane,13,B,0.00000056
+E02004694,Basingstoke and Deane 020,420,Basingstoke and Deane,3,F,0.00000000
+E02004694,Basingstoke and Deane 020,843,Basingstoke and Deane,12,B,0.00000022
+E02004694,Basingstoke and Deane 020,842,Basingstoke and Deane,5,B,0.99999931
+E02004694,Basingstoke and Deane 020,841,Basingstoke and Deane,5,B,0.00000029
+E02004694,Basingstoke and Deane 020,807,Basingstoke and Deane,3,F,0.00000017
+E02004695,Basingstoke and Deane 021,841,Basingstoke and Deane,5,B,0.00000120
+E02004695,Basingstoke and Deane 021,838,Basingstoke and Deane,5,B,0.99999766
+E02004695,Basingstoke and Deane 021,837,Basingstoke and Deane,13,B,0.00000114
+E02004696,Basingstoke and Deane 022,424,Basingstoke and Deane,3,F,0.00000035
+E02004696,Basingstoke and Deane 022,420,Basingstoke and Deane,3,F,0.00000002
+E02004696,Basingstoke and Deane 022,842,Basingstoke and Deane,5,B,0.00000033
+E02004696,Basingstoke and Deane 022,841,Basingstoke and Deane,5,B,0.99999894
+E02004696,Basingstoke and Deane 022,840,Basingstoke and Deane,5,B,0.00000016
+E02004696,Basingstoke and Deane 022,838,Basingstoke and Deane,5,B,0.00000004
+E02004696,Basingstoke and Deane 022,837,Basingstoke and Deane,13,B,0.00000016
+E02004697,East Hampshire 001,837,East Hampshire,13,B,0.00000009
+E02004697,East Hampshire 001,836,East Hampshire,13,B,0.47928080
+E02004697,East Hampshire 001,835,East Hampshire,13,B,0.52071817
+E02004698,East Hampshire 002,836,East Hampshire,13,B,1.00000000
+E02004699,East Hampshire 003,836,East Hampshire,13,B,0.99999898
+E02004699,East Hampshire 003,835,East Hampshire,13,B,0.00000102
+E02004700,East Hampshire 004,835,East Hampshire,13,B,0.00000067
+E02004700,East Hampshire 004,834,East Hampshire,13,B,0.99999850
+E02004702,East Hampshire 006,834,East Hampshire,13,B,1.00000000
+E02004703,East Hampshire 007,837,East Hampshire,13,B,0.00000010
+E02004703,East Hampshire 007,836,East Hampshire,13,B,0.59738456
+E02004703,East Hampshire 007,835,East Hampshire,13,B,0.00000011
+E02004703,East Hampshire 007,806,East Hampshire,3,F,0.00000016
+E02004703,East Hampshire 007,805,East Hampshire,3,F,0.00000012
+E02004703,East Hampshire 007,804,East Hampshire,3,F,0.00000003
+E02004703,East Hampshire 007,801,East Hampshire,6,F,0.40261471
+E02004703,East Hampshire 007,796,East Hampshire,6,F,0.00000015
+E02004703,East Hampshire 007,795,East Hampshire,6,F,0.00000006
+E02004704,East Hampshire 008,836,East Hampshire,13,B,0.00000014
+E02004704,East Hampshire 008,835,East Hampshire,13,B,0.72620037
+E02004704,East Hampshire 008,834,East Hampshire,13,B,0.27379901
+E02004704,East Hampshire 008,801,East Hampshire,6,F,0.00000008
+E02004704,East Hampshire 008,795,East Hampshire,6,F,0.00000034
+E02004704,East Hampshire 008,793,East Hampshire,6,F,0.00000005
+E02004705,East Hampshire 009,834,East Hampshire,13,B,0.99999927
+E02004705,East Hampshire 009,833,East Hampshire,9,B,0.00000030
+E02004705,East Hampshire 009,793,East Hampshire,6,F,0.00000021
+E02004706,East Hampshire 010,835,East Hampshire,13,B,0.00000036
+E02004706,East Hampshire 010,834,East Hampshire,13,B,0.00000023
+E02004706,East Hampshire 010,801,East Hampshire,6,F,0.00000017
+E02004706,East Hampshire 010,796,East Hampshire,6,F,0.00000056
+E02004706,East Hampshire 010,795,East Hampshire,6,F,0.99999844
+E02004706,East Hampshire 010,793,East Hampshire,6,F,0.00000024
+E02004707,East Hampshire 011,661,East Hampshire,2,F,0.00000004
+E02004707,East Hampshire 011,649,East Hampshire,2,F,0.00000005
+E02004707,East Hampshire 011,648,East Hampshire,2,F,0.00000000
+E02004707,East Hampshire 011,804,East Hampshire,3,F,0.00000009
+E02004707,East Hampshire 011,802,East Hampshire,2,F,0.00000004
+E02004707,East Hampshire 011,801,East Hampshire,6,F,0.00000013
+E02004707,East Hampshire 011,800,East Hampshire,6,F,0.36675048
+E02004707,East Hampshire 011,799,East Hampshire,6,F,0.17495868
+E02004707,East Hampshire 011,798,East Hampshire,6,F,0.00697440
+E02004707,East Hampshire 011,797,East Hampshire,6,F,0.02617430
+E02004707,East Hampshire 011,796,East Hampshire,6,F,0.42514152
+E02004707,East Hampshire 011,795,East Hampshire,6,F,0.00000015
+E02004707,East Hampshire 011,793,East Hampshire,6,F,0.00000013
+E02004708,East Hampshire 012,799,East Hampshire,6,F,0.00000140
+E02004708,East Hampshire 012,798,East Hampshire,6,F,0.53198185
+E02004708,East Hampshire 012,797,East Hampshire,6,F,0.46801603
+E02004708,East Hampshire 012,796,East Hampshire,6,F,0.00000052
+E02004708,East Hampshire 012,793,East Hampshire,6,F,0.00000020
+E02004709,East Hampshire 013,661,East Hampshire,2,F,0.16554652
+E02004709,East Hampshire 013,660,East Hampshire,2,F,0.03684739
+E02004709,East Hampshire 013,659,East Hampshire,2,F,0.02227730
+E02004709,East Hampshire 013,658,East Hampshire,2,F,0.01670664
+E02004709,East Hampshire 013,657,East Hampshire,2,F,0.00000041
+E02004709,East Hampshire 013,650,East Hampshire,2,F,0.00000045
+E02004709,East Hampshire 013,649,East Hampshire,2,F,0.39526658
+E02004709,East Hampshire 013,648,East Hampshire,2,F,0.36335366
+E02004709,East Hampshire 013,647,East Hampshire,2,F,0.00000023
+E02004709,East Hampshire 013,802,East Hampshire,2,F,0.00000003
+E02004709,East Hampshire 013,800,East Hampshire,6,F,0.00000021
+E02004709,East Hampshire 013,799,East Hampshire,6,F,0.00000019
+E02004709,East Hampshire 013,793,East Hampshire,6,F,0.00000007
+E02004709,East Hampshire 013,792,East Hampshire,7,F,0.00000032
+E02004710,East Hampshire 014,661,East Hampshire,2,F,0.00000040
+E02004710,East Hampshire 014,659,East Hampshire,2,F,0.00000015
+E02004710,East Hampshire 014,658,East Hampshire,2,F,0.02600026
+E02004710,East Hampshire 014,657,East Hampshire,2,F,0.70920194
+E02004710,East Hampshire 014,656,East Hampshire,2,F,0.08517952
+E02004710,East Hampshire 014,655,East Hampshire,2,F,0.05440121
+E02004710,East Hampshire 014,654,East Hampshire,2,F,0.07574081
+E02004710,East Hampshire 014,653,East Hampshire,2,F,0.01449596
+E02004710,East Hampshire 014,652,East Hampshire,2,F,0.00000012
+E02004710,East Hampshire 014,650,East Hampshire,2,F,0.00000018
+E02004710,East Hampshire 014,370,East Hampshire,2,F,0.00000059
+E02004710,East Hampshire 014,961,East Hampshire,2,F,0.03497834
+E02004710,East Hampshire 014,802,East Hampshire,2,F,0.00000029
+E02004710,East Hampshire 014,632,East Hampshire,2,F,0.00000004
+E02004710,East Hampshire 014,631,East Hampshire,2,F,0.00000020
+E02004712,Eastleigh 001,436,Eastleigh,3,F,0.00000086
+E02004712,Eastleigh 001,260,Eastleigh,3,F,0.00000007
+E02004712,Eastleigh 001,259,Eastleigh,3,F,0.00000028
+E02004712,Eastleigh 001,258,Eastleigh,3,F,0.35439534
+E02004712,Eastleigh 001,257,Eastleigh,3,F,0.16894845
+E02004712,Eastleigh 001,256,Eastleigh,3,F,0.24965404
+E02004712,Eastleigh 001,255,Eastleigh,3,F,0.05986903
+E02004712,Eastleigh 001,252,Eastleigh,3,F,0.16706640
+E02004712,Eastleigh 001,232,Eastleigh,3,F,0.00006506
+E02004712,Eastleigh 001,266,Eastleigh,3,F,0.00000047
+E02004713,Eastleigh 002,368,Eastleigh,3,F,0.00000123
+E02004713,Eastleigh 002,436,Eastleigh,3,F,0.00000003
+E02004713,Eastleigh 002,256,Eastleigh,3,F,0.06973899
+E02004713,Eastleigh 002,255,Eastleigh,3,F,0.15346523
+E02004713,Eastleigh 002,254,Eastleigh,3,F,0.01344481
+E02004713,Eastleigh 002,253,Eastleigh,3,F,0.13028817
+E02004713,Eastleigh 002,251,Eastleigh,3,F,0.00000030
+E02004713,Eastleigh 002,240,Eastleigh,3,F,0.00000010
+E02004713,Eastleigh 002,235,Eastleigh,3,F,0.09211592
+E02004713,Eastleigh 002,234,Eastleigh,3,F,0.17528078
+E02004713,Eastleigh 002,233,Eastleigh,3,F,0.10910132
+E02004713,Eastleigh 002,232,Eastleigh,3,F,0.17881726
+E02004713,Eastleigh 002,920,Eastleigh,3,F,0.07774588
+E02004714,Eastleigh 003,262,Eastleigh,3,F,0.00000042
+E02004714,Eastleigh 003,261,Eastleigh,3,F,0.00000206
+E02004714,Eastleigh 003,259,Eastleigh,3,F,0.00000097
+E02004714,Eastleigh 003,257,Eastleigh,3,F,0.09537374
+E02004714,Eastleigh 003,255,Eastleigh,3,F,0.03014377
+E02004714,Eastleigh 003,254,Eastleigh,3,F,0.11715844
+E02004714,Eastleigh 003,253,Eastleigh,3,F,0.00000054
+E02004714,Eastleigh 003,252,Eastleigh,3,F,0.18003846
+E02004714,Eastleigh 003,251,Eastleigh,3,F,0.14493261
+E02004714,Eastleigh 003,250,Eastleigh,3,F,0.26660151
+E02004714,Eastleigh 003,249,Eastleigh,3,F,0.13075912
+E02004714,Eastleigh 003,248,Eastleigh,3,F,0.03498774
+E02004714,Eastleigh 003,247,Eastleigh,3,F,0.00000045
+E02004714,Eastleigh 003,240,Eastleigh,3,F,0.00000016
+E02004714,Eastleigh 003,959,Eastleigh,3,F,0.00000003
+E02004715,Eastleigh 004,368,Eastleigh,3,F,0.00000089
+E02004715,Eastleigh 004,253,Eastleigh,3,F,0.00000000
+E02004715,Eastleigh 004,251,Eastleigh,3,F,0.00000016
+E02004715,Eastleigh 004,241,Eastleigh,3,F,0.00000005
+E02004715,Eastleigh 004,240,Eastleigh,3,F,0.09660433
+E02004715,Eastleigh 004,238,Eastleigh,3,F,0.06985971
+E02004715,Eastleigh 004,237,Eastleigh,3,F,0.00385993
+E02004715,Eastleigh 004,236,Eastleigh,3,F,0.17283934
+E02004715,Eastleigh 004,235,Eastleigh,3,F,0.10888958
+E02004715,Eastleigh 004,234,Eastleigh,3,F,0.08455057
+E02004715,Eastleigh 004,233,Eastleigh,3,F,0.12266123
+E02004715,Eastleigh 004,231,Eastleigh,3,F,0.03792531
+E02004715,Eastleigh 004,230,Eastleigh,3,F,0.30280892
+E02004716,Eastleigh 005,368,Eastleigh,3,F,0.00000023
+E02004716,Eastleigh 005,367,Eastleigh,3,F,0.00000004
+E02004716,Eastleigh 005,237,Eastleigh,3,F,0.00000049
+E02004716,Eastleigh 005,231,Eastleigh,3,F,0.30184848
+E02004716,Eastleigh 005,230,Eastleigh,3,F,0.12802392
+E02004716,Eastleigh 005,229,Eastleigh,3,F,0.23718489
+E02004716,Eastleigh 005,228,Eastleigh,3,F,0.08685849
+E02004716,Eastleigh 005,227,Eastleigh,3,F,0.00000028
+E02004716,Eastleigh 005,226,Eastleigh,3,F,0.03176118
+E02004716,Eastleigh 005,224,Eastleigh,3,F,0.00000001
+E02004716,Eastleigh 005,223,Eastleigh,3,F,0.00000022
+E02004716,Eastleigh 005,887,Eastleigh,3,F,0.00004431
+E02004716,Eastleigh 005,923,Eastleigh,3,F,0.01068248
+E02004716,Eastleigh 005,921,Eastleigh,3,F,0.20359499
+E02004717,Eastleigh 006,262,Eastleigh,3,F,0.00010503
+E02004717,Eastleigh 006,251,Eastleigh,3,F,0.00000002
+E02004717,Eastleigh 006,249,Eastleigh,3,F,0.02096145
+E02004717,Eastleigh 006,248,Eastleigh,3,F,0.06038589
+E02004717,Eastleigh 006,247,Eastleigh,3,F,0.04498986
+E02004717,Eastleigh 006,246,Eastleigh,3,F,0.06222551
+E02004717,Eastleigh 006,245,Eastleigh,3,F,0.06902201
+E02004717,Eastleigh 006,244,Eastleigh,3,F,0.18985840
+E02004717,Eastleigh 006,243,Eastleigh,3,F,0.12119334
+E02004717,Eastleigh 006,242,Eastleigh,3,F,0.00000042
+E02004717,Eastleigh 006,241,Eastleigh,3,F,0.03690125
+E02004717,Eastleigh 006,240,Eastleigh,3,F,0.07967793
+E02004717,Eastleigh 006,238,Eastleigh,3,F,0.00000012
+E02004717,Eastleigh 006,223,Eastleigh,3,F,0.00000067
+E02004717,Eastleigh 006,99,Eastleigh,3,F,0.00000016
+E02004717,Eastleigh 006,97,Eastleigh,3,F,0.00000024
+E02004717,Eastleigh 006,888,Eastleigh,3,F,0.00042707
+E02004717,Eastleigh 006,884,Eastleigh,3,F,0.09533018
+E02004717,Eastleigh 006,952,Eastleigh,3,F,0.02666568
+E02004718,Eastleigh 007,246,Eastleigh,3,F,0.00000046
+E02004718,Eastleigh 007,244,Eastleigh,3,F,0.00000074
+E02004718,Eastleigh 007,243,Eastleigh,3,F,0.00000000
+E02004718,Eastleigh 007,242,Eastleigh,3,F,0.11370465
+E02004718,Eastleigh 007,241,Eastleigh,3,F,0.05901492
+E02004718,Eastleigh 007,240,Eastleigh,3,F,0.00000002
+E02004718,Eastleigh 007,239,Eastleigh,3,F,0.06084205
+E02004718,Eastleigh 007,238,Eastleigh,3,F,0.06177699
+E02004718,Eastleigh 007,237,Eastleigh,3,F,0.15807655
+E02004718,Eastleigh 007,236,Eastleigh,3,F,0.03856853
+E02004718,Eastleigh 007,235,Eastleigh,3,F,0.00000018
+E02004718,Eastleigh 007,233,Eastleigh,3,F,0.00000002
+E02004718,Eastleigh 007,231,Eastleigh,3,F,0.00000094
+E02004718,Eastleigh 007,230,Eastleigh,3,F,0.00000026
+E02004718,Eastleigh 007,223,Eastleigh,3,F,0.00000045
+E02004718,Eastleigh 007,888,Eastleigh,3,F,0.17276827
+E02004718,Eastleigh 007,887,Eastleigh,3,F,0.32186811
+E02004718,Eastleigh 007,952,Eastleigh,3,F,0.00673564
+E02004719,Eastleigh 008,387,Eastleigh,2,F,0.00000021
+E02004719,Eastleigh 008,383,Eastleigh,2,F,0.00000030
+E02004719,Eastleigh 008,367,Eastleigh,3,F,0.00000024
+E02004719,Eastleigh 008,422,Eastleigh,2,F,0.00000055
+E02004719,Eastleigh 008,231,Eastleigh,3,F,0.00000016
+E02004719,Eastleigh 008,230,Eastleigh,3,F,0.00000001
+E02004719,Eastleigh 008,229,Eastleigh,3,F,0.04577744
+E02004719,Eastleigh 008,228,Eastleigh,3,F,0.00753740
+E02004719,Eastleigh 008,227,Eastleigh,3,F,0.03578325
+E02004719,Eastleigh 008,226,Eastleigh,3,F,0.17086161
+E02004719,Eastleigh 008,225,Eastleigh,3,F,0.23843267
+E02004719,Eastleigh 008,224,Eastleigh,3,F,0.17008004
+E02004719,Eastleigh 008,223,Eastleigh,3,F,0.00000029
+E02004719,Eastleigh 008,203,Eastleigh,3,F,0.00000007
+E02004719,Eastleigh 008,883,Eastleigh,3,F,0.00811752
+E02004719,Eastleigh 008,955,Eastleigh,3,F,0.14428419
+E02004719,Eastleigh 008,925,Eastleigh,3,F,0.01353674
+E02004719,Eastleigh 008,924,Eastleigh,3,F,0.00578096
+E02004719,Eastleigh 008,923,Eastleigh,3,F,0.05991426
+E02004719,Eastleigh 008,922,Eastleigh,3,F,0.05519060
+E02004719,Eastleigh 008,921,Eastleigh,3,F,0.04470151
+E02004720,Eastleigh 009,243,Eastleigh,3,F,0.00000034
+E02004720,Eastleigh 009,231,Eastleigh,3,F,0.00000008
+E02004720,Eastleigh 009,229,Eastleigh,3,F,0.00000003
+E02004720,Eastleigh 009,224,Eastleigh,3,F,0.00000014
+E02004720,Eastleigh 009,223,Eastleigh,3,F,0.34578327
+E02004720,Eastleigh 009,222,Eastleigh,3,F,0.02660455
+E02004720,Eastleigh 009,221,Eastleigh,3,F,0.05238891
+E02004720,Eastleigh 009,220,Eastleigh,3,F,0.03565134
+E02004720,Eastleigh 009,219,Eastleigh,3,F,0.05714402
+E02004720,Eastleigh 009,218,Eastleigh,3,F,0.12316931
+E02004720,Eastleigh 009,217,Eastleigh,3,F,0.00000024
+E02004720,Eastleigh 009,210,Eastleigh,3,F,0.00000009
+E02004720,Eastleigh 009,209,Eastleigh,3,F,0.00000003
+E02004720,Eastleigh 009,207,Eastleigh,3,F,0.10222630
+E02004720,Eastleigh 009,204,Eastleigh,3,F,0.00000006
+E02004720,Eastleigh 009,203,Eastleigh,3,F,0.00000003
+E02004720,Eastleigh 009,97,Eastleigh,3,F,0.00000004
+E02004720,Eastleigh 009,96,Eastleigh,3,F,0.00000009
+E02004720,Eastleigh 009,49,Eastleigh,3,F,0.00000017
+E02004720,Eastleigh 009,48,Eastleigh,3,F,0.00000005
+E02004720,Eastleigh 009,47,Eastleigh,3,F,0.00000004
+E02004720,Eastleigh 009,46,Eastleigh,3,F,0.00000013
+E02004720,Eastleigh 009,43,Eastleigh,3,F,0.00000003
+E02004720,Eastleigh 009,888,Eastleigh,3,F,0.00000002
+E02004720,Eastleigh 009,887,Eastleigh,3,F,0.00000004
+E02004720,Eastleigh 009,883,Eastleigh,3,F,0.06120115
+E02004720,Eastleigh 009,954,Eastleigh,3,F,0.13250584
+E02004720,Eastleigh 009,953,Eastleigh,3,F,0.00000003
+E02004720,Eastleigh 009,925,Eastleigh,3,F,0.00603494
+E02004720,Eastleigh 009,924,Eastleigh,3,F,0.05728865
+E02004720,Eastleigh 009,923,Eastleigh,3,F,0.00000005
+E02004721,Eastleigh 010,383,Eastleigh,2,F,0.00000086
+E02004721,Eastleigh 010,382,Eastleigh,2,F,0.00000032
+E02004721,Eastleigh 010,381,Eastleigh,2,F,0.00000006
+E02004721,Eastleigh 010,224,Eastleigh,3,F,0.00000013
+E02004721,Eastleigh 010,223,Eastleigh,3,F,0.00000027
+E02004721,Eastleigh 010,209,Eastleigh,3,F,0.00000007
+E02004721,Eastleigh 010,208,Eastleigh,3,F,0.01240168
+E02004721,Eastleigh 010,207,Eastleigh,3,F,0.05624615
+E02004721,Eastleigh 010,206,Eastleigh,3,F,0.07174957
+E02004721,Eastleigh 010,205,Eastleigh,3,F,0.05087733
+E02004721,Eastleigh 010,204,Eastleigh,3,F,0.06347059
+E02004721,Eastleigh 010,203,Eastleigh,3,F,0.28088092
+E02004721,Eastleigh 010,202,Eastleigh,3,F,0.00000017
+E02004721,Eastleigh 010,201,Eastleigh,3,F,0.07060975
+E02004721,Eastleigh 010,886,Eastleigh,3,F,0.09632008
+E02004721,Eastleigh 010,885,Eastleigh,3,F,0.15010722
+E02004721,Eastleigh 010,964,Eastleigh,2,F,0.00004311
+E02004721,Eastleigh 010,963,Eastleigh,2,F,0.00000010
+E02004721,Eastleigh 010,962,Eastleigh,2,F,0.00000002
+E02004721,Eastleigh 010,953,Eastleigh,3,F,0.10528423
+E02004721,Eastleigh 010,935,Eastleigh,2,F,0.04200738
+E02004722,Eastleigh 011,380,Eastleigh,2,F,0.00000045
+E02004722,Eastleigh 011,363,Eastleigh,2,F,0.00018022
+E02004722,Eastleigh 011,218,Eastleigh,3,F,0.00000002
+E02004722,Eastleigh 011,216,Eastleigh,3,F,0.00000018
+E02004722,Eastleigh 011,215,Eastleigh,3,F,0.00000006
+E02004722,Eastleigh 011,214,Eastleigh,3,F,0.00000000
+E02004722,Eastleigh 011,212,Eastleigh,3,F,0.00927311
+E02004722,Eastleigh 011,211,Eastleigh,3,F,0.06202622
+E02004722,Eastleigh 011,210,Eastleigh,3,F,0.03761051
+E02004722,Eastleigh 011,209,Eastleigh,3,F,0.08273026
+E02004722,Eastleigh 011,208,Eastleigh,3,F,0.03703457
+E02004722,Eastleigh 011,207,Eastleigh,3,F,0.00000087
+E02004722,Eastleigh 011,206,Eastleigh,3,F,0.03231597
+E02004722,Eastleigh 011,203,Eastleigh,3,F,0.00000011
+E02004722,Eastleigh 011,202,Eastleigh,3,F,0.11886925
+E02004722,Eastleigh 011,201,Eastleigh,3,F,0.61991263
+E02004722,Eastleigh 011,200,Eastleigh,3,F,0.00000022
+E02004722,Eastleigh 011,886,Eastleigh,3,F,0.00004515
+E02004722,Eastleigh 011,962,Eastleigh,2,F,0.00000022
+E02004723,Eastleigh 012,365,Eastleigh,2,F,0.00006860
+E02004723,Eastleigh 012,364,Eastleigh,2,F,0.00003980
+E02004723,Eastleigh 012,363,Eastleigh,2,F,0.00010321
+E02004723,Eastleigh 012,218,Eastleigh,3,F,0.00000020
+E02004723,Eastleigh 012,217,Eastleigh,3,F,0.15503358
+E02004723,Eastleigh 012,216,Eastleigh,3,F,0.06582089
+E02004723,Eastleigh 012,215,Eastleigh,3,F,0.11740183
+E02004723,Eastleigh 012,214,Eastleigh,3,F,0.09801733
+E02004723,Eastleigh 012,213,Eastleigh,3,F,0.08609141
+E02004723,Eastleigh 012,212,Eastleigh,3,F,0.06489609
+E02004723,Eastleigh 012,211,Eastleigh,3,F,0.00000048
+E02004723,Eastleigh 012,210,Eastleigh,3,F,0.08392547
+E02004723,Eastleigh 012,209,Eastleigh,3,F,0.00000010
+E02004723,Eastleigh 012,202,Eastleigh,3,F,0.00000051
+E02004723,Eastleigh 012,201,Eastleigh,3,F,0.00003567
+E02004723,Eastleigh 012,200,Eastleigh,3,F,0.23998722
+E02004723,Eastleigh 012,199,Eastleigh,3,F,0.00000012
+E02004723,Eastleigh 012,198,Eastleigh,3,F,0.00000021
+E02004723,Eastleigh 012,197,Eastleigh,3,F,0.00161734
+E02004723,Eastleigh 012,194,Eastleigh,3,F,0.00000015
+E02004723,Eastleigh 012,926,Eastleigh,3,F,0.08695981
+E02004724,Eastleigh 013,365,Eastleigh,2,F,0.00016487
+E02004724,Eastleigh 013,218,Eastleigh,3,F,0.00000009
+E02004724,Eastleigh 013,217,Eastleigh,3,F,0.04461490
+E02004724,Eastleigh 013,214,Eastleigh,3,F,0.00000018
+E02004724,Eastleigh 013,213,Eastleigh,3,F,0.00000012
+E02004724,Eastleigh 013,200,Eastleigh,3,F,0.00000042
+E02004724,Eastleigh 013,199,Eastleigh,3,F,0.08903188
+E02004724,Eastleigh 013,198,Eastleigh,3,F,0.13730401
+E02004724,Eastleigh 013,197,Eastleigh,3,F,0.13025549
+E02004724,Eastleigh 013,196,Eastleigh,3,F,0.08042367
+E02004724,Eastleigh 013,195,Eastleigh,3,F,0.19061348
+E02004724,Eastleigh 013,194,Eastleigh,3,F,0.31157361
+E02004724,Eastleigh 013,193,Eastleigh,3,F,0.00000012
+E02004724,Eastleigh 013,192,Eastleigh,3,F,0.00000000
+E02004724,Eastleigh 013,191,Eastleigh,3,F,0.00000022
+E02004724,Eastleigh 013,43,Eastleigh,3,F,0.00000016
+E02004724,Eastleigh 013,42,Eastleigh,3,F,0.00000018
+E02004724,Eastleigh 013,41,Eastleigh,3,F,0.00000015
+E02004724,Eastleigh 013,40,Eastleigh,3,F,0.00000000
+E02004724,Eastleigh 013,39,Eastleigh,3,F,0.00000009
+E02004724,Eastleigh 013,31,Eastleigh,3,F,0.00000036
+E02004724,Eastleigh 013,929,Eastleigh,3,F,0.00000005
+E02004724,Eastleigh 013,928,Eastleigh,3,F,0.00758891
+E02004724,Eastleigh 013,927,Eastleigh,3,F,0.00000030
+E02004724,Eastleigh 013,926,Eastleigh,3,F,0.00842674
+E02004725,Eastleigh 014,194,Eastleigh,3,F,0.00000066
+E02004725,Eastleigh 014,193,Eastleigh,3,F,0.70877638
+E02004725,Eastleigh 014,192,Eastleigh,3,F,0.29104124
+E02004725,Eastleigh 014,191,Eastleigh,3,F,0.00018101
+E02004725,Eastleigh 014,31,Eastleigh,3,F,0.00000000
+E02004725,Eastleigh 014,30,Eastleigh,3,F,0.00000035
+E02004725,Eastleigh 014,25,Eastleigh,3,F,0.00000031
+E02004725,Eastleigh 014,929,Eastleigh,3,F,0.00000004
+E02004726,Eastleigh 015,195,Eastleigh,3,F,0.00354682
+E02004726,Eastleigh 015,194,Eastleigh,3,F,0.00000045
+E02004726,Eastleigh 015,193,Eastleigh,3,F,0.00000008
+E02004726,Eastleigh 015,192,Eastleigh,3,F,0.04668305
+E02004726,Eastleigh 015,191,Eastleigh,3,F,0.60565219
+E02004726,Eastleigh 015,190,Eastleigh,3,F,0.07825065
+E02004726,Eastleigh 015,189,Eastleigh,3,F,0.17524743
+E02004726,Eastleigh 015,929,Eastleigh,3,F,0.01959785
+E02004726,Eastleigh 015,927,Eastleigh,3,F,0.04315933
+E02004726,Eastleigh 015,911,Eastleigh,3,F,0.02786214
+E02004727,Fareham 001,380,Fareham,2,F,0.00000007
+E02004727,Fareham 001,379,Fareham,2,F,0.00000024
+E02004727,Fareham 001,377,Fareham,2,F,0.00000009
+E02004727,Fareham 001,366,Fareham,2,F,0.28173058
+E02004727,Fareham 001,365,Fareham,2,F,0.09676879
+E02004727,Fareham 001,364,Fareham,2,F,0.15803611
+E02004727,Fareham 001,363,Fareham,2,F,0.18865531
+E02004727,Fareham 001,362,Fareham,2,F,0.04044500
+E02004727,Fareham 001,361,Fareham,2,F,0.09498596
+E02004727,Fareham 001,360,Fareham,2,F,0.00000004
+E02004727,Fareham 001,359,Fareham,2,F,0.01395673
+E02004727,Fareham 001,358,Fareham,2,F,0.07583056
+E02004727,Fareham 001,356,Fareham,2,F,0.00000009
+E02004727,Fareham 001,351,Fareham,2,F,0.00000055
+E02004727,Fareham 001,201,Fareham,3,F,0.00010766
+E02004727,Fareham 001,200,Fareham,3,F,0.00023113
+E02004727,Fareham 001,197,Fareham,3,F,0.00003079
+E02004727,Fareham 001,899,Fareham,2,F,0.00000737
+E02004727,Fareham 001,958,Fareham,2,F,0.02379848
+E02004727,Fareham 001,957,Fareham,2,F,0.02541446
+E02004728,Fareham 002,377,Fareham,2,F,0.00000037
+E02004728,Fareham 002,361,Fareham,2,F,0.00000030
+E02004728,Fareham 002,360,Fareham,2,F,0.15101024
+E02004728,Fareham 002,359,Fareham,2,F,0.08324041
+E02004728,Fareham 002,358,Fareham,2,F,0.00000038
+E02004728,Fareham 002,357,Fareham,2,F,0.08845080
+E02004728,Fareham 002,356,Fareham,2,F,0.07218496
+E02004728,Fareham 002,355,Fareham,2,F,0.01943403
+E02004728,Fareham 002,351,Fareham,2,F,0.00000017
+E02004728,Fareham 002,347,Fareham,2,F,0.00000014
+E02004728,Fareham 002,345,Fareham,2,F,0.03056178
+E02004728,Fareham 002,344,Fareham,2,F,0.03988371
+E02004728,Fareham 002,343,Fareham,2,F,0.06265865
+E02004728,Fareham 002,342,Fareham,2,F,0.10886194
+E02004728,Fareham 002,341,Fareham,2,F,0.20973633
+E02004728,Fareham 002,340,Fareham,2,F,0.13397542
+E02004728,Fareham 002,339,Fareham,2,F,0.00000006
+E02004728,Fareham 002,338,Fareham,2,F,0.00000013
+E02004728,Fareham 002,957,Fareham,2,F,0.00000018
+E02004729,Fareham 003,376,Fareham,2,F,0.00000076
+E02004729,Fareham 003,320,Fareham,2,F,0.00000023
+E02004729,Fareham 003,319,Fareham,2,F,0.00000060
+E02004729,Fareham 003,318,Fareham,2,F,0.17809852
+E02004729,Fareham 003,317,Fareham,2,F,0.52192727
+E02004729,Fareham 003,316,Fareham,2,F,0.00000030
+E02004729,Fareham 003,315,Fareham,2,F,0.15800268
+E02004729,Fareham 003,314,Fareham,2,F,0.14196723
+E02004729,Fareham 003,313,Fareham,2,F,0.00000058
+E02004729,Fareham 003,312,Fareham,2,F,0.00000095
+E02004729,Fareham 003,311,Fareham,2,F,0.00000068
+E02004729,Fareham 003,309,Fareham,2,F,0.00000021
+E02004730,Fareham 004,376,Fareham,2,F,0.00011833
+E02004730,Fareham 004,375,Fareham,2,F,0.00001355
+E02004730,Fareham 004,369,Fareham,2,F,0.00022553
+E02004730,Fareham 004,322,Fareham,2,F,0.00000002
+E02004730,Fareham 004,321,Fareham,2,F,0.00000012
+E02004730,Fareham 004,320,Fareham,2,F,0.03209767
+E02004730,Fareham 004,318,Fareham,2,F,0.00000010
+E02004730,Fareham 004,317,Fareham,2,F,0.00000010
+E02004730,Fareham 004,316,Fareham,2,F,0.07402631
+E02004730,Fareham 004,315,Fareham,2,F,0.00576162
+E02004730,Fareham 004,314,Fareham,2,F,0.00000012
+E02004730,Fareham 004,313,Fareham,2,F,0.02312664
+E02004730,Fareham 004,312,Fareham,2,F,0.01856897
+E02004730,Fareham 004,311,Fareham,2,F,0.05680189
+E02004730,Fareham 004,310,Fareham,2,F,0.01789481
+E02004730,Fareham 004,309,Fareham,2,F,0.01038943
+E02004730,Fareham 004,308,Fareham,2,F,0.00000001
+E02004730,Fareham 004,307,Fareham,2,F,0.00000005
+E02004730,Fareham 004,306,Fareham,2,F,0.00624444
+E02004730,Fareham 004,305,Fareham,2,F,0.02249808
+E02004730,Fareham 004,304,Fareham,2,F,0.01507880
+E02004730,Fareham 004,302,Fareham,2,F,0.00000002
+E02004730,Fareham 004,301,Fareham,2,F,0.41306798
+E02004730,Fareham 004,300,Fareham,2,F,0.00000004
+E02004730,Fareham 004,298,Fareham,2,F,0.00000002
+E02004730,Fareham 004,295,Fareham,2,F,0.00000002
+E02004730,Fareham 004,896,Fareham,2,F,0.01492562
+E02004730,Fareham 004,895,Fareham,2,F,0.03882754
+E02004730,Fareham 004,894,Fareham,2,F,0.02043679
+E02004730,Fareham 004,893,Fareham,2,F,0.09357544
+E02004730,Fareham 004,892,Fareham,2,F,0.01464396
+E02004730,Fareham 004,891,Fareham,2,F,0.01951944
+E02004730,Fareham 004,890,Fareham,2,F,0.01513207
+E02004730,Fareham 004,889,Fareham,2,F,0.04715748
+E02004730,Fareham 004,937,Fareham,2,F,0.02525607
+E02004730,Fareham 004,936,Fareham,2,F,0.01461096
+E02004731,Fareham 005,357,Fareham,2,F,0.02258753
+E02004731,Fareham 005,356,Fareham,2,F,0.02413160
+E02004731,Fareham 005,355,Fareham,2,F,0.16654542
+E02004731,Fareham 005,354,Fareham,2,F,0.13399731
+E02004731,Fareham 005,353,Fareham,2,F,0.11991135
+E02004731,Fareham 005,352,Fareham,2,F,0.15304572
+E02004731,Fareham 005,351,Fareham,2,F,0.00000020
+E02004731,Fareham 005,349,Fareham,2,F,0.00000252
+E02004731,Fareham 005,348,Fareham,2,F,0.30869051
+E02004731,Fareham 005,346,Fareham,2,F,0.00000019
+E02004731,Fareham 005,345,Fareham,2,F,0.00000000
+E02004731,Fareham 005,344,Fareham,2,F,0.07108766
+E02004732,Fareham 006,366,Fareham,2,F,0.00000048
+E02004732,Fareham 006,358,Fareham,2,F,0.00000017
+E02004732,Fareham 006,356,Fareham,2,F,0.00657496
+E02004732,Fareham 006,355,Fareham,2,F,0.00000000
+E02004732,Fareham 006,354,Fareham,2,F,0.00000001
+E02004732,Fareham 006,353,Fareham,2,F,0.01288766
+E02004732,Fareham 006,352,Fareham,2,F,0.07704390
+E02004732,Fareham 006,351,Fareham,2,F,0.15941120
+E02004732,Fareham 006,350,Fareham,2,F,0.06596776
+E02004732,Fareham 006,349,Fareham,2,F,0.67811307
+E02004732,Fareham 006,348,Fareham,2,F,0.00000034
+E02004732,Fareham 006,346,Fareham,2,F,0.00000004
+E02004732,Fareham 006,334,Fareham,2,F,0.00000042
+E02004733,Fareham 007,377,Fareham,2,F,0.00000001
+E02004733,Fareham 007,376,Fareham,2,F,0.00000003
+E02004733,Fareham 007,355,Fareham,2,F,0.00000006
+E02004733,Fareham 007,352,Fareham,2,F,0.00000000
+E02004733,Fareham 007,349,Fareham,2,F,0.00004273
+E02004733,Fareham 007,348,Fareham,2,F,0.02477727
+E02004733,Fareham 007,347,Fareham,2,F,0.02525641
+E02004733,Fareham 007,346,Fareham,2,F,0.03499180
+E02004733,Fareham 007,345,Fareham,2,F,0.01485586
+E02004733,Fareham 007,344,Fareham,2,F,0.00855784
+E02004733,Fareham 007,342,Fareham,2,F,0.00004733
+E02004733,Fareham 007,341,Fareham,2,F,0.00000005
+E02004733,Fareham 007,340,Fareham,2,F,0.02454611
+E02004733,Fareham 007,339,Fareham,2,F,0.08461969
+E02004733,Fareham 007,338,Fareham,2,F,0.09304392
+E02004733,Fareham 007,337,Fareham,2,F,0.00000028
+E02004733,Fareham 007,336,Fareham,2,F,0.00000004
+E02004733,Fareham 007,335,Fareham,2,F,0.00623879
+E02004733,Fareham 007,334,Fareham,2,F,0.56632921
+E02004733,Fareham 007,333,Fareham,2,F,0.00000016
+E02004733,Fareham 007,330,Fareham,2,F,0.00000037
+E02004733,Fareham 007,329,Fareham,2,F,0.02040198
+E02004733,Fareham 007,325,Fareham,2,F,0.00000003
+E02004733,Fareham 007,321,Fareham,2,F,0.00000000
+E02004733,Fareham 007,319,Fareham,2,F,0.00000013
+E02004733,Fareham 007,956,Fareham,2,F,0.05653865
+E02004733,Fareham 007,919,Fareham,2,F,0.00010633
+E02004733,Fareham 007,918,Fareham,2,F,0.03964491
+E02004734,Fareham 008,465,Fareham,2,F,0.00000003
+E02004734,Fareham 008,369,Fareham,2,F,0.00000022
+E02004734,Fareham 008,323,Fareham,2,F,0.00000058
+E02004734,Fareham 008,322,Fareham,2,F,0.01203371
+E02004734,Fareham 008,310,Fareham,2,F,0.00000002
+E02004734,Fareham 008,309,Fareham,2,F,0.00000005
+E02004734,Fareham 008,308,Fareham,2,F,0.00000016
+E02004734,Fareham 008,307,Fareham,2,F,0.05586762
+E02004734,Fareham 008,306,Fareham,2,F,0.02602742
+E02004734,Fareham 008,305,Fareham,2,F,0.00000015
+E02004734,Fareham 008,304,Fareham,2,F,0.03681209
+E02004734,Fareham 008,303,Fareham,2,F,0.04123019
+E02004734,Fareham 008,302,Fareham,2,F,0.08889746
+E02004734,Fareham 008,301,Fareham,2,F,0.00000037
+E02004734,Fareham 008,300,Fareham,2,F,0.08088662
+E02004734,Fareham 008,299,Fareham,2,F,0.07015259
+E02004734,Fareham 008,298,Fareham,2,F,0.06004971
+E02004734,Fareham 008,297,Fareham,2,F,0.08426586
+E02004734,Fareham 008,296,Fareham,2,F,0.27686585
+E02004734,Fareham 008,295,Fareham,2,F,0.12706456
+E02004734,Fareham 008,294,Fareham,2,F,0.00000013
+E02004734,Fareham 008,293,Fareham,2,F,0.00000002
+E02004734,Fareham 008,291,Fareham,2,F,0.00000015
+E02004734,Fareham 008,893,Fareham,2,F,0.00154695
+E02004734,Fareham 008,938,Fareham,2,F,0.03829750
+E02004735,Fareham 009,376,Fareham,2,F,0.00000001
+E02004735,Fareham 009,339,Fareham,2,F,0.00000020
+E02004735,Fareham 009,338,Fareham,2,F,0.00000220
+E02004735,Fareham 009,337,Fareham,2,F,0.19779410
+E02004735,Fareham 009,336,Fareham,2,F,0.10333629
+E02004735,Fareham 009,335,Fareham,2,F,0.14039101
+E02004735,Fareham 009,334,Fareham,2,F,0.00000011
+E02004735,Fareham 009,322,Fareham,2,F,0.00000010
+E02004735,Fareham 009,321,Fareham,2,F,0.22013743
+E02004735,Fareham 009,320,Fareham,2,F,0.07954521
+E02004735,Fareham 009,319,Fareham,2,F,0.25873174
+E02004735,Fareham 009,318,Fareham,2,F,0.00000022
+E02004735,Fareham 009,317,Fareham,2,F,0.00000040
+E02004735,Fareham 009,956,Fareham,2,F,0.00000000
+E02004735,Fareham 009,919,Fareham,2,F,0.00000025
+E02004735,Fareham 009,918,Fareham,2,F,0.00006071
+E02004736,Fareham 010,488,Fareham,2,F,0.00000004
+E02004736,Fareham 010,487,Fareham,2,F,0.00000063
+E02004736,Fareham 010,369,Fareham,2,F,0.00000072
+E02004736,Fareham 010,296,Fareham,2,F,0.00000923
+E02004736,Fareham 010,295,Fareham,2,F,0.12624706
+E02004736,Fareham 010,294,Fareham,2,F,0.11694034
+E02004736,Fareham 010,293,Fareham,2,F,0.23217723
+E02004736,Fareham 010,292,Fareham,2,F,0.08941926
+E02004736,Fareham 010,291,Fareham,2,F,0.23798712
+E02004736,Fareham 010,290,Fareham,2,F,0.08346956
+E02004736,Fareham 010,289,Fareham,2,F,0.00000043
+E02004736,Fareham 010,288,Fareham,2,F,0.06677348
+E02004736,Fareham 010,286,Fareham,2,F,0.00000001
+E02004736,Fareham 010,938,Fareham,2,F,0.04697489
+E02004737,Fareham 011,465,Fareham,2,F,0.00000006
+E02004737,Fareham 011,326,Fareham,2,F,0.00000091
+E02004737,Fareham 011,324,Fareham,2,F,0.18639857
+E02004737,Fareham 011,323,Fareham,2,F,0.29585711
+E02004737,Fareham 011,322,Fareham,2,F,0.20599692
+E02004737,Fareham 011,321,Fareham,2,F,0.04949166
+E02004737,Fareham 011,320,Fareham,2,F,0.00000033
+E02004737,Fareham 011,313,Fareham,2,F,0.00000080
+E02004737,Fareham 011,310,Fareham,2,F,0.00000016
+E02004737,Fareham 011,309,Fareham,2,F,0.08178851
+E02004737,Fareham 011,308,Fareham,2,F,0.06958579
+E02004737,Fareham 011,307,Fareham,2,F,0.00000031
+E02004737,Fareham 011,298,Fareham,2,F,0.08968347
+E02004737,Fareham 011,297,Fareham,2,F,0.02025021
+E02004737,Fareham 011,919,Fareham,2,F,0.00094518
+E02004738,Fareham 012,488,Fareham,2,F,0.00000021
+E02004738,Fareham 012,294,Fareham,2,F,0.07266281
+E02004738,Fareham 012,293,Fareham,2,F,0.00000066
+E02004738,Fareham 012,292,Fareham,2,F,0.00000134
+E02004738,Fareham 012,291,Fareham,2,F,0.05528073
+E02004738,Fareham 012,290,Fareham,2,F,0.04154840
+E02004738,Fareham 012,289,Fareham,2,F,0.13065329
+E02004738,Fareham 012,288,Fareham,2,F,0.22265583
+E02004738,Fareham 012,287,Fareham,2,F,0.07226181
+E02004738,Fareham 012,286,Fareham,2,F,0.40493460
+E02004738,Fareham 012,587,Fareham,2,F,0.00000032
+E02004739,Fareham 013,470,Fareham,2,F,0.00000011
+E02004739,Fareham 013,467,Fareham,2,F,0.00000002
+E02004739,Fareham 013,465,Fareham,2,F,0.00000017
+E02004739,Fareham 013,464,Fareham,2,F,0.00000018
+E02004739,Fareham 013,463,Fareham,2,F,0.00000008
+E02004739,Fareham 013,462,Fareham,2,F,0.00000032
+E02004739,Fareham 013,461,Fareham,2,F,0.00000028
+E02004739,Fareham 013,332,Fareham,2,F,0.00852272
+E02004739,Fareham 013,331,Fareham,2,F,0.00000005
+E02004739,Fareham 013,330,Fareham,2,F,0.00473552
+E02004739,Fareham 013,329,Fareham,2,F,0.06821185
+E02004739,Fareham 013,328,Fareham,2,F,0.07019476
+E02004739,Fareham 013,327,Fareham,2,F,0.08505213
+E02004739,Fareham 013,326,Fareham,2,F,0.39733565
+E02004739,Fareham 013,325,Fareham,2,F,0.07198997
+E02004739,Fareham 013,324,Fareham,2,F,0.00000023
+E02004739,Fareham 013,323,Fareham,2,F,0.00000018
+E02004739,Fareham 013,321,Fareham,2,F,0.00000011
+E02004739,Fareham 013,956,Fareham,2,F,0.11310830
+E02004739,Fareham 013,919,Fareham,2,F,0.08005551
+E02004739,Fareham 013,918,Fareham,2,F,0.00000159
+E02004739,Fareham 013,906,Fareham,2,F,0.02820892
+E02004739,Fareham 013,905,Fareham,2,F,0.00025157
+E02004739,Fareham 013,904,Fareham,2,F,0.07232980
+E02004740,Fareham 014,467,Fareham,2,F,0.00000000
+E02004740,Fareham 014,334,Fareham,2,F,0.00000095
+E02004740,Fareham 014,333,Fareham,2,F,0.37807580
+E02004740,Fareham 014,332,Fareham,2,F,0.13683380
+E02004740,Fareham 014,331,Fareham,2,F,0.10852844
+E02004740,Fareham 014,330,Fareham,2,F,0.36109612
+E02004740,Fareham 014,329,Fareham,2,F,0.00000079
+E02004740,Fareham 014,328,Fareham,2,F,0.00905195
+E02004740,Fareham 014,327,Fareham,2,F,0.00000015
+E02004740,Fareham 014,906,Fareham,2,F,0.00637999
+E02004740,Fareham 014,905,Fareham,2,F,0.00003202
+E02004741,Gosport 001,466,Gosport,2,F,0.25248060
+E02004741,Gosport 001,465,Gosport,2,F,0.11627138
+E02004741,Gosport 001,464,Gosport,2,F,0.20412880
+E02004741,Gosport 001,463,Gosport,2,F,0.05260405
+E02004741,Gosport 001,462,Gosport,2,F,0.12212648
+E02004741,Gosport 001,461,Gosport,2,F,0.00000509
+E02004741,Gosport 001,457,Gosport,2,F,0.00000078
+E02004741,Gosport 001,455,Gosport,2,F,0.12181662
+E02004741,Gosport 001,454,Gosport,2,F,0.13056278
+E02004741,Gosport 001,453,Gosport,2,F,0.00000174
+E02004741,Gosport 001,326,Gosport,2,F,0.00000161
+E02004741,Gosport 001,323,Gosport,2,F,0.00000005
+E02004741,Gosport 001,297,Gosport,2,F,0.00000001
+E02004742,Gosport 002,466,Gosport,2,F,0.00006185
+E02004742,Gosport 002,464,Gosport,2,F,0.00000013
+E02004742,Gosport 002,463,Gosport,2,F,0.06970550
+E02004742,Gosport 002,462,Gosport,2,F,0.00000747
+E02004742,Gosport 002,461,Gosport,2,F,0.03246702
+E02004742,Gosport 002,460,Gosport,2,F,0.00000001
+E02004742,Gosport 002,459,Gosport,2,F,0.03351077
+E02004742,Gosport 002,458,Gosport,2,F,0.05553755
+E02004742,Gosport 002,457,Gosport,2,F,0.15563394
+E02004742,Gosport 002,456,Gosport,2,F,0.07655340
+E02004742,Gosport 002,455,Gosport,2,F,0.03060496
+E02004742,Gosport 002,454,Gosport,2,F,0.00000119
+E02004742,Gosport 002,453,Gosport,2,F,0.54591548
+E02004742,Gosport 002,452,Gosport,2,F,0.00000074
+E02004743,Gosport 003,480,Gosport,2,F,0.00000004
+E02004743,Gosport 003,478,Gosport,2,F,0.00000020
+E02004743,Gosport 003,473,Gosport,2,F,0.00000024
+E02004743,Gosport 003,459,Gosport,2,F,0.00000069
+E02004743,Gosport 003,456,Gosport,2,F,0.00000031
+E02004743,Gosport 003,453,Gosport,2,F,0.00000043
+E02004743,Gosport 003,452,Gosport,2,F,0.56295362
+E02004743,Gosport 003,451,Gosport,2,F,0.06150452
+E02004743,Gosport 003,450,Gosport,2,F,0.11539640
+E02004743,Gosport 003,449,Gosport,2,F,0.04109156
+E02004743,Gosport 003,448,Gosport,2,F,0.15656854
+E02004743,Gosport 003,447,Gosport,2,F,0.06247887
+E02004743,Gosport 003,446,Gosport,2,F,0.00000457
+E02004744,Gosport 004,486,Gosport,2,F,0.00000004
+E02004744,Gosport 004,475,Gosport,2,F,0.00000078
+E02004744,Gosport 004,474,Gosport,2,F,0.00000044
+E02004744,Gosport 004,473,Gosport,2,F,0.00000026
+E02004744,Gosport 004,472,Gosport,2,F,0.15281189
+E02004744,Gosport 004,471,Gosport,2,F,0.33399373
+E02004744,Gosport 004,470,Gosport,2,F,0.00000494
+E02004744,Gosport 004,462,Gosport,2,F,0.00000043
+E02004744,Gosport 004,461,Gosport,2,F,0.15925625
+E02004744,Gosport 004,460,Gosport,2,F,0.23539652
+E02004744,Gosport 004,459,Gosport,2,F,0.06090723
+E02004744,Gosport 004,458,Gosport,2,F,0.05762633
+E02004744,Gosport 004,457,Gosport,2,F,0.00000027
+E02004744,Gosport 004,452,Gosport,2,F,0.00000011
+E02004744,Gosport 004,326,Gosport,2,F,0.00000064
+E02004744,Gosport 004,951,Gosport,2,F,0.00000013
+E02004745,Gosport 005,482,Gosport,2,F,0.00000079
+E02004745,Gosport 005,481,Gosport,2,F,0.00035764
+E02004745,Gosport 005,480,Gosport,2,F,0.14680168
+E02004745,Gosport 005,479,Gosport,2,F,0.16555343
+E02004745,Gosport 005,478,Gosport,2,F,0.10532176
+E02004745,Gosport 005,477,Gosport,2,F,0.00000032
+E02004745,Gosport 005,476,Gosport,2,F,0.00000006
+E02004745,Gosport 005,473,Gosport,2,F,0.00000018
+E02004745,Gosport 005,450,Gosport,2,F,0.00000033
+E02004745,Gosport 005,449,Gosport,2,F,0.12557814
+E02004745,Gosport 005,448,Gosport,2,F,0.07310512
+E02004745,Gosport 005,447,Gosport,2,F,0.00000011
+E02004745,Gosport 005,446,Gosport,2,F,0.38255765
+E02004745,Gosport 005,445,Gosport,2,F,0.00072278
+E02004746,Gosport 006,486,Gosport,2,F,0.00000018
+E02004746,Gosport 006,471,Gosport,2,F,0.00000091
+E02004746,Gosport 006,470,Gosport,2,F,0.50390335
+E02004746,Gosport 006,469,Gosport,2,F,0.23330445
+E02004746,Gosport 006,468,Gosport,2,F,0.06669221
+E02004746,Gosport 006,467,Gosport,2,F,0.12151461
+E02004746,Gosport 006,461,Gosport,2,F,0.00000009
+E02004746,Gosport 006,460,Gosport,2,F,0.00000017
+E02004746,Gosport 006,332,Gosport,2,F,0.00000012
+E02004746,Gosport 006,327,Gosport,2,F,0.00011515
+E02004746,Gosport 006,326,Gosport,2,F,0.00000007
+E02004746,Gosport 006,905,Gosport,2,F,0.07440307
+E02004746,Gosport 006,904,Gosport,2,F,0.00006562
+E02004747,Gosport 007,486,Gosport,2,F,0.00000022
+E02004747,Gosport 007,484,Gosport,2,F,0.00000093
+E02004747,Gosport 007,483,Gosport,2,F,0.00000055
+E02004747,Gosport 007,482,Gosport,2,F,0.08740087
+E02004747,Gosport 007,481,Gosport,2,F,0.00000000
+E02004747,Gosport 007,479,Gosport,2,F,0.01171997
+E02004747,Gosport 007,478,Gosport,2,F,0.04268957
+E02004747,Gosport 007,477,Gosport,2,F,0.10562028
+E02004747,Gosport 007,476,Gosport,2,F,0.16999453
+E02004747,Gosport 007,475,Gosport,2,F,0.30244064
+E02004747,Gosport 007,474,Gosport,2,F,0.13521460
+E02004747,Gosport 007,473,Gosport,2,F,0.07859759
+E02004747,Gosport 007,472,Gosport,2,F,0.00000049
+E02004747,Gosport 007,471,Gosport,2,F,0.00000062
+E02004747,Gosport 007,459,Gosport,2,F,0.00000024
+E02004747,Gosport 007,452,Gosport,2,F,0.00000007
+E02004747,Gosport 007,450,Gosport,2,F,0.00000027
+E02004747,Gosport 007,951,Gosport,2,F,0.06631855
+E02004748,Gosport 008,483,Gosport,2,F,0.00000012
+E02004748,Gosport 008,482,Gosport,2,F,0.04607327
+E02004748,Gosport 008,481,Gosport,2,F,0.11643126
+E02004748,Gosport 008,480,Gosport,2,F,0.05579893
+E02004748,Gosport 008,479,Gosport,2,F,0.00000017
+E02004748,Gosport 008,446,Gosport,2,F,0.00000000
+E02004748,Gosport 008,445,Gosport,2,F,0.25280316
+E02004748,Gosport 008,444,Gosport,2,F,0.11540796
+E02004748,Gosport 008,443,Gosport,2,F,0.25349537
+E02004748,Gosport 008,442,Gosport,2,F,0.14245119
+E02004748,Gosport 008,441,Gosport,2,F,0.01753844
+E02004748,Gosport 008,440,Gosport,2,F,0.00000013
+E02004749,Gosport 009,486,Gosport,2,F,0.27801870
+E02004749,Gosport 009,485,Gosport,2,F,0.38927283
+E02004749,Gosport 009,484,Gosport,2,F,0.21297347
+E02004749,Gosport 009,483,Gosport,2,F,0.04421003
+E02004749,Gosport 009,476,Gosport,2,F,0.00000113
+E02004749,Gosport 009,475,Gosport,2,F,0.00000059
+E02004749,Gosport 009,471,Gosport,2,F,0.00000016
+E02004749,Gosport 009,470,Gosport,2,F,0.00000009
+E02004749,Gosport 009,469,Gosport,2,F,0.00000320
+E02004749,Gosport 009,440,Gosport,2,F,0.07551904
+E02004749,Gosport 009,439,Gosport,2,F,0.00000035
+E02004749,Gosport 009,437,Gosport,2,F,0.00000043
+E02004750,Gosport 010,485,Gosport,2,F,0.00000026
+E02004750,Gosport 010,484,Gosport,2,F,0.00000001
+E02004750,Gosport 010,483,Gosport,2,F,0.07023785
+E02004750,Gosport 010,482,Gosport,2,F,0.02143061
+E02004750,Gosport 010,481,Gosport,2,F,0.00000010
+E02004750,Gosport 010,476,Gosport,2,F,0.00000011
+E02004750,Gosport 010,445,Gosport,2,F,0.00000002
+E02004750,Gosport 010,444,Gosport,2,F,0.02893850
+E02004750,Gosport 010,443,Gosport,2,F,0.00006236
+E02004750,Gosport 010,442,Gosport,2,F,0.00409070
+E02004750,Gosport 010,441,Gosport,2,F,0.05628838
+E02004750,Gosport 010,440,Gosport,2,F,0.06510028
+E02004750,Gosport 010,439,Gosport,2,F,0.18149853
+E02004750,Gosport 010,438,Gosport,2,F,0.27104586
+E02004750,Gosport 010,437,Gosport,2,F,0.30130643
+E02004754,Hart 004,839,Hart,5,B,0.00000010
+E02004756,Hart 006,839,Hart,5,B,0.00000009
+E02004756,Hart 006,838,Hart,5,B,0.00000050
+E02004760,Hart 010,836,Hart,13,B,0.00000002
+E02004760,Hart 010,835,Hart,13,B,0.00000012
+E02004761,Hart 011,838,Hart,5,B,0.00000017
+E02004761,Hart 011,837,Hart,13,B,0.00000027
+E02004761,Hart 011,836,Hart,13,B,0.00000026
+E02004764,Havant 003,370,Havant,2,F,0.00000051
+E02004764,Havant 003,901,Havant,2,F,0.00039102
+E02004764,Havant 003,961,Havant,2,F,0.00000065
+E02004764,Havant 003,639,Havant,2,F,0.00000070
+E02004764,Havant 003,637,Havant,2,F,0.07186603
+E02004764,Havant 003,636,Havant,2,F,0.28911267
+E02004764,Havant 003,635,Havant,2,F,0.28150987
+E02004764,Havant 003,634,Havant,2,F,0.14557340
+E02004764,Havant 003,633,Havant,2,F,0.21154394
+E02004764,Havant 003,632,Havant,2,F,0.00000094
+E02004764,Havant 003,628,Havant,2,F,0.00000006
+E02004764,Havant 003,627,Havant,2,F,0.00000021
+E02004765,Havant 004,642,Havant,2,F,0.00000037
+E02004765,Havant 004,641,Havant,2,F,0.00000032
+E02004765,Havant 004,639,Havant,2,F,0.00000098
+E02004765,Havant 004,638,Havant,2,F,0.22799013
+E02004765,Havant 004,637,Havant,2,F,0.17932872
+E02004765,Havant 004,636,Havant,2,F,0.00000039
+E02004765,Havant 004,633,Havant,2,F,0.00000059
+E02004765,Havant 004,628,Havant,2,F,0.00000058
+E02004765,Havant 004,627,Havant,2,F,0.59267683
+E02004765,Havant 004,626,Havant,2,F,0.00000070
+E02004765,Havant 004,623,Havant,2,F,0.00000040
+E02004766,Havant 005,902,Havant,2,F,0.00039069
+E02004766,Havant 005,901,Havant,2,F,0.00000016
+E02004766,Havant 005,900,Havant,2,F,0.12053571
+E02004766,Havant 005,903,Havant,2,F,0.00021717
+E02004766,Havant 005,644,Havant,2,F,0.12736556
+E02004766,Havant 005,643,Havant,2,F,0.00000070
+E02004766,Havant 005,641,Havant,2,F,0.00000088
+E02004766,Havant 005,640,Havant,2,F,0.42518423
+E02004766,Havant 005,639,Havant,2,F,0.29874987
+E02004766,Havant 005,638,Havant,2,F,0.00000133
+E02004766,Havant 005,637,Havant,2,F,0.02755357
+E02004766,Havant 005,636,Havant,2,F,0.00000014
+E02004767,Havant 006,882,Havant,2,F,0.01773746
+E02004767,Havant 006,881,Havant,2,F,0.06991825
+E02004767,Havant 006,965,Havant,2,F,0.00000024
+E02004767,Havant 006,642,Havant,2,F,0.00000010
+E02004767,Havant 006,628,Havant,2,F,0.00000001
+E02004767,Havant 006,627,Havant,2,F,0.00000080
+E02004767,Havant 006,626,Havant,2,F,0.27501478
+E02004767,Havant 006,625,Havant,2,F,0.13985904
+E02004767,Havant 006,624,Havant,2,F,0.00000004
+E02004767,Havant 006,623,Havant,2,F,0.49746807
+E02004767,Havant 006,622,Havant,2,F,0.00000073
+E02004767,Havant 006,601,Havant,2,F,0.00000005
+E02004767,Havant 006,600,Havant,2,F,0.00000043
+E02004768,Havant 007,646,Havant,2,F,0.00000026
+E02004768,Havant 007,644,Havant,2,F,0.00000026
+E02004768,Havant 007,643,Havant,2,F,0.32036535
+E02004768,Havant 007,642,Havant,2,F,0.38200617
+E02004768,Havant 007,641,Havant,2,F,0.25874496
+E02004768,Havant 007,640,Havant,2,F,0.03888029
+E02004768,Havant 007,639,Havant,2,F,0.00000050
+E02004768,Havant 007,638,Havant,2,F,0.00000031
+E02004768,Havant 007,627,Havant,2,F,0.00000056
+E02004768,Havant 007,626,Havant,2,F,0.00000027
+E02004768,Havant 007,600,Havant,2,F,0.00000106
+E02004769,Havant 008,647,Havant,2,F,0.00000070
+E02004769,Havant 008,626,Havant,2,F,0.03464205
+E02004769,Havant 008,624,Havant,2,F,0.07449974
+E02004769,Havant 008,623,Havant,2,F,0.01639681
+E02004769,Havant 008,622,Havant,2,F,0.60515826
+E02004769,Havant 008,621,Havant,2,F,0.12801310
+E02004769,Havant 008,620,Havant,2,F,0.00000021
+E02004769,Havant 008,619,Havant,2,F,0.14128911
+E02004769,Havant 008,618,Havant,2,F,0.00000001
+E02004769,Havant 008,616,Havant,2,F,0.00000000
+E02004770,Havant 009,647,Havant,2,F,0.00000230
+E02004770,Havant 009,621,Havant,2,F,0.00000024
+E02004770,Havant 009,620,Havant,2,F,0.00000040
+E02004770,Havant 009,619,Havant,2,F,0.25233111
+E02004770,Havant 009,618,Havant,2,F,0.17062055
+E02004770,Havant 009,617,Havant,2,F,0.30028580
+E02004770,Havant 009,616,Havant,2,F,0.27585966
+E02004770,Havant 009,609,Havant,2,F,0.00000020
+E02004770,Havant 009,608,Havant,2,F,0.00089923
+E02004770,Havant 009,607,Havant,2,F,0.00000024
+E02004770,Havant 009,603,Havant,2,F,0.00000028
+E02004771,Havant 010,626,Havant,2,F,0.00000100
+E02004771,Havant 010,625,Havant,2,F,0.07287701
+E02004771,Havant 010,624,Havant,2,F,0.17308323
+E02004771,Havant 010,622,Havant,2,F,0.00000005
+E02004771,Havant 010,621,Havant,2,F,0.13841189
+E02004771,Havant 010,620,Havant,2,F,0.29916732
+E02004771,Havant 010,618,Havant,2,F,0.00000061
+E02004771,Havant 010,603,Havant,2,F,0.03355932
+E02004771,Havant 010,602,Havant,2,F,0.12862189
+E02004771,Havant 010,601,Havant,2,F,0.15427731
+E02004771,Havant 010,599,Havant,2,F,0.00000037
+E02004772,Havant 011,570,Havant,2,F,0.00000017
+E02004772,Havant 011,564,Havant,2,F,0.00000043
+E02004772,Havant 011,563,Havant,2,F,0.00000029
+E02004772,Havant 011,369,Havant,2,F,0.00000066
+E02004772,Havant 011,900,Havant,2,F,0.00000027
+E02004772,Havant 011,903,Havant,2,F,0.00013880
+E02004772,Havant 011,646,Havant,2,F,0.42480767
+E02004772,Havant 011,645,Havant,2,F,0.34779632
+E02004772,Havant 011,644,Havant,2,F,0.10216185
+E02004772,Havant 011,643,Havant,2,F,0.11444060
+E02004772,Havant 011,640,Havant,2,F,0.01065205
+E02004772,Havant 011,600,Havant,2,F,0.00000053
+E02004772,Havant 011,599,Havant,2,F,0.00000007
+E02004772,Havant 011,598,Havant,2,F,0.00000030
+E02004774,Havant 013,647,Havant,2,F,0.00000028
+E02004774,Havant 013,791,Havant,7,F,0.00000077
+E02004774,Havant 013,786,Havant,7,F,0.00000025
+E02004774,Havant 013,615,Havant,7,F,0.33707629
+E02004774,Havant 013,614,Havant,7,F,0.25146435
+E02004774,Havant 013,613,Havant,7,F,0.19901257
+E02004774,Havant 013,612,Havant,7,F,0.21244454
+E02004774,Havant 013,611,Havant,2,F,0.00000051
+E02004774,Havant 013,609,Havant,2,F,0.00000043
+E02004775,Havant 014,647,Havant,2,F,0.00000011
+E02004775,Havant 014,618,Havant,2,F,0.00000007
+E02004775,Havant 014,617,Havant,2,F,0.00000034
+E02004775,Havant 014,615,Havant,7,F,0.00000030
+E02004775,Havant 014,614,Havant,7,F,0.00000195
+E02004775,Havant 014,612,Havant,7,F,0.00000082
+E02004775,Havant 014,611,Havant,2,F,0.16744114
+E02004775,Havant 014,610,Havant,2,F,0.07189493
+E02004775,Havant 014,609,Havant,2,F,0.14813653
+E02004775,Havant 014,608,Havant,2,F,0.13002635
+E02004775,Havant 014,607,Havant,2,F,0.02338256
+E02004775,Havant 014,606,Havant,2,F,0.09574535
+E02004775,Havant 014,605,Havant,2,F,0.22918739
+E02004775,Havant 014,604,Havant,2,F,0.06859328
+E02004775,Havant 014,603,Havant,2,F,0.06558835
+E02004775,Havant 014,602,Havant,2,F,0.00000025
+E02004775,Havant 014,599,Havant,2,F,0.00000023
+E02004775,Havant 014,598,Havant,2,F,0.00000004
+E02004776,Havant 015,597,Havant,2,F,0.23149257
+E02004776,Havant 015,596,Havant,2,F,0.09253150
+E02004776,Havant 015,595,Havant,2,F,0.00000038
+E02004776,Havant 015,594,Havant,2,F,0.04830269
+E02004776,Havant 015,593,Havant,2,F,0.62767284
+E02004776,Havant 015,592,Havant,2,F,0.00000002
+E02004777,Havant 016,597,Havant,2,F,0.30661932
+E02004777,Havant 016,596,Havant,2,F,0.12475092
+E02004777,Havant 016,595,Havant,2,F,0.43128670
+E02004777,Havant 016,594,Havant,2,F,0.00000004
+E02004777,Havant 016,592,Havant,2,F,0.13734273
+E02004777,Havant 016,591,Havant,2,F,0.00000030
+E02004778,Havant 017,596,Havant,2,F,0.00000025
+E02004778,Havant 017,595,Havant,2,F,0.12291062
+E02004778,Havant 017,594,Havant,2,F,0.15189948
+E02004778,Havant 017,593,Havant,2,F,0.00000064
+E02004778,Havant 017,592,Havant,2,F,0.29518889
+E02004778,Havant 017,591,Havant,2,F,0.43000011
+E02004779,New Forest 001,849,New Forest,11,B,0.00008555
+E02004779,New Forest 001,848,New Forest,11,B,0.99991415
+E02004779,New Forest 001,847,New Forest,10,B,0.00000008
+E02004779,New Forest 001,846,New Forest,12,B,0.00000016
+E02004779,New Forest 001,817,New Forest,3,F,0.00000006
+E02004780,New Forest 002,187,New Forest,3,F,0.07497527
+E02004780,New Forest 002,186,New Forest,3,F,0.12041648
+E02004780,New Forest 002,185,New Forest,3,F,0.00000019
+E02004780,New Forest 002,184,New Forest,3,F,0.15190691
+E02004780,New Forest 002,183,New Forest,3,F,0.29048940
+E02004780,New Forest 002,182,New Forest,3,F,0.19469992
+E02004780,New Forest 002,181,New Forest,3,F,0.00000006
+E02004780,New Forest 002,180,New Forest,3,F,0.00000042
+E02004780,New Forest 002,179,New Forest,3,F,0.16750998
+E02004780,New Forest 002,178,New Forest,3,F,0.00000136
+E02004781,New Forest 003,276,New Forest,3,F,0.00000066
+E02004781,New Forest 003,188,New Forest,3,F,0.00000124
+E02004781,New Forest 003,187,New Forest,3,F,0.18482409
+E02004781,New Forest 003,186,New Forest,3,F,0.08084836
+E02004781,New Forest 003,185,New Forest,3,F,0.24488103
+E02004781,New Forest 003,184,New Forest,3,F,0.00000069
+E02004781,New Forest 003,183,New Forest,3,F,0.01636221
+E02004781,New Forest 003,182,New Forest,3,F,0.11250441
+E02004781,New Forest 003,181,New Forest,3,F,0.16071148
+E02004781,New Forest 003,180,New Forest,3,F,0.07860785
+E02004781,New Forest 003,178,New Forest,3,F,0.00000022
+E02004781,New Forest 003,175,New Forest,3,F,0.00000019
+E02004781,New Forest 003,948,New Forest,3,F,0.05210284
+E02004781,New Forest 003,912,New Forest,3,F,0.06915399
+E02004781,New Forest 003,820,New Forest,3,F,0.00000015
+E02004781,New Forest 003,819,New Forest,3,F,0.00000059
+E02004782,New Forest 004,276,New Forest,3,F,0.00000069
+E02004782,New Forest 004,186,New Forest,3,F,0.00000001
+E02004782,New Forest 004,185,New Forest,3,F,0.00000035
+E02004782,New Forest 004,184,New Forest,3,F,0.06996570
+E02004782,New Forest 004,183,New Forest,3,F,0.00000013
+E02004782,New Forest 004,179,New Forest,3,F,0.03664790
+E02004782,New Forest 004,178,New Forest,3,F,0.28847697
+E02004782,New Forest 004,177,New Forest,3,F,0.06841117
+E02004782,New Forest 004,176,New Forest,3,F,0.00000006
+E02004782,New Forest 004,175,New Forest,3,F,0.00000015
+E02004782,New Forest 004,174,New Forest,3,F,0.08643034
+E02004782,New Forest 004,173,New Forest,3,F,0.01440636
+E02004782,New Forest 004,172,New Forest,3,F,0.03585497
+E02004782,New Forest 004,171,New Forest,3,F,0.30314107
+E02004782,New Forest 004,170,New Forest,3,F,0.00000017
+E02004782,New Forest 004,168,New Forest,3,F,0.00000007
+E02004782,New Forest 004,145,New Forest,3,F,0.00000025
+E02004782,New Forest 004,141,New Forest,3,F,0.00000001
+E02004782,New Forest 004,914,New Forest,3,F,0.03704371
+E02004782,New Forest 004,913,New Forest,3,F,0.05961954
+E02004782,New Forest 004,821,New Forest,1,F,0.00000037
+E02004783,New Forest 005,182,New Forest,3,F,0.00000031
+E02004783,New Forest 005,180,New Forest,3,F,0.15890168
+E02004783,New Forest 005,179,New Forest,3,F,0.13003329
+E02004783,New Forest 005,177,New Forest,3,F,0.00000056
+E02004783,New Forest 005,176,New Forest,3,F,0.20478479
+E02004783,New Forest 005,175,New Forest,3,F,0.26033288
+E02004783,New Forest 005,174,New Forest,3,F,0.10350886
+E02004783,New Forest 005,173,New Forest,3,F,0.14243658
+E02004783,New Forest 005,171,New Forest,3,F,0.00000044
+E02004783,New Forest 005,821,New Forest,1,F,0.00000008
+E02004783,New Forest 005,820,New Forest,3,F,0.00000052
+E02004784,New Forest 006,278,New Forest,3,F,0.00000023
+E02004784,New Forest 006,277,New Forest,3,F,0.00000010
+E02004784,New Forest 006,276,New Forest,3,F,0.00000003
+E02004784,New Forest 006,188,New Forest,3,F,0.24142800
+E02004784,New Forest 006,187,New Forest,3,F,0.00000005
+E02004784,New Forest 006,186,New Forest,3,F,0.00000006
+E02004784,New Forest 006,185,New Forest,3,F,0.00000002
+E02004784,New Forest 006,181,New Forest,3,F,0.00000008
+E02004784,New Forest 006,180,New Forest,3,F,0.00000004
+E02004784,New Forest 006,175,New Forest,3,F,0.00000004
+E02004784,New Forest 006,948,New Forest,3,F,0.00381024
+E02004784,New Forest 006,947,New Forest,3,F,0.02833181
+E02004784,New Forest 006,912,New Forest,3,F,0.01330557
+E02004784,New Forest 006,821,New Forest,1,F,0.00000099
+E02004784,New Forest 006,820,New Forest,3,F,0.13103607
+E02004784,New Forest 006,819,New Forest,3,F,0.23036185
+E02004784,New Forest 006,818,New Forest,3,F,0.00000028
+E02004784,New Forest 006,817,New Forest,3,F,0.35172444
+E02004784,New Forest 006,816,New Forest,3,F,0.00000010
+E02004785,New Forest 007,278,New Forest,3,F,0.00000004
+E02004785,New Forest 007,188,New Forest,3,F,0.00000006
+E02004785,New Forest 007,854,New Forest,11,B,0.00000005
+E02004785,New Forest 007,848,New Forest,11,B,0.00000018
+E02004785,New Forest 007,846,New Forest,12,B,0.00000005
+E02004785,New Forest 007,823,New Forest,1,F,0.00000010
+E02004785,New Forest 007,822,New Forest,3,F,0.16158002
+E02004785,New Forest 007,821,New Forest,1,F,0.00000018
+E02004785,New Forest 007,818,New Forest,3,F,0.01977210
+E02004785,New Forest 007,817,New Forest,3,F,0.75766265
+E02004785,New Forest 007,816,New Forest,3,F,0.06098446
+E02004785,New Forest 007,815,New Forest,3,F,0.00000011
+E02004786,New Forest 008,171,New Forest,3,F,0.00000011
+E02004786,New Forest 008,170,New Forest,3,F,0.06167256
+E02004786,New Forest 008,169,New Forest,3,F,0.09000050
+E02004786,New Forest 008,168,New Forest,3,F,0.31815054
+E02004786,New Forest 008,167,New Forest,3,F,0.39598933
+E02004786,New Forest 008,166,New Forest,3,F,0.00375795
+E02004786,New Forest 008,164,New Forest,3,F,0.00000001
+E02004786,New Forest 008,162,New Forest,3,F,0.00000037
+E02004786,New Forest 008,950,New Forest,3,F,0.06346991
+E02004786,New Forest 008,949,New Forest,3,F,0.00937414
+E02004786,New Forest 008,916,New Forest,3,F,0.01134641
+E02004786,New Forest 008,915,New Forest,3,F,0.00578077
+E02004786,New Forest 008,914,New Forest,3,F,0.04045691
+E02004786,New Forest 008,821,New Forest,1,F,0.00000051
+E02004787,New Forest 009,167,New Forest,3,F,0.00000168
+E02004787,New Forest 009,166,New Forest,3,F,0.18625538
+E02004787,New Forest 009,165,New Forest,3,F,0.04350777
+E02004787,New Forest 009,164,New Forest,3,F,0.19222445
+E02004787,New Forest 009,163,New Forest,3,F,0.09386323
+E02004787,New Forest 009,162,New Forest,3,F,0.43397088
+E02004787,New Forest 009,161,New Forest,3,F,0.00000007
+E02004787,New Forest 009,916,New Forest,3,F,0.05017622
+E02004787,New Forest 009,821,New Forest,1,F,0.00000031
+E02004788,New Forest 010,854,New Forest,11,B,0.11776855
+E02004788,New Forest 010,849,New Forest,11,B,0.00003903
+E02004788,New Forest 010,848,New Forest,11,B,0.88219222
+E02004788,New Forest 010,817,New Forest,3,F,0.00000020
+E02004789,New Forest 011,166,New Forest,3,F,0.00000036
+E02004789,New Forest 011,165,New Forest,3,F,0.35810089
+E02004789,New Forest 011,164,New Forest,3,F,0.00000016
+E02004789,New Forest 011,163,New Forest,3,F,0.11464290
+E02004789,New Forest 011,162,New Forest,3,F,0.05127415
+E02004789,New Forest 011,161,New Forest,3,F,0.29480911
+E02004789,New Forest 011,160,New Forest,3,F,0.18117077
+E02004789,New Forest 011,159,New Forest,3,F,0.00000031
+E02004789,New Forest 011,158,New Forest,3,F,0.00000064
+E02004789,New Forest 011,821,New Forest,1,F,0.00000073
+E02004790,New Forest 012,854,New Forest,11,B,0.99999923
+E02004790,New Forest 012,849,New Forest,11,B,0.00000077
+E02004791,New Forest 013,159,New Forest,3,F,0.99999776
+E02004791,New Forest 013,158,New Forest,3,F,0.00000119
+E02004791,New Forest 013,157,New Forest,3,F,0.00000017
+E02004791,New Forest 013,821,New Forest,1,F,0.00000088
+E02004792,New Forest 014,161,New Forest,3,F,0.00000012
+E02004792,New Forest 014,160,New Forest,3,F,0.00000003
+E02004792,New Forest 014,159,New Forest,3,F,0.11771772
+E02004792,New Forest 014,158,New Forest,3,F,0.31634890
+E02004792,New Forest 014,157,New Forest,3,F,0.12798562
+E02004792,New Forest 014,156,New Forest,3,F,0.42480540
+E02004792,New Forest 014,917,New Forest,3,F,0.01314177
+E02004792,New Forest 014,828,New Forest,1,F,0.00000023
+E02004792,New Forest 014,821,New Forest,1,F,0.00000021
+E02004793,New Forest 015,854,New Forest,11,B,0.00000016
+E02004793,New Forest 015,828,New Forest,1,F,0.00000003
+E02004793,New Forest 015,827,New Forest,1,F,0.05495119
+E02004793,New Forest 015,826,New Forest,1,F,0.20085690
+E02004793,New Forest 015,825,New Forest,1,F,0.00000009
+E02004793,New Forest 015,824,New Forest,1,F,0.00000010
+E02004793,New Forest 015,823,New Forest,1,F,0.74419128
+E02004793,New Forest 015,822,New Forest,3,F,0.00000009
+E02004793,New Forest 015,821,New Forest,1,F,0.00000011
+E02004793,New Forest 015,817,New Forest,3,F,0.00000006
+E02004794,New Forest 016,854,New Forest,11,B,0.99999936
+E02004794,New Forest 016,853,New Forest,11,B,0.00000018
+E02004794,New Forest 016,852,New Forest,11,B,0.00000010
+E02004794,New Forest 016,849,New Forest,11,B,0.00000002
+E02004794,New Forest 016,848,New Forest,11,B,0.00000005
+E02004794,New Forest 016,824,New Forest,1,F,0.00000012
+E02004794,New Forest 016,823,New Forest,1,F,0.00000012
+E02004794,New Forest 016,817,New Forest,3,F,0.00000006
+E02004795,New Forest 017,175,New Forest,3,F,0.00000000
+E02004795,New Forest 017,174,New Forest,3,F,0.00000001
+E02004795,New Forest 017,171,New Forest,3,F,0.00000001
+E02004795,New Forest 017,168,New Forest,3,F,0.00000004
+E02004795,New Forest 017,167,New Forest,3,F,0.00000001
+E02004795,New Forest 017,166,New Forest,3,F,0.00000001
+E02004795,New Forest 017,165,New Forest,3,F,0.00000001
+E02004795,New Forest 017,160,New Forest,3,F,0.00000001
+E02004795,New Forest 017,159,New Forest,3,F,0.00000005
+E02004795,New Forest 017,157,New Forest,3,F,0.00000003
+E02004795,New Forest 017,156,New Forest,3,F,0.00000001
+E02004795,New Forest 017,828,New Forest,1,F,0.37626029
+E02004795,New Forest 017,827,New Forest,1,F,0.14182389
+E02004795,New Forest 017,823,New Forest,1,F,0.00000009
+E02004795,New Forest 017,822,New Forest,3,F,0.00000010
+E02004795,New Forest 017,821,New Forest,1,F,0.48191510
+E02004795,New Forest 017,820,New Forest,3,F,0.00000028
+E02004795,New Forest 017,819,New Forest,3,F,0.00000001
+E02004795,New Forest 017,817,New Forest,3,F,0.00000006
+E02004796,New Forest 018,854,New Forest,11,B,0.00000046
+E02004796,New Forest 018,827,New Forest,1,F,0.00000036
+E02004796,New Forest 018,826,New Forest,1,F,0.00000032
+E02004796,New Forest 018,825,New Forest,1,F,0.53251909
+E02004796,New Forest 018,824,New Forest,1,F,0.46747954
+E02004796,New Forest 018,823,New Forest,1,F,0.00000024
+E02004797,New Forest 019,827,New Forest,1,F,0.99999898
+E02004797,New Forest 019,826,New Forest,1,F,0.00000037
+E02004797,New Forest 019,825,New Forest,1,F,0.00000065
+E02004798,New Forest 020,854,New Forest,11,B,0.00000001
+E02004798,New Forest 020,853,New Forest,11,B,0.00000053
+E02004798,New Forest 020,825,New Forest,1,F,0.00000025
+E02004798,New Forest 020,824,New Forest,1,F,0.99999922
+E02004799,New Forest 021,825,New Forest,1,F,0.00000073
+E02004799,New Forest 021,824,New Forest,1,F,0.99999927
+E02004800,New Forest 022,853,New Forest,11,B,0.00000016
+E02004800,New Forest 022,825,New Forest,1,F,0.00000062
+E02004800,New Forest 022,824,New Forest,1,F,0.99999922
+E02004801,New Forest 023,827,New Forest,1,F,0.35491569
+E02004801,New Forest 023,825,New Forest,1,F,0.64508413
+E02004801,New Forest 023,824,New Forest,1,F,0.00000017
+E02004814,Test Valley 001,843,Test Valley,12,B,0.99999538
+E02004814,Test Valley 001,842,Test Valley,5,B,0.00000030
+E02004815,Test Valley 002,843,Test Valley,12,B,1.00000000
+E02004816,Test Valley 003,843,Test Valley,12,B,0.99999894
+E02004816,Test Valley 003,842,Test Valley,5,B,0.00000044
+E02004816,Test Valley 003,808,Test Valley,8,F,0.00000029
+E02004816,Test Valley 003,807,Test Valley,3,F,0.00000033
+E02004817,Test Valley 004,843,Test Valley,12,B,1.00000000
+E02004818,Test Valley 005,843,Test Valley,12,B,0.56307885
+E02004818,Test Valley 005,809,Test Valley,8,F,0.00000003
+E02004818,Test Valley 005,808,Test Valley,8,F,0.43692097
+E02004819,Test Valley 006,843,Test Valley,12,B,0.99999968
+E02004819,Test Valley 006,808,Test Valley,8,F,0.00000032
+E02004820,Test Valley 007,844,Test Valley,12,B,0.00000014
+E02004820,Test Valley 007,843,Test Valley,12,B,0.38573201
+E02004820,Test Valley 007,809,Test Valley,8,F,0.00000014
+E02004820,Test Valley 007,808,Test Valley,8,F,0.61426523
+E02004821,Test Valley 008,426,Test Valley,3,F,0.00000003
+E02004821,Test Valley 008,420,Test Valley,3,F,0.00000007
+E02004821,Test Valley 008,415,Test Valley,3,F,0.00000001
+E02004821,Test Valley 008,843,Test Valley,12,B,0.00000013
+E02004821,Test Valley 008,842,Test Valley,5,B,0.00000018
+E02004821,Test Valley 008,811,Test Valley,3,F,0.00000014
+E02004821,Test Valley 008,810,Test Valley,8,F,0.24841085
+E02004821,Test Valley 008,809,Test Valley,8,F,0.00000002
+E02004821,Test Valley 008,808,Test Valley,8,F,0.17886356
+E02004821,Test Valley 008,807,Test Valley,3,F,0.57272502
+E02004822,Test Valley 009,436,Test Valley,3,F,0.00000003
+E02004822,Test Valley 009,426,Test Valley,3,F,0.00000395
+E02004822,Test Valley 009,285,Test Valley,3,F,0.00000001
+E02004822,Test Valley 009,268,Test Valley,3,F,0.00000003
+E02004822,Test Valley 009,267,Test Valley,3,F,0.00000035
+E02004822,Test Valley 009,846,Test Valley,12,B,0.00000012
+E02004822,Test Valley 009,844,Test Valley,12,B,0.00000000
+E02004822,Test Valley 009,814,Test Valley,3,F,0.00000010
+E02004822,Test Valley 009,813,Test Valley,3,F,0.06403218
+E02004822,Test Valley 009,812,Test Valley,8,F,0.27945263
+E02004822,Test Valley 009,811,Test Valley,3,F,0.23929712
+E02004822,Test Valley 009,810,Test Valley,8,F,0.16398052
+E02004822,Test Valley 009,809,Test Valley,8,F,0.25323283
+E02004822,Test Valley 009,808,Test Valley,8,F,0.00000011
+E02004822,Test Valley 009,807,Test Valley,3,F,0.00000004
+E02004823,Test Valley 010,284,Test Valley,3,F,0.07083932
+E02004823,Test Valley 010,281,Test Valley,3,F,0.00000052
+E02004823,Test Valley 010,280,Test Valley,3,F,0.27805846
+E02004823,Test Valley 010,279,Test Valley,3,F,0.02989019
+E02004823,Test Valley 010,271,Test Valley,3,F,0.22121072
+E02004823,Test Valley 010,270,Test Valley,3,F,0.24187695
+E02004823,Test Valley 010,269,Test Valley,3,F,0.15777447
+E02004823,Test Valley 010,268,Test Valley,3,F,0.00000204
+E02004823,Test Valley 010,960,Test Valley,3,F,0.00034733
+E02004824,Test Valley 011,284,Test Valley,3,F,0.16526203
+E02004824,Test Valley 011,283,Test Valley,3,F,0.33653832
+E02004824,Test Valley 011,282,Test Valley,3,F,0.08622597
+E02004824,Test Valley 011,281,Test Valley,3,F,0.25076633
+E02004824,Test Valley 011,280,Test Valley,3,F,0.00000030
+E02004824,Test Valley 011,279,Test Valley,3,F,0.16084835
+E02004824,Test Valley 011,278,Test Valley,3,F,0.00000102
+E02004824,Test Valley 011,271,Test Valley,3,F,0.00000118
+E02004824,Test Valley 011,270,Test Valley,3,F,0.00000030
+E02004824,Test Valley 011,268,Test Valley,3,F,0.00000124
+E02004824,Test Valley 011,909,Test Valley,3,F,0.00035496
+E02004825,Test Valley 012,436,Test Valley,3,F,0.00000035
+E02004825,Test Valley 012,262,Test Valley,3,F,0.00000012
+E02004825,Test Valley 012,261,Test Valley,3,F,0.00000004
+E02004825,Test Valley 012,260,Test Valley,3,F,0.00000007
+E02004825,Test Valley 012,258,Test Valley,3,F,0.00000009
+E02004825,Test Valley 012,252,Test Valley,3,F,0.00000003
+E02004825,Test Valley 012,272,Test Valley,3,F,0.00000002
+E02004825,Test Valley 012,271,Test Valley,3,F,0.06633690
+E02004825,Test Valley 012,270,Test Valley,3,F,0.00994243
+E02004825,Test Valley 012,269,Test Valley,3,F,0.00629322
+E02004825,Test Valley 012,268,Test Valley,3,F,0.00000034
+E02004825,Test Valley 012,267,Test Valley,3,F,0.30132735
+E02004825,Test Valley 012,266,Test Valley,3,F,0.33400707
+E02004825,Test Valley 012,265,Test Valley,3,F,0.04006614
+E02004825,Test Valley 012,264,Test Valley,3,F,0.01404372
+E02004825,Test Valley 012,263,Test Valley,3,F,0.20373974
+E02004825,Test Valley 012,960,Test Valley,3,F,0.01452747
+E02004825,Test Valley 012,910,Test Valley,3,F,0.00971463
+E02004825,Test Valley 012,813,Test Valley,3,F,0.00000016
+E02004825,Test Valley 012,811,Test Valley,3,F,0.00000013
+E02004826,Test Valley 013,285,Test Valley,3,F,0.04019038
+E02004826,Test Valley 013,284,Test Valley,3,F,0.00000003
+E02004826,Test Valley 013,283,Test Valley,3,F,0.00000007
+E02004826,Test Valley 013,282,Test Valley,3,F,0.00000000
+E02004826,Test Valley 013,281,Test Valley,3,F,0.00000001
+E02004826,Test Valley 013,280,Test Valley,3,F,0.00000001
+E02004826,Test Valley 013,279,Test Valley,3,F,0.00000000
+E02004826,Test Valley 013,278,Test Valley,3,F,0.16156294
+E02004826,Test Valley 013,277,Test Valley,3,F,0.08268713
+E02004826,Test Valley 013,276,Test Valley,3,F,0.00000007
+E02004826,Test Valley 013,272,Test Valley,3,F,0.00000006
+E02004826,Test Valley 013,271,Test Valley,3,F,0.05497168
+E02004826,Test Valley 013,270,Test Valley,3,F,0.00000001
+E02004826,Test Valley 013,269,Test Valley,3,F,0.00102944
+E02004826,Test Valley 013,268,Test Valley,3,F,0.09481132
+E02004826,Test Valley 013,267,Test Valley,3,F,0.00000007
+E02004826,Test Valley 013,266,Test Valley,3,F,0.00000004
+E02004826,Test Valley 013,264,Test Valley,3,F,0.00000000
+E02004826,Test Valley 013,188,Test Valley,3,F,0.00000008
+E02004826,Test Valley 013,846,Test Valley,12,B,0.00000026
+E02004826,Test Valley 013,910,Test Valley,3,F,0.00051553
+E02004826,Test Valley 013,909,Test Valley,3,F,0.01190020
+E02004826,Test Valley 013,817,Test Valley,3,F,0.00000006
+E02004826,Test Valley 013,816,Test Valley,3,F,0.00000011
+E02004826,Test Valley 013,815,Test Valley,3,F,0.27843717
+E02004826,Test Valley 013,814,Test Valley,3,F,0.27389304
+E02004826,Test Valley 013,813,Test Valley,3,F,0.00000011
+E02004826,Test Valley 013,812,Test Valley,8,F,0.00000017
+E02004827,Test Valley 014,262,Test Valley,3,F,0.00000000
+E02004827,Test Valley 014,261,Test Valley,3,F,0.22588851
+E02004827,Test Valley 014,260,Test Valley,3,F,0.34983496
+E02004827,Test Valley 014,259,Test Valley,3,F,0.42427277
+E02004827,Test Valley 014,252,Test Valley,3,F,0.00000092
+E02004827,Test Valley 014,250,Test Valley,3,F,0.00000061
+E02004827,Test Valley 014,249,Test Valley,3,F,0.00000021
+E02004827,Test Valley 014,266,Test Valley,3,F,0.00000008
+E02004827,Test Valley 014,263,Test Valley,3,F,0.00000147
+E02004827,Test Valley 014,959,Test Valley,3,F,0.00000047
+E02004828,Test Valley 015,262,Test Valley,3,F,0.44372885
+E02004828,Test Valley 015,261,Test Valley,3,F,0.00000006
+E02004828,Test Valley 015,249,Test Valley,3,F,0.00000005
+E02004828,Test Valley 015,247,Test Valley,3,F,0.00000003
+E02004828,Test Valley 015,244,Test Valley,3,F,0.00000030
+E02004828,Test Valley 015,277,Test Valley,3,F,0.00000040
+E02004828,Test Valley 015,276,Test Valley,3,F,0.20034456
+E02004828,Test Valley 015,275,Test Valley,3,F,0.01186146
+E02004828,Test Valley 015,274,Test Valley,3,F,0.03520132
+E02004828,Test Valley 015,273,Test Valley,3,F,0.03447884
+E02004828,Test Valley 015,272,Test Valley,3,F,0.24213261
+E02004828,Test Valley 015,271,Test Valley,3,F,0.00000007
+E02004828,Test Valley 015,264,Test Valley,3,F,0.00000014
+E02004828,Test Valley 015,263,Test Valley,3,F,0.00000013
+E02004828,Test Valley 015,111,Test Valley,3,F,0.00000007
+E02004828,Test Valley 015,110,Test Valley,3,F,0.00000018
+E02004828,Test Valley 015,99,Test Valley,3,F,0.00000005
+E02004828,Test Valley 015,188,Test Valley,3,F,0.00000002
+E02004828,Test Valley 015,185,Test Valley,3,F,0.00000009
+E02004828,Test Valley 015,178,Test Valley,3,F,0.00000021
+E02004828,Test Valley 015,155,Test Valley,3,F,0.00000008
+E02004828,Test Valley 015,152,Test Valley,3,F,0.00000016
+E02004828,Test Valley 015,151,Test Valley,3,F,0.00000003
+E02004828,Test Valley 015,148,Test Valley,3,F,0.00000014
+E02004828,Test Valley 015,146,Test Valley,3,F,0.00000004
+E02004828,Test Valley 015,145,Test Valley,3,F,0.00000003
+E02004828,Test Valley 015,884,Test Valley,3,F,0.00007672
+E02004828,Test Valley 015,959,Test Valley,3,F,0.03216828
+E02004828,Test Valley 015,910,Test Valley,3,F,0.00000509
+E02004829,Winchester 001,425,Winchester,3,F,0.00000002
+E02004829,Winchester 001,424,Winchester,3,F,0.54919111
+E02004829,Winchester 001,423,Winchester,3,F,0.00000018
+E02004829,Winchester 001,421,Winchester,3,F,0.06783643
+E02004829,Winchester 001,420,Winchester,3,F,0.38297175
+E02004829,Winchester 001,419,Winchester,3,F,0.00000001
+E02004829,Winchester 001,415,Winchester,3,F,0.00000004
+E02004829,Winchester 001,842,Winchester,5,B,0.00000002
+E02004829,Winchester 001,841,Winchester,5,B,0.00000014
+E02004829,Winchester 001,837,Winchester,13,B,0.00000013
+E02004829,Winchester 001,807,Winchester,3,F,0.00000017
+E02004830,Winchester 002,433,Winchester,3,F,0.00000001
+E02004830,Winchester 002,429,Winchester,3,F,0.00000004
+E02004830,Winchester 002,425,Winchester,3,F,0.00001889
+E02004830,Winchester 002,424,Winchester,3,F,0.00000009
+E02004830,Winchester 002,423,Winchester,3,F,0.89041947
+E02004830,Winchester 002,422,Winchester,2,F,0.00000009
+E02004830,Winchester 002,421,Winchester,3,F,0.00000003
+E02004830,Winchester 002,419,Winchester,3,F,0.09044778
+E02004830,Winchester 002,418,Winchester,3,F,0.01909620
+E02004830,Winchester 002,399,Winchester,3,F,0.00000002
+E02004830,Winchester 002,395,Winchester,3,F,0.00000003
+E02004830,Winchester 002,837,Winchester,13,B,0.00000005
+E02004830,Winchester 002,806,Winchester,3,F,0.00000014
+E02004830,Winchester 002,805,Winchester,3,F,0.00000013
+E02004830,Winchester 002,417,Winchester,3,F,0.00001706
+E02004831,Winchester 003,436,Winchester,3,F,0.00000015
+E02004831,Winchester 003,431,Winchester,3,F,0.00000010
+E02004831,Winchester 003,428,Winchester,3,F,0.02368641
+E02004831,Winchester 003,427,Winchester,3,F,0.01543601
+E02004831,Winchester 003,426,Winchester,3,F,0.51960993
+E02004831,Winchester 003,425,Winchester,3,F,0.13223835
+E02004831,Winchester 003,423,Winchester,3,F,0.00000004
+E02004831,Winchester 003,421,Winchester,3,F,0.00000010
+E02004831,Winchester 003,420,Winchester,3,F,0.00000005
+E02004831,Winchester 003,419,Winchester,3,F,0.00000001
+E02004831,Winchester 003,418,Winchester,3,F,0.00000004
+E02004831,Winchester 003,416,Winchester,3,F,0.01638306
+E02004831,Winchester 003,415,Winchester,3,F,0.23159296
+E02004831,Winchester 003,414,Winchester,3,F,0.00000001
+E02004831,Winchester 003,413,Winchester,3,F,0.00000000
+E02004831,Winchester 003,409,Winchester,3,F,0.00000067
+E02004831,Winchester 003,408,Winchester,3,F,0.01791230
+E02004831,Winchester 003,407,Winchester,3,F,0.00000004
+E02004831,Winchester 003,406,Winchester,3,F,0.00000006
+E02004831,Winchester 003,399,Winchester,3,F,0.00000000
+E02004831,Winchester 003,811,Winchester,3,F,0.00000036
+E02004831,Winchester 003,810,Winchester,8,F,0.00000011
+E02004831,Winchester 003,807,Winchester,3,F,0.00000001
+E02004831,Winchester 003,417,Winchester,3,F,0.04313921
+E02004832,Winchester 004,423,Winchester,3,F,0.00000023
+E02004832,Winchester 004,422,Winchester,2,F,0.00000006
+E02004832,Winchester 004,837,Winchester,13,B,0.00000006
+E02004832,Winchester 004,836,Winchester,13,B,0.00000013
+E02004832,Winchester 004,806,Winchester,3,F,0.32534213
+E02004832,Winchester 004,805,Winchester,3,F,0.67465706
+E02004832,Winchester 004,804,Winchester,3,F,0.00000017
+E02004832,Winchester 004,801,Winchester,6,F,0.00000016
+E02004833,Winchester 005,436,Winchester,3,F,0.00000039
+E02004833,Winchester 005,431,Winchester,3,F,0.49351412
+E02004833,Winchester 005,427,Winchester,3,F,0.00000346
+E02004833,Winchester 005,426,Winchester,3,F,0.00000012
+E02004833,Winchester 005,425,Winchester,3,F,0.00000007
+E02004833,Winchester 005,412,Winchester,3,F,0.00000016
+E02004833,Winchester 005,409,Winchester,3,F,0.00000014
+E02004833,Winchester 005,408,Winchester,3,F,0.00001539
+E02004833,Winchester 005,407,Winchester,3,F,0.20025780
+E02004833,Winchester 005,406,Winchester,3,F,0.10403709
+E02004833,Winchester 005,405,Winchester,3,F,0.00002480
+E02004833,Winchester 005,404,Winchester,3,F,0.09163225
+E02004833,Winchester 005,403,Winchester,3,F,0.11051391
+E02004833,Winchester 005,393,Winchester,3,F,0.00000029
+E02004834,Winchester 006,433,Winchester,3,F,0.00000011
+E02004834,Winchester 006,429,Winchester,3,F,0.34000214
+E02004834,Winchester 006,428,Winchester,3,F,0.00000022
+E02004834,Winchester 006,423,Winchester,3,F,0.00000188
+E02004834,Winchester 006,414,Winchester,3,F,0.00000005
+E02004834,Winchester 006,413,Winchester,3,F,0.09248536
+E02004834,Winchester 006,411,Winchester,3,F,0.00006583
+E02004834,Winchester 006,410,Winchester,3,F,0.00005690
+E02004834,Winchester 006,399,Winchester,3,F,0.21406932
+E02004834,Winchester 006,398,Winchester,3,F,0.04607024
+E02004834,Winchester 006,397,Winchester,3,F,0.10610713
+E02004834,Winchester 006,396,Winchester,3,F,0.07782733
+E02004834,Winchester 006,395,Winchester,3,F,0.12330784
+E02004834,Winchester 006,394,Winchester,3,F,0.00000565
+E02004835,Winchester 007,390,Winchester,3,F,0.00000004
+E02004835,Winchester 007,388,Winchester,3,F,0.00000039
+E02004835,Winchester 007,433,Winchester,3,F,0.00000036
+E02004835,Winchester 007,432,Winchester,3,F,0.16756070
+E02004835,Winchester 007,431,Winchester,3,F,0.00000000
+E02004835,Winchester 007,430,Winchester,3,F,0.05677859
+E02004835,Winchester 007,429,Winchester,3,F,0.00000000
+E02004835,Winchester 007,428,Winchester,3,F,0.00000026
+E02004835,Winchester 007,425,Winchester,3,F,0.00000000
+E02004835,Winchester 007,414,Winchester,3,F,0.06508407
+E02004835,Winchester 007,413,Winchester,3,F,0.00000038
+E02004835,Winchester 007,412,Winchester,3,F,0.06237807
+E02004835,Winchester 007,411,Winchester,3,F,0.03021279
+E02004835,Winchester 007,410,Winchester,3,F,0.06575072
+E02004835,Winchester 007,409,Winchester,3,F,0.05532128
+E02004835,Winchester 007,407,Winchester,3,F,0.00000001
+E02004835,Winchester 007,405,Winchester,3,F,0.10536353
+E02004835,Winchester 007,404,Winchester,3,F,0.00000009
+E02004835,Winchester 007,403,Winchester,3,F,0.00000071
+E02004835,Winchester 007,402,Winchester,3,F,0.00009697
+E02004835,Winchester 007,401,Winchester,3,F,0.00000035
+E02004835,Winchester 007,400,Winchester,3,F,0.00000013
+E02004835,Winchester 007,398,Winchester,3,F,0.00000004
+E02004835,Winchester 007,397,Winchester,3,F,0.00000014
+E02004835,Winchester 007,394,Winchester,3,F,0.39144236
+E02004835,Winchester 007,393,Winchester,3,F,0.00000007
+E02004835,Winchester 007,392,Winchester,3,F,0.00000794
+E02004836,Winchester 008,390,Winchester,3,F,0.00000045
+E02004836,Winchester 008,389,Winchester,3,F,0.00000033
+E02004836,Winchester 008,435,Winchester,3,F,0.00000000
+E02004836,Winchester 008,432,Winchester,3,F,0.00000111
+E02004836,Winchester 008,430,Winchester,3,F,0.00000030
+E02004836,Winchester 008,405,Winchester,3,F,0.00017801
+E02004836,Winchester 008,402,Winchester,3,F,0.25007564
+E02004836,Winchester 008,401,Winchester,3,F,0.13338524
+E02004836,Winchester 008,400,Winchester,3,F,0.25678474
+E02004836,Winchester 008,394,Winchester,3,F,0.00000005
+E02004836,Winchester 008,393,Winchester,3,F,0.00000104
+E02004836,Winchester 008,392,Winchester,3,F,0.15003668
+E02004836,Winchester 008,391,Winchester,3,F,0.20953641
+E02004837,Winchester 009,390,Winchester,3,F,0.00579265
+E02004837,Winchester 009,389,Winchester,3,F,0.00709257
+E02004837,Winchester 009,388,Winchester,3,F,0.19021181
+E02004837,Winchester 009,368,Winchester,3,F,0.00000007
+E02004837,Winchester 009,436,Winchester,3,F,0.75550365
+E02004837,Winchester 009,435,Winchester,3,F,0.02348181
+E02004837,Winchester 009,434,Winchester,3,F,0.00000003
+E02004837,Winchester 009,433,Winchester,3,F,0.00000006
+E02004837,Winchester 009,432,Winchester,3,F,0.00000001
+E02004837,Winchester 009,431,Winchester,3,F,0.00000004
+E02004837,Winchester 009,426,Winchester,3,F,0.00000015
+E02004837,Winchester 009,405,Winchester,3,F,0.00000005
+E02004837,Winchester 009,400,Winchester,3,F,0.00000001
+E02004837,Winchester 009,393,Winchester,3,F,0.01791663
+E02004837,Winchester 009,392,Winchester,3,F,0.00000002
+E02004837,Winchester 009,391,Winchester,3,F,0.00000004
+E02004837,Winchester 009,258,Winchester,3,F,0.00000004
+E02004837,Winchester 009,256,Winchester,3,F,0.00000002
+E02004837,Winchester 009,232,Winchester,3,F,0.00000000
+E02004837,Winchester 009,267,Winchester,3,F,0.00000015
+E02004837,Winchester 009,266,Winchester,3,F,0.00000014
+E02004837,Winchester 009,811,Winchester,3,F,0.00000007
+E02004838,Winchester 010,388,Winchester,3,F,0.00000036
+E02004838,Winchester 010,387,Winchester,2,F,0.04731374
+E02004838,Winchester 010,386,Winchester,2,F,0.00000001
+E02004838,Winchester 010,383,Winchester,2,F,0.00000003
+E02004838,Winchester 010,368,Winchester,3,F,0.07672906
+E02004838,Winchester 010,367,Winchester,3,F,0.07199307
+E02004838,Winchester 010,436,Winchester,3,F,0.00000000
+E02004838,Winchester 010,434,Winchester,3,F,0.03755795
+E02004838,Winchester 010,433,Winchester,3,F,0.20792523
+E02004838,Winchester 010,429,Winchester,3,F,0.00000002
+E02004838,Winchester 010,423,Winchester,3,F,0.00000013
+E02004838,Winchester 010,422,Winchester,2,F,0.55477522
+E02004838,Winchester 010,394,Winchester,3,F,0.00000001
+E02004838,Winchester 010,233,Winchester,3,F,0.00000002
+E02004838,Winchester 010,232,Winchester,3,F,0.00000005
+E02004838,Winchester 010,230,Winchester,3,F,0.00000005
+E02004838,Winchester 010,226,Winchester,3,F,0.00000006
+E02004838,Winchester 010,225,Winchester,3,F,0.00000007
+E02004838,Winchester 010,955,Winchester,3,F,0.00000002
+E02004838,Winchester 010,922,Winchester,3,F,0.00104123
+E02004838,Winchester 010,921,Winchester,3,F,0.00266345
+E02004838,Winchester 010,805,Winchester,3,F,0.00000015
+E02004838,Winchester 010,804,Winchester,3,F,0.00000007
+E02004839,Winchester 011,661,Winchester,2,F,0.00000001
+E02004839,Winchester 011,657,Winchester,2,F,0.00000001
+E02004839,Winchester 011,387,Winchester,2,F,0.00000004
+E02004839,Winchester 011,385,Winchester,2,F,0.00000003
+E02004839,Winchester 011,384,Winchester,2,F,0.00000002
+E02004839,Winchester 011,375,Winchester,2,F,0.00000003
+E02004839,Winchester 011,374,Winchester,2,F,0.00000057
+E02004839,Winchester 011,373,Winchester,2,F,0.04886261
+E02004839,Winchester 011,372,Winchester,2,F,0.15225475
+E02004839,Winchester 011,371,Winchester,2,F,0.00000001
+E02004839,Winchester 011,370,Winchester,2,F,0.00000003
+E02004839,Winchester 011,369,Winchester,2,F,0.00000004
+E02004839,Winchester 011,422,Winchester,2,F,0.00000002
+E02004839,Winchester 011,805,Winchester,3,F,0.00000012
+E02004839,Winchester 011,804,Winchester,3,F,0.46092261
+E02004839,Winchester 011,803,Winchester,2,F,0.15347670
+E02004839,Winchester 011,802,Winchester,2,F,0.18448222
+E02004839,Winchester 011,801,Winchester,6,F,0.00000002
+E02004839,Winchester 011,800,Winchester,6,F,0.00000012
+E02004839,Winchester 011,796,Winchester,6,F,0.00000003
+E02004840,Winchester 012,387,Winchester,2,F,0.45312358
+E02004840,Winchester 012,386,Winchester,2,F,0.10767525
+E02004840,Winchester 012,385,Winchester,2,F,0.29014559
+E02004840,Winchester 012,384,Winchester,2,F,0.09300246
+E02004840,Winchester 012,383,Winchester,2,F,0.00000015
+E02004840,Winchester 012,382,Winchester,2,F,0.00000018
+E02004840,Winchester 012,374,Winchester,2,F,0.05605158
+E02004840,Winchester 012,373,Winchester,2,F,0.00000033
+E02004840,Winchester 012,372,Winchester,2,F,0.00000029
+E02004840,Winchester 012,422,Winchester,2,F,0.00000028
+E02004840,Winchester 012,804,Winchester,3,F,0.00000018
+E02004840,Winchester 012,803,Winchester,2,F,0.00000013
+E02004841,Winchester 013,387,Winchester,2,F,0.00000004
+E02004841,Winchester 013,386,Winchester,2,F,0.00000004
+E02004841,Winchester 013,385,Winchester,2,F,0.00000006
+E02004841,Winchester 013,384,Winchester,2,F,0.00000030
+E02004841,Winchester 013,383,Winchester,2,F,0.18859085
+E02004841,Winchester 013,382,Winchester,2,F,0.11007913
+E02004841,Winchester 013,381,Winchester,2,F,0.02759154
+E02004841,Winchester 013,380,Winchester,2,F,0.05210594
+E02004841,Winchester 013,379,Winchester,2,F,0.00887688
+E02004841,Winchester 013,378,Winchester,2,F,0.00253172
+E02004841,Winchester 013,377,Winchester,2,F,0.09955060
+E02004841,Winchester 013,376,Winchester,2,F,0.09553348
+E02004841,Winchester 013,375,Winchester,2,F,0.12717418
+E02004841,Winchester 013,374,Winchester,2,F,0.21792169
+E02004841,Winchester 013,372,Winchester,2,F,0.00000017
+E02004841,Winchester 013,369,Winchester,2,F,0.00000003
+E02004841,Winchester 013,363,Winchester,2,F,0.00000206
+E02004841,Winchester 013,362,Winchester,2,F,0.00000001
+E02004841,Winchester 013,361,Winchester,2,F,0.00000002
+E02004841,Winchester 013,360,Winchester,2,F,0.00000000
+E02004841,Winchester 013,341,Winchester,2,F,0.00000003
+E02004841,Winchester 013,338,Winchester,2,F,0.00000005
+E02004841,Winchester 013,225,Winchester,3,F,0.00000007
+E02004841,Winchester 013,224,Winchester,3,F,0.00000003
+E02004841,Winchester 013,203,Winchester,3,F,0.00000009
+E02004841,Winchester 013,201,Winchester,3,F,0.00000007
+E02004841,Winchester 013,319,Winchester,2,F,0.00000000
+E02004841,Winchester 013,317,Winchester,2,F,0.00000003
+E02004841,Winchester 013,316,Winchester,2,F,0.00000007
+E02004841,Winchester 013,301,Winchester,2,F,0.00000006
+E02004841,Winchester 013,899,Winchester,2,F,0.01359981
+E02004841,Winchester 013,898,Winchester,2,F,0.01754360
+E02004841,Winchester 013,897,Winchester,2,F,0.01086631
+E02004841,Winchester 013,895,Winchester,2,F,0.00008090
+E02004841,Winchester 013,889,Winchester,2,F,0.00000101
+E02004841,Winchester 013,885,Winchester,3,F,0.00001367
+E02004841,Winchester 013,964,Winchester,2,F,0.01304868
+E02004841,Winchester 013,963,Winchester,2,F,0.00332618
+E02004841,Winchester 013,962,Winchester,2,F,0.01151320
+E02004841,Winchester 013,937,Winchester,2,F,0.00004742
+E02004841,Winchester 013,935,Winchester,2,F,0.00000001
+E02004842,Winchester 014,657,Winchester,2,F,0.00000009
+E02004842,Winchester 014,490,Winchester,2,F,0.00000006
+E02004842,Winchester 014,489,Winchester,2,F,0.00000001
+E02004842,Winchester 014,487,Winchester,2,F,0.00000002
+E02004842,Winchester 014,571,Winchester,2,F,0.00000003
+E02004842,Winchester 014,570,Winchester,2,F,0.00000009
+E02004842,Winchester 014,375,Winchester,2,F,0.00000004
+E02004842,Winchester 014,372,Winchester,2,F,0.10267662
+E02004842,Winchester 014,371,Winchester,2,F,0.07800236
+E02004842,Winchester 014,370,Winchester,2,F,0.14839872
+E02004842,Winchester 014,369,Winchester,2,F,0.60948181
+E02004842,Winchester 014,301,Winchester,2,F,0.00000009
+E02004842,Winchester 014,295,Winchester,2,F,0.00000002
+E02004842,Winchester 014,291,Winchester,2,F,0.00000003
+E02004842,Winchester 014,902,Winchester,2,F,0.01819716
+E02004842,Winchester 014,901,Winchester,2,F,0.01426389
+E02004842,Winchester 014,900,Winchester,2,F,0.00003177
+E02004842,Winchester 014,961,Winchester,2,F,0.02039983
+E02004842,Winchester 014,903,Winchester,2,F,0.00824647
+E02004842,Winchester 014,802,Winchester,2,F,0.00000015
+E02004842,Winchester 014,645,Winchester,2,F,0.00000530
+E02004842,Winchester 014,644,Winchester,2,F,0.00000227
+E02004842,Winchester 014,640,Winchester,2,F,0.00000588
+E02004842,Winchester 014,639,Winchester,2,F,0.00028720
+E02004842,Winchester 014,636,Winchester,2,F,0.00000002
+E02004842,Winchester 014,635,Winchester,2,F,0.00000002
+E02004842,Winchester 014,634,Winchester,2,F,0.00000001
+E02004842,Winchester 014,632,Winchester,2,F,0.00000002
+E02006047,Mendip 001,847,Mendip,10,B,0.00000002
+E02006056,Mendip 010,847,Mendip,10,B,0.00000004
+E02006075,South Somerset 001,847,South Somerset,10,B,0.00000013
+E02006441,Waverley 003,835,Waverley,13,B,0.00000028
+E02006447,Waverley 009,835,Waverley,13,B,0.00000058
+E02006453,Waverley 015,833,Waverley,9,B,0.00000024
+E02006454,Waverley 016,833,Waverley,9,B,0.00000068
+E02006455,Waverley 017,834,Waverley,13,B,0.00000104
+E02006455,Waverley 017,833,Waverley,9,B,0.00000050
+E02006539,Adur 006,831,Adur,14,B,0.00000020
+E02006539,Adur 006,829,Adur,14,B,0.00000060
+E02006541,Adur 008,829,Adur,14,B,0.00000039
+E02006542,Arun 001,832,Arun,9,B,0.00000012
+E02006542,Arun 001,831,Arun,14,B,0.64335160
+E02006542,Arun 001,830,Arun,14,B,0.00000003
+E02006542,Arun 001,783,Arun,7,F,0.00000009
+E02006542,Arun 001,782,Arun,7,F,0.35664726
+E02006542,Arun 001,780,Arun,7,F,0.00000003
+E02006543,Arun 002,831,Arun,14,B,0.99999670
+E02006543,Arun 002,830,Arun,14,B,0.00000008
+E02006543,Arun 002,829,Arun,14,B,0.00000029
+E02006544,Arun 003,784,Arun,7,F,0.00000026
+E02006544,Arun 003,783,Arun,7,F,0.00000010
+E02006544,Arun 003,782,Arun,7,F,0.99999906
+E02006544,Arun 003,781,Arun,7,F,0.00000016
+E02006544,Arun 003,780,Arun,7,F,0.00000042
+E02006545,Arun 004,831,Arun,14,B,0.00000093
+E02006545,Arun 004,830,Arun,14,B,0.99999850
+E02006545,Arun 004,780,Arun,7,F,0.00000057
+E02006546,Arun 005,831,Arun,14,B,0.81742470
+E02006546,Arun 005,830,Arun,14,B,0.18257530
+E02006547,Arun 006,831,Arun,14,B,0.00000010
+E02006547,Arun 006,830,Arun,14,B,0.00000040
+E02006547,Arun 006,782,Arun,7,F,0.00000044
+E02006547,Arun 006,780,Arun,7,F,0.99999906
+E02006548,Arun 007,831,Arun,14,B,0.00000084
+E02006548,Arun 007,830,Arun,14,B,0.99999916
+E02006549,Arun 008,831,Arun,14,B,0.00003077
+E02006549,Arun 008,830,Arun,14,B,0.99996840
+E02006549,Arun 008,829,Arun,14,B,0.00000084
+E02006550,Arun 009,830,Arun,14,B,1.00000000
+E02006551,Arun 010,830,Arun,14,B,1.00000000
+E02006552,Arun 011,830,Arun,14,B,0.99999903
+E02006552,Arun 011,780,Arun,7,F,0.00000097
+E02006553,Arun 012,784,Arun,7,F,0.00000045
+E02006553,Arun 012,782,Arun,7,F,0.00000043
+E02006553,Arun 012,781,Arun,7,F,0.99999883
+E02006553,Arun 012,780,Arun,7,F,0.00000028
+E02006554,Arun 013,782,Arun,7,F,0.00000031
+E02006554,Arun 013,781,Arun,7,F,0.00000002
+E02006554,Arun 013,780,Arun,7,F,0.99999967
+E02006555,Arun 014,781,Arun,7,F,0.99999960
+E02006555,Arun 014,780,Arun,7,F,0.00000040
+E02006556,Arun 015,781,Arun,7,F,0.00000118
+E02006556,Arun 015,780,Arun,7,F,0.99999882
+E02006557,Arun 016,781,Arun,7,F,1.00000000
+E02006558,Arun 017,781,Arun,7,F,0.99999838
+E02006558,Arun 017,780,Arun,7,F,0.00000162
+E02006559,Arun 018,781,Arun,7,F,1.00000000
+E02006560,Arun 019,785,Arun,7,F,0.00000006
+E02006560,Arun 019,784,Arun,7,F,0.00000113
+E02006560,Arun 019,781,Arun,7,F,0.99999881
+E02006561,Chichester 001,834,Chichester,13,B,0.00000012
+E02006561,Chichester 001,833,Chichester,9,B,0.99999918
+E02006561,Chichester 001,832,Chichester,9,B,0.00000037
+E02006561,Chichester 001,794,Chichester,6,F,0.00000002
+E02006561,Chichester 001,793,Chichester,6,F,0.00000009
+E02006562,Chichester 002,833,Chichester,9,B,0.51043771
+E02006562,Chichester 002,832,Chichester,9,B,0.48956011
+E02006563,Chichester 003,648,Chichester,2,F,0.00000001
+E02006563,Chichester 003,834,Chichester,13,B,0.00000005
+E02006563,Chichester 003,833,Chichester,9,B,0.00000007
+E02006563,Chichester 003,832,Chichester,9,B,0.00000005
+E02006563,Chichester 003,799,Chichester,6,F,0.00000008
+E02006563,Chichester 003,797,Chichester,6,F,0.00000001
+E02006563,Chichester 003,796,Chichester,6,F,0.00000003
+E02006563,Chichester 003,795,Chichester,6,F,0.00000005
+E02006563,Chichester 003,794,Chichester,6,F,0.20221944
+E02006563,Chichester 003,793,Chichester,6,F,0.79778005
+E02006563,Chichester 003,792,Chichester,7,F,0.00000009
+E02006563,Chichester 003,789,Chichester,7,F,0.00000007
+E02006564,Chichester 004,833,Chichester,9,B,0.00000010
+E02006564,Chichester 004,832,Chichester,9,B,0.20715746
+E02006564,Chichester 004,794,Chichester,6,F,0.79284222
+E02006564,Chichester 004,789,Chichester,7,F,0.00000022
+E02006564,Chichester 004,783,Chichester,7,F,0.00000000
+E02006565,Chichester 005,833,Chichester,9,B,0.00000015
+E02006565,Chichester 005,832,Chichester,9,B,0.99999903
+E02006565,Chichester 005,831,Chichester,14,B,0.00000003
+E02006565,Chichester 005,794,Chichester,6,F,0.00000011
+E02006565,Chichester 005,783,Chichester,7,F,0.00000004
+E02006565,Chichester 005,782,Chichester,7,F,0.00000003
+E02006566,Chichester 006,832,Chichester,9,B,0.00000009
+E02006566,Chichester 006,794,Chichester,6,F,0.00000008
+E02006566,Chichester 006,793,Chichester,6,F,0.00000005
+E02006566,Chichester 006,792,Chichester,7,F,0.00000006
+E02006566,Chichester 006,790,Chichester,7,F,0.00000006
+E02006566,Chichester 006,789,Chichester,7,F,0.52517525
+E02006566,Chichester 006,788,Chichester,7,F,0.01259715
+E02006566,Chichester 006,784,Chichester,7,F,0.00000005
+E02006566,Chichester 006,783,Chichester,7,F,0.46222712
+E02006566,Chichester 006,782,Chichester,7,F,0.00000009
+E02006567,Chichester 007,648,Chichester,2,F,0.00000006
+E02006567,Chichester 007,647,Chichester,2,F,0.00000008
+E02006567,Chichester 007,793,Chichester,6,F,0.00000014
+E02006567,Chichester 007,792,Chichester,7,F,0.64425764
+E02006567,Chichester 007,791,Chichester,7,F,0.09061389
+E02006567,Chichester 007,790,Chichester,7,F,0.24279547
+E02006567,Chichester 007,789,Chichester,7,F,0.00000017
+E02006567,Chichester 007,788,Chichester,7,F,0.00000002
+E02006567,Chichester 007,787,Chichester,7,F,0.00000009
+E02006567,Chichester 007,786,Chichester,7,F,0.02233239
+E02006567,Chichester 007,615,Chichester,7,F,0.00000002
+E02006567,Chichester 007,614,Chichester,7,F,0.00000003
+E02006567,Chichester 007,613,Chichester,7,F,0.00000000
+E02006568,Chichester 008,788,Chichester,7,F,0.99999867
+E02006568,Chichester 008,784,Chichester,7,F,0.00000039
+E02006568,Chichester 008,783,Chichester,7,F,0.00000094
+E02006569,Chichester 009,791,Chichester,7,F,0.00000008
+E02006569,Chichester 009,790,Chichester,7,F,0.00000012
+E02006569,Chichester 009,787,Chichester,7,F,0.54574118
+E02006569,Chichester 009,786,Chichester,7,F,0.45425857
+E02006569,Chichester 009,613,Chichester,7,F,0.00000005
+E02006570,Chichester 010,788,Chichester,7,F,0.99999892
+E02006570,Chichester 010,787,Chichester,7,F,0.00000039
+E02006570,Chichester 010,785,Chichester,7,F,0.00000028
+E02006570,Chichester 010,784,Chichester,7,F,0.00000042
+E02006571,Chichester 011,790,Chichester,7,F,0.00000026
+E02006571,Chichester 011,789,Chichester,7,F,0.00000009
+E02006571,Chichester 011,788,Chichester,7,F,0.13927555
+E02006571,Chichester 011,787,Chichester,7,F,0.38164805
+E02006571,Chichester 011,785,Chichester,7,F,0.47907607
+E02006572,Chichester 012,788,Chichester,7,F,0.03465265
+E02006572,Chichester 012,785,Chichester,7,F,0.13320942
+E02006572,Chichester 012,784,Chichester,7,F,0.83213716
+E02006572,Chichester 012,783,Chichester,7,F,0.00000018
+E02006572,Chichester 012,782,Chichester,7,F,0.00000015
+E02006572,Chichester 012,781,Chichester,7,F,0.00000045
+E02006573,Chichester 013,785,Chichester,7,F,0.99999990
+E02006573,Chichester 013,784,Chichester,7,F,0.00000010
+E02006574,Chichester 014,785,Chichester,7,F,0.99999997
+E02006574,Chichester 014,781,Chichester,7,F,0.00000003
+E02006592,Horsham 005,833,Horsham,9,B,0.00000012
+E02006597,Horsham 010,833,Horsham,9,B,0.00000000
+E02006597,Horsham 010,832,Horsham,9,B,0.00000010
+E02006599,Horsham 012,832,Horsham,9,B,0.00000007
+E02006600,Horsham 013,832,Horsham,9,B,0.00000015
+E02006600,Horsham 013,831,Horsham,14,B,0.00000030
+E02006602,Horsham 015,831,Horsham,14,B,0.00000026
+E02006603,Horsham 016,831,Horsham,14,B,0.00000002
+E02006621,Worthing 001,831,Worthing,14,B,0.00000094
+E02006621,Worthing 001,829,Worthing,14,B,0.99999906
+E02006622,Worthing 002,829,Worthing,14,B,1.00000000
+E02006623,Worthing 003,829,Worthing,14,B,1.00000000
+E02006624,Worthing 004,831,Worthing,14,B,0.00000031
+E02006624,Worthing 004,829,Worthing,14,B,0.99999822
+E02006625,Worthing 005,829,Worthing,14,B,0.99999623
+E02006626,Worthing 006,831,Worthing,14,B,0.00000042
+E02006626,Worthing 006,830,Worthing,14,B,0.00000057
+E02006626,Worthing 006,829,Worthing,14,B,0.99999901
+E02006627,Worthing 007,829,Worthing,14,B,1.00000000
+E02006628,Worthing 008,829,Worthing,14,B,1.00000000
+E02006629,Worthing 009,829,Worthing,14,B,0.99999538
+E02006630,Worthing 010,829,Worthing,14,B,1.00000000
+E02006631,Worthing 011,829,Worthing,14,B,1.00000000
+E02006632,Worthing 012,829,Worthing,14,B,1.00000000
+E02006633,Worthing 013,830,Worthing,14,B,0.00000088
+E02006633,Worthing 013,829,Worthing,14,B,0.99999912
+E02006640,Wiltshire 029,843,Wiltshire,12,B,0.00000007
+E02006641,Wiltshire 034,847,Wiltshire,10,B,0.00000009
+E02006642,Wiltshire 038,847,Wiltshire,10,B,0.00000003
+E02006642,Wiltshire 038,844,Wiltshire,12,B,0.00000009
+E02006643,Wiltshire 041,844,Wiltshire,12,B,0.00000016
+E02006643,Wiltshire 041,843,Wiltshire,12,B,0.00000052
+E02006661,Wiltshire 045,847,Wiltshire,10,B,0.59649043
+E02006661,Wiltshire 045,844,Wiltshire,12,B,0.40350636
+E02006661,Wiltshire 045,843,Wiltshire,12,B,0.00000002
+E02006662,Wiltshire 046,844,Wiltshire,12,B,1.00000000
+E02006663,Wiltshire 048,847,Wiltshire,10,B,0.00000017
+E02006663,Wiltshire 048,844,Wiltshire,12,B,0.99999983
+E02006664,Wiltshire 049,847,Wiltshire,10,B,0.00000026
+E02006664,Wiltshire 049,846,Wiltshire,12,B,0.00000012
+E02006664,Wiltshire 049,845,Wiltshire,12,B,0.00000015
+E02006664,Wiltshire 049,844,Wiltshire,12,B,0.99999934
+E02006664,Wiltshire 049,843,Wiltshire,12,B,0.00000002
+E02006664,Wiltshire 049,809,Wiltshire,8,F,0.00000001
+E02006664,Wiltshire 049,808,Wiltshire,8,F,0.00000009
+E02006665,Wiltshire 050,847,Wiltshire,10,B,0.99999667
+E02006666,Wiltshire 051,845,Wiltshire,12,B,1.00000000
+E02006667,Wiltshire 052,847,Wiltshire,10,B,0.00000160
+E02006667,Wiltshire 052,845,Wiltshire,12,B,0.99999687
+E02006667,Wiltshire 052,844,Wiltshire,12,B,0.00000152
+E02006668,Wiltshire 053,845,Wiltshire,12,B,0.99999905
+E02006668,Wiltshire 053,844,Wiltshire,12,B,0.00000095
+E02006669,Wiltshire 054,849,Wiltshire,11,B,0.00000050
+E02006669,Wiltshire 054,848,Wiltshire,11,B,0.00000006
+E02006669,Wiltshire 054,847,Wiltshire,10,B,0.99999815
+E02006669,Wiltshire 054,846,Wiltshire,12,B,0.00000008
+E02006669,Wiltshire 054,845,Wiltshire,12,B,0.00000003
+E02006669,Wiltshire 054,844,Wiltshire,12,B,0.00000014
+E02006670,Wiltshire 055,847,Wiltshire,10,B,0.00000104
+E02006670,Wiltshire 055,846,Wiltshire,12,B,0.00000100
+E02006670,Wiltshire 055,845,Wiltshire,12,B,0.99999796
+E02006671,Wiltshire 056,846,Wiltshire,12,B,0.00000127
+E02006671,Wiltshire 056,845,Wiltshire,12,B,0.99999873
+E02006672,Wiltshire 057,848,Wiltshire,11,B,0.00000012
+E02006672,Wiltshire 057,847,Wiltshire,10,B,0.00000024
+E02006672,Wiltshire 057,846,Wiltshire,12,B,0.61589624
+E02006672,Wiltshire 057,845,Wiltshire,12,B,0.38410329
+E02006672,Wiltshire 057,844,Wiltshire,12,B,0.00000012
+E02006673,Wiltshire 058,846,Wiltshire,12,B,0.00000147
+E02006673,Wiltshire 058,845,Wiltshire,12,B,0.99999853
+E02006674,Wiltshire 059,846,Wiltshire,12,B,0.00000208
+E02006674,Wiltshire 059,845,Wiltshire,12,B,0.99999793
+E02006675,Wiltshire 060,846,Wiltshire,12,B,0.99999935
+E02006675,Wiltshire 060,845,Wiltshire,12,B,0.00000015
+E02006675,Wiltshire 060,844,Wiltshire,12,B,0.00000013
+E02006675,Wiltshire 060,815,Wiltshire,3,F,0.00000003
+E02006675,Wiltshire 060,814,Wiltshire,3,F,0.00000006
+E02006675,Wiltshire 060,812,Wiltshire,8,F,0.00000021
+E02006675,Wiltshire 060,809,Wiltshire,8,F,0.00000008
+E02006676,Wiltshire 061,849,Wiltshire,11,B,0.00000049
+E02006676,Wiltshire 061,847,Wiltshire,10,B,0.99999771
+E02006677,Wiltshire 062,848,Wiltshire,11,B,0.00000030
+E02006677,Wiltshire 062,846,Wiltshire,12,B,0.99999937
+E02006677,Wiltshire 062,817,Wiltshire,3,F,0.00000009
+E02006677,Wiltshire 062,815,Wiltshire,3,F,0.00000024
+E02006695,Wiltshire 047,847,Wiltshire,10,B,0.00000018
+E02006821,Portsmouth 026,567,Portsmouth,2,F,0.01474847
+E02006821,Portsmouth 026,565,Portsmouth,2,F,0.08330246
+E02006821,Portsmouth 026,564,Portsmouth,2,F,0.04660725
+E02006821,Portsmouth 026,563,Portsmouth,2,F,0.17730980
+E02006821,Portsmouth 026,562,Portsmouth,2,F,0.14266593
+E02006821,Portsmouth 026,561,Portsmouth,2,F,0.53536480
+E02006821,Portsmouth 026,646,Portsmouth,2,F,0.00000050
+E02006821,Portsmouth 026,645,Portsmouth,2,F,0.00000012
+E02006821,Portsmouth 026,598,Portsmouth,2,F,0.00000067
+E02006822,Havant 018,563,Havant,2,F,0.00022781
+E02006822,Havant 018,562,Havant,2,F,0.00000020
+E02006822,Havant 018,561,Havant,2,F,0.00000053
+E02006822,Havant 018,646,Havant,2,F,0.00000043
+E02006822,Havant 018,643,Havant,2,F,0.00000021
+E02006822,Havant 018,642,Havant,2,F,0.00000003
+E02006822,Havant 018,626,Havant,2,F,0.00000001
+E02006822,Havant 018,625,Havant,2,F,0.00000079
+E02006822,Havant 018,620,Havant,2,F,0.00000008
+E02006822,Havant 018,605,Havant,2,F,0.00000008
+E02006822,Havant 018,604,Havant,2,F,0.00000035
+E02006822,Havant 018,603,Havant,2,F,0.02541968
+E02006822,Havant 018,602,Havant,2,F,0.06735324
+E02006822,Havant 018,601,Havant,2,F,0.05095264
+E02006822,Havant 018,600,Havant,2,F,0.21916443
+E02006822,Havant 018,599,Havant,2,F,0.27128283
+E02006822,Havant 018,598,Havant,2,F,0.36559666
+E02006829,East Hampshire 016,659,East Hampshire,2,F,0.00000003
+E02006829,East Hampshire 016,658,East Hampshire,2,F,0.00000013
+E02006829,East Hampshire 016,655,East Hampshire,2,F,0.00597759
+E02006829,East Hampshire 016,654,East Hampshire,2,F,0.00000014
+E02006829,East Hampshire 016,653,East Hampshire,2,F,0.01328811
+E02006829,East Hampshire 016,652,East Hampshire,2,F,0.01754414
+E02006829,East Hampshire 016,651,East Hampshire,2,F,0.03106250
+E02006829,East Hampshire 016,650,East Hampshire,2,F,0.31795266
+E02006829,East Hampshire 016,649,East Hampshire,2,F,0.00000012
+E02006829,East Hampshire 016,648,East Hampshire,2,F,0.00000053
+E02006829,East Hampshire 016,647,East Hampshire,2,F,0.57841015
+E02006829,East Hampshire 016,965,East Hampshire,2,F,0.03576280
+E02006829,East Hampshire 016,792,East Hampshire,7,F,0.00000024
+E02006829,East Hampshire 016,791,East Hampshire,7,F,0.00000000
+E02006829,East Hampshire 016,631,East Hampshire,2,F,0.00000006
+E02006829,East Hampshire 016,630,East Hampshire,2,F,0.00000003
+E02006829,East Hampshire 016,629,East Hampshire,2,F,0.00000011
+E02006829,East Hampshire 016,628,East Hampshire,2,F,0.00000001
+E02006829,East Hampshire 016,623,East Hampshire,2,F,0.00000005
+E02006829,East Hampshire 016,622,East Hampshire,2,F,0.00000019
+E02006829,East Hampshire 016,619,East Hampshire,2,F,0.00000010
+E02006829,East Hampshire 016,617,East Hampshire,2,F,0.00000002
+E02006829,East Hampshire 016,616,East Hampshire,2,F,0.00000018
+E02006829,East Hampshire 016,615,East Hampshire,7,F,0.00000007
+E02006829,East Hampshire 016,609,East Hampshire,2,F,0.00000006
+E02006830,Havant 019,656,Havant,2,F,0.00000069
+E02006830,Havant 019,655,Havant,2,F,0.00000021
+E02006830,Havant 019,653,Havant,2,F,0.00030653
+E02006830,Havant 019,961,Havant,2,F,0.00000294
+E02006830,Havant 019,634,Havant,2,F,0.02452914
+E02006830,Havant 019,633,Havant,2,F,0.00000037
+E02006830,Havant 019,632,Havant,2,F,0.45772520
+E02006830,Havant 019,631,Havant,2,F,0.43446387
+E02006830,Havant 019,630,Havant,2,F,0.08297105
+E02006831,Havant 020,653,Havant,2,F,0.00000018
+E02006831,Havant 020,651,Havant,2,F,0.00042156
+E02006831,Havant 020,647,Havant,2,F,0.00000071
+E02006831,Havant 020,965,Havant,2,F,0.00000000
+E02006831,Havant 020,633,Havant,2,F,0.03270439
+E02006831,Havant 020,632,Havant,2,F,0.00000055
+E02006831,Havant 020,631,Havant,2,F,0.00000036
+E02006831,Havant 020,630,Havant,2,F,0.21172364
+E02006831,Havant 020,629,Havant,2,F,0.27582608
+E02006831,Havant 020,628,Havant,2,F,0.44342034
+E02006831,Havant 020,627,Havant,2,F,0.03590179
+E02006831,Havant 020,623,Havant,2,F,0.00000038
+E02006838,East Hampshire 017,834,East Hampshire,13,B,0.99999874
+E02006839,Waverley 018,835,Waverley,13,B,0.00000009
+E02006839,Waverley 018,834,Waverley,13,B,0.00003956
+E02006883,Bournemouth 023,851,Bournemouth,11,B,0.99999261
+E02006883,Bournemouth 023,850,Bournemouth,11,B,0.00000739
+E02006885,Bournemouth 024,851,Bournemouth,11,B,0.99999030
+E02006885,Bournemouth 024,850,Bournemouth,11,B,0.00000970
