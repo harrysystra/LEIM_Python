@@ -44,9 +44,6 @@ def read_avzn(path):
     geodef_df = read_geodef(path="C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Step2//Inputs")
     df["District"] = df["Zone"].map(geodef_df.set_index("Zone")["D30_Districts ID"])
 
-    print(geodef_df)
-
-    print(df)
     return df
 
 
@@ -87,7 +84,6 @@ def calculate_additional_hhs_and_emp(df,
 
     result_df['ExtraHH/jobs'] = result_df[f'NTEM_Target_{year}'] * result_df['Proportion']
 
-    print(result_df)
     return result_df
 
 
@@ -104,7 +100,6 @@ def add_extra_people_by_pt_on_hh(df):
     for i in range(1, 5):
         df[f"1_Category{i}"] = df[f"Category{i}"] + (df[f"Category{i}"] * df["ExtraHH/jobs"]) / df["Quantity"]
 
-    print(df)
     return df
 
 
@@ -138,8 +133,6 @@ def check_children_at_district_level_ntem(df, high_planning_under16_difference_d
     out["NTEM Target"] = out["District"].map(ntem_lookup)
 
     out["Remaining"] = out["NTEM Target"] - out["Difference"]
-
-    print(out)
 
     return out
 
@@ -189,7 +182,7 @@ def distribute_remaining_children_to_hh_with_child(
 
     out["Extra Children by Zone"] = out["Prop Child by 30 Sect"] * out["Remaining Children to Allocate"]
     out["New Children + Jobs1"] = out["Extra Children by Zone"] + out["1_Category1"]
-    print(out)
+
     return out
 
 
@@ -227,7 +220,7 @@ def create_updated_avzn(df):
         out["Category3"] +
         out["Category4"]
     )
-    print(out)
+
     return out
 
 
@@ -243,6 +236,7 @@ def sum_population_tables(csv_path_1, csv_path_2, csv_path_3):
     out = df1.copy()
     cols_to_sum = [col for col in out.columns if col != "District"]
     out[cols_to_sum] = df1[cols_to_sum] + df2[cols_to_sum] + df3[cols_to_sum]
+
     return out
 
 
@@ -307,38 +301,73 @@ def check_population_at_district_level_ntem_vs_step3(
     out["NTEM Adults"] = out["NTEM Population"] - out["NTEM Children"]
     out["Remaining Adults"] = out["NTEM Adults"] - out["Difference"]
 
-    print(out)
     return out
 
 
-def redistribute_adults_to_multi_adult_households(df):
+def redistribute_adults_to_multi_adult_households(
+    df,
+    population_check_df
+):
     out = df.copy()
 
-    multiadult_totals = (
-        out.loc[out["Classification4"] == "MultiAdults"]
-        .groupby("District")["Total adults"]
-        .sum()
+    remaining_adults_lookup = population_check_df.set_index("District")["Remaining Adults"]
+    out["Remaining Adults"] = out["District"].map(remaining_adults_lookup)
+
+    mask = out["Actv"].gt(16) & out["Actv"].lt(33)
+
+    eligible_adults = out["Total adults"].where(mask, 0)
+    district_multiadult_totals = eligible_adults.groupby(out["District"]).transform("sum")
+
+    out["Scaling Factor"] = np.where(
+        mask,
+        out["Total adults"] / district_multiadult_totals,
+        0.0
     )
 
-    out["_multiadult_district_total"] = out["District"].map(multiadult_totals)
-
-
-    out["Scaling Factor"] = 0.0
-
-    mask = (
-        (out["Classification4"] == "MultiAdults") &
-        (out["_multiadult_district_total"].notna()) &
-        (out["_multiadult_district_total"] != 0)
+    out["Extra Adults"] = np.where(
+        mask,
+        out["Remaining Adults"] * out["Scaling Factor"],
+        0.0
     )
 
-    out.loc[mask, "Scaling Factor"] = (
-        out.loc[mask, "Total adults"] / out.loc[mask, "_multiadult_district_total"]
-    )
+    for i in range(1, 5):
+        out[f"2_Category{i}"] = np.where(
+            mask,
+            out["Extra Adults"] * out[f"Category{i}"] / out["Total adults"],
+            0.0
+        )
 
-    out = out.drop(columns=["_multiadult_district_total"])
+    out["Total Adult Diff"] = out["2_Category2"] + out["2_Category3"] + out["2_Category4"]
+
+    return out
+
+
+
+def create_final_avzn(redistributed_adults_df,
+                      updated_avzn):
+    out = updated_avzn.copy()
+
+    for i in range(2, 5):
+        out[f"Category{i}"] += redistributed_adults_df[f"2_Category{i}"]
+
+    for i in range(1, 5):
+        out.drop(labels=f"Classification{i}", axis=1, inplace=True)
 
     print(out)
     return out
+
+
+
+def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
+    """
+    Exports df as a csv file and saves to output folder. 
+    Args:
+        - csv_name: desired filename for output
+        - table: pandas DataFrame to convert to csv
+        - output_folder: full path to desired output location
+    """
+    output_path = os.path.join(output_folder, csv_name)
+    table.to_csv(output_path, index=None, header=True)
 
 
 
@@ -372,4 +401,10 @@ if __name__ == "__main__":
                                                                              population_target_df=population_table,
                                                                              under16_target_df=under16_table,
                                                                              year=2031)
-    #redistributed_adults = redistribute_adults_to_multi_adult_households(updated_avzn)
+    redistributed_adults = redistribute_adults_to_multi_adult_households(df=updated_avzn,
+                                                                         population_check_df=population_checker_df)
+    final_avzn = create_final_avzn(redistributed_adults_df=redistributed_adults,
+                                   updated_avzn=updated_avzn)
+    export_df_as_csv(csv_name="avzn_updated",
+                     table=final_avzn,
+                     output_folder="Outputs//3_Scale_AVZN")
