@@ -38,8 +38,8 @@ def read_avzn(path):
 
     df = pd.read_csv(StringIO(data), sep=r"\s+", header=None, names=columns, engine="python")
 
-    df["Sum"] = df.iloc[:, -4:-1].sum(axis=1)
-    df["Adults"] = df.iloc[:, -4:-2].sum(axis=1)
+    df["Sum"] = df["Category1"] + df["Category2"] + df["Category3"] + df["Category4"]
+    df["Adults"] = df["Category2"] + df["Category3"] + df["Category4"]
 
     geodef_df = read_geodef(path="C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Step2//Inputs")
     df["District"] = df["Zone"].map(geodef_df.set_index("Zone")["D30_Districts ID"])
@@ -69,7 +69,7 @@ def append_ntem_target_column(avzn_df,
     df = df.merge(jobs, on="District", how="left")
 
     df[output_col] = df["_jobs"]
-    df.loc[df["Actv"] < 40, output_col] = df.loc[df["Actv"] < 40, "_hhs"]
+    df.loc[df["Actv"] < 33, output_col] = df.loc[df["Actv"] < 33, "_hhs"]
 
     df = df.drop(columns=["_hhs", "_jobs"])
 
@@ -81,7 +81,7 @@ def calculate_additional_hhs_and_emp(df,
                                      year):
     result_df = df.copy()
 
-    result_df['hh/emp'] = np.where(result_df["Actv"] < 34, "hh", "Emp")
+    result_df['hh/emp'] = np.where(result_df["Actv"] < 33, "hh", "Emp")
     group_totals = result_df.groupby(["District", 'hh/emp'])["Quantity"].transform("sum")
     result_df['Proportion'] = result_df["Quantity"] / group_totals
 
@@ -114,14 +114,14 @@ def check_children_at_district_level_ntem(df, high_planning_under16_difference_d
     out = pd.DataFrame({"District": range(1, 30)})
 
     after = (
-        df.loc[df["Actv"] < 40]
+        df.loc[df["Actv"] < 33]
         .groupby("District")["1_Category1"]
         .sum()
         .rename("ChildrenAfter")
     )
 
     before = (
-        df.loc[df["Actv"] < 40]
+        df.loc[df["Actv"] < 33]
         .groupby("District")["Category1"]
         .sum()
         .rename("ChildrenBefore")
@@ -144,8 +144,201 @@ def check_children_at_district_level_ntem(df, high_planning_under16_difference_d
     return out
 
 
+def distribute_remaining_children_to_hh_with_child(
+    df,
+    activity_classifications_df,
+    district_children_df
+):
+    out = df.copy()
+
+    classification_cols = ["Classification1", "Classification2", "Classification3", "Classification4"]
+    lookup_df = activity_classifications_df.set_index("Actv")
+
+    for col in classification_cols:
+        out[col] = out["Actv"].map(lookup_df[col])
+
+    children_totals = (
+        out.loc[out["Classification2"] == "Children"]
+        .groupby("District")["1_Category1"]
+        .sum()
+    )
+
+    out["_children_district_total"] = out["District"].map(children_totals)
+
+    out["Prop Child by 30 Sect"] = 0.0
+
+    mask_prop = (
+        (out["Classification2"] == "Children") &
+        (out["_children_district_total"].notna()) &
+        (out["_children_district_total"] != 0)
+    )
+
+    out.loc[mask_prop, "Prop Child by 30 Sect"] = (
+        out.loc[mask_prop, "1_Category1"] / out.loc[mask_prop, "_children_district_total"]
+    )
+
+    remaining_lookup = district_children_df.set_index("District")["Remaining"]
+    out["Remaining Children to Allocate"] = 0.0
+
+    mask_remaining = out["Classification2"] == "Children"
+    out.loc[mask_remaining, "Remaining Children to Allocate"] = (
+        out.loc[mask_remaining, "District"].map(remaining_lookup).fillna(0)
+    )
+
+    out = out.drop(columns=["_children_district_total"])
+
+    out["Extra Children by Zone"] = out["Prop Child by 30 Sect"] * out["Remaining Children to Allocate"]
+    out["New Children + Jobs1"] = out["Extra Children by Zone"] + out["1_Category1"]
+    print(out)
+    return out
 
 
+
+def create_updated_avzn(df):
+    out = df.copy()
+
+    classification_cols = [col for col in out.columns if "Classification" in col]
+
+    keep_cols = (
+        ["Actv", "Zone", "District"] +
+        classification_cols +
+        ["1_Quantity", "New Children + Jobs1", "1_Category2", "1_Category3", "1_Category4"]
+    )
+
+    out = out[keep_cols].copy()
+
+    out = out.rename(columns={
+        "1_Quantity": "Quantity",
+        "New Children + Jobs1": "Category1",
+        "1_Category2": "Category2",
+        "1_Category3": "Category3",
+        "1_Category4": "Category4"
+    })
+
+    out["Total population"] = (
+        out["Category1"] +
+        out["Category2"] +
+        out["Category3"] +
+        out["Category4"]
+    )
+
+    out["Total adults"] = (
+        out["Category2"] +
+        out["Category3"] +
+        out["Category4"]
+    )
+    print(out)
+    return out
+
+
+
+def sum_population_tables(csv_path_1, csv_path_2, csv_path_3):
+    df1 = pd.read_csv(csv_path_1)
+    df2 = pd.read_csv(csv_path_2)
+    df3 = pd.read_csv(csv_path_3)
+
+    if list(df1.columns) != list(df2.columns) or list(df1.columns) != list(df3.columns):
+        raise ValueError("Input CSVs do not have matching columns")
+
+    out = df1.copy()
+    cols_to_sum = [col for col in out.columns if col != "District"]
+    out[cols_to_sum] = df1[cols_to_sum] + df2[cols_to_sum] + df3[cols_to_sum]
+    return out
+
+
+
+def check_population_at_district_level_ntem_vs_step3(
+    new_avzn_df,
+    old_avzn_df,
+    population_target_df,
+    under16_target_df,
+    year,
+    resident_actv_max=32
+):
+
+    new_residents = new_avzn_df.loc[new_avzn_df["Actv"] <= resident_actv_max].copy()
+    old_residents = old_avzn_df.loc[old_avzn_df["Actv"] <= resident_actv_max].copy()
+
+    out = pd.DataFrame({"District": sorted(new_residents["District"].dropna().unique())})
+
+    after = (
+        new_residents.groupby("District")["Total adults"]
+        .sum()
+        .rename("Adults After")
+    )
+
+    if "Adults" in old_residents.columns:
+        before = (
+            old_residents.groupby("District")["Adults"]
+            .sum()
+            .rename("Adults Before")
+        )
+    else:
+        tmp = old_residents.copy()
+        tmp["Adults"] = tmp["Category2"] + tmp["Category3"] + tmp["Category4"]
+        before = (
+            tmp.groupby("District")["Adults"]
+            .sum()
+            .rename("Adults Before")
+        )
+
+    out = out.merge(after, on="District", how="left")
+    out = out.merge(before, on="District", how="left")
+
+    out[["Adults After", "Adults Before"]] = out[["Adults After", "Adults Before"]].fillna(0)
+    out["Difference"] = out["Adults After"] - out["Adults Before"]
+
+    lookup_col = f"Sum of {year}"
+
+    if lookup_col not in population_target_df.columns:
+        raise ValueError(f"Column '{lookup_col}' not found in population_target_df")
+
+    if lookup_col not in under16_target_df.columns:
+        raise ValueError(f"Column '{lookup_col}' not found in under16_target_df")
+
+    population_lookup = population_target_df.set_index("District")[lookup_col]
+    under16_lookup = under16_target_df.set_index("District")[lookup_col]
+
+    out["NTEM Population"] = out["District"].map(population_lookup)
+    out["NTEM Children"] = out["District"].map(under16_lookup)
+
+    out[["NTEM Population", "NTEM Children"]] = out[["NTEM Population", "NTEM Children"]].fillna(0)
+
+    out["NTEM Adults"] = out["NTEM Population"] - out["NTEM Children"]
+    out["Remaining Adults"] = out["NTEM Adults"] - out["Difference"]
+
+    print(out)
+    return out
+
+
+def redistribute_adults_to_multi_adult_households(df):
+    out = df.copy()
+
+    multiadult_totals = (
+        out.loc[out["Classification4"] == "MultiAdults"]
+        .groupby("District")["Total adults"]
+        .sum()
+    )
+
+    out["_multiadult_district_total"] = out["District"].map(multiadult_totals)
+
+
+    out["Scaling Factor"] = 0.0
+
+    mask = (
+        (out["Classification4"] == "MultiAdults") &
+        (out["_multiadult_district_total"].notna()) &
+        (out["_multiadult_district_total"] != 0)
+    )
+
+    out.loc[mask, "Scaling Factor"] = (
+        out.loc[mask, "Total adults"] / out.loc[mask, "_multiadult_district_total"]
+    )
+
+    out = out.drop(columns=["_multiadult_district_total"])
+
+    print(out)
+    return out
 
 
 
@@ -156,11 +349,27 @@ if __name__ == "__main__":
     additional_hh_emp_df = append_ntem_target_column(avzn_df=avzn_df,
                                                      planning_hhs_difference_df=planning_hh_difference_df,
                                                      planning_jobs_difference_df=planning_jobs_difference_df,
-                                                     year=2046)
+                                                     year=2031)
     extra_hhs_emp = calculate_additional_hhs_and_emp(df=additional_hh_emp_df,
-                                                     year=2046)
+                                                     year=2031)
     extra_ppl_df = add_extra_people_by_pt_on_hh(extra_hhs_emp)
     high_under16_df = pd.read_csv('Outputs//2_Extended_NTEM_Targets//High_planning_under16_difference.csv')
     district_df = check_children_at_district_level_ntem(df=extra_ppl_df,
                                                         high_planning_under16_difference_df=high_under16_df,
-                                                        year=2046)
+                                                        year=2031)
+    activity_class_df = pd.read_csv("Step3//Inputs//activity_classifications.csv")
+    distributed_children = distribute_remaining_children_to_hh_with_child(df=extra_ppl_df,
+                                                                          activity_classifications_df=activity_class_df,
+                                                                          district_children_df=district_df)
+    updated_avzn = create_updated_avzn(df=distributed_children)
+    population_table = sum_population_tables("Outputs//2_Extended_NTEM_Targets//High_planning_under16_difference.csv",
+                                             "Outputs//2_Extended_NTEM_Targets//High_planning_75plus_difference.csv",
+                                             "Outputs//2_Extended_NTEM_Targets//High_planning_16-74_difference.csv"
+                                             )
+    under16_table = pd.read_csv("Outputs//2_Extended_NTEM_Targets//High_planning_under16_difference.csv")
+    population_checker_df = check_population_at_district_level_ntem_vs_step3(new_avzn_df=updated_avzn,
+                                                                             old_avzn_df=avzn_df,
+                                                                             population_target_df=population_table,
+                                                                             under16_target_df=under16_table,
+                                                                             year=2031)
+    #redistributed_adults = redistribute_adults_to_multi_adult_households(updated_avzn)

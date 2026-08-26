@@ -1,14 +1,5 @@
-"""
-ALL INPUTS NEEDED:
+def run_tool():
+    pass
 
-Set explicit paths to:
-- COZN 
-- AVZN
-- Geodef 
-- Intersection
-- ntem files (planning and car ownership data)
-
-Configure:
-- Years
-- Scenarios
-"""
+if __name__ == "__main__":
+    run_tool()
