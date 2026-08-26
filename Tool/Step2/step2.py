@@ -3,15 +3,6 @@ import pandas as pd
 import os
 from rich.progress import track
 
-years = ['2019', '2026', '2031', '2036', '2046'] # can include any years included in input files (between 2019 and 2046 inclusive)
-scenarios = ['Core', 'Low', 'Behavioural','High'] # any combination of: 'Core', 'Low', 'High', 'Behavioural'
-#CORE MUST BE LISTED FIRST
-
-input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Inputs\\Step2'
-output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Outputs\\2_Extended_NTEM_Targets'
-step_4_input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Inputs'
-
-
 inputs = {'geodef': [
     'geodef_GISCorrect.csv', 
 ],
@@ -57,7 +48,9 @@ def check_inputs(input_dir, scenarios, inputs):
         
 
 
-def read_input_files(input_dir, scenario):
+def read_input_files(input_dir, 
+                     scenario,
+                     years):
     """Reads input files and returns as DataFramas for a given scenario
     Args:
         - input_dir: full path to the location of the input CSVs
@@ -78,7 +71,8 @@ def read_input_files(input_dir, scenario):
 
 
 
-def define_splits(inputs):
+def define_splits(inputs,
+                  input_dir):
     """Reads the Intersection file and creates a lookup for proportional splits between 
     TfSH zones and MSOA
     Args:
@@ -113,7 +107,8 @@ def define_splits(inputs):
 
 def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                               working_data: pd.DataFrame, 
-                              intersection_df: pd.DataFrame):
+                              intersection_df: pd.DataFrame,
+                              years: list):
     """
     Takes population data given on a per-MSOA basis, and allocates the data to ZonePfSH zones.
     Utilises a lookup created in the define_splits function to define the relationships between ZonePfSH zones and MSOA. 
@@ -152,7 +147,8 @@ def convert_population_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
 
 def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
                               working_data: pd.DataFrame, 
-                              intersection_df: pd.DataFrame):
+                              intersection_df: pd.DataFrame,
+                              years: list):
     """
     Takes car ownership data given on a per-MSOA basis, and allocates the data to ZonePfSH zones.
     Utilises a lookup created in the define_splits function to define the relationships between ZonePfSH zones and MSOA. 
@@ -192,7 +188,8 @@ def convert_car_to_zonepfsh(msoa_zonepfsh_lookup: pd.DataFrame,
 
 
 def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame, 
-                           geodef_df: pd.DataFrame):
+                           geodef_df: pd.DataFrame,
+                           years: list):
     """
     Aggregates population data from population-by-zone (ZonePfSH) up to population-by-district level (i.e. there are multiple zones per district).
     This calculation is based on the zones-to-districts relationships outlined in the geodef_GISCorrect.csv file. 
@@ -226,7 +223,8 @@ def aggregate_population_to_districts(zonepfsh_level_data: pd.DataFrame,
 
 
 def aggregate_car_to_districts(zonepfsh_level_data: pd.DataFrame, 
-                           geodef_df: pd.DataFrame):
+                           geodef_df: pd.DataFrame,
+                           years):
     """
     Aggregates car ownership data from cars-by-zone (ZonePfSH) up to cars-by-district level (i.e. there are multiple zones per district).
     This calculation is based on the zones-to-districts relationships outlined in the geodef_GISCorrect.csv file. 
@@ -272,7 +270,7 @@ def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
 
 
 
-def subtract_dataframes(df1: pd.DataFrame, df2: pd.DataFrame):
+def subtract_dataframes(df1: pd.DataFrame, df2: pd.DataFrame, years: list):
     """
     Subtracts the values of two dataframes with the same structure. 
     Args:
@@ -304,7 +302,8 @@ def run_step2(input_dir: str,
     """
     check_inputs(input_dir, scenarios, inputs)
 
-    msoa_zonepfsh_lookup, intersection_df = define_splits(inputs=inputs)
+    msoa_zonepfsh_lookup, intersection_df = define_splits(inputs=inputs,
+                                                          input_dir=input_dir)
 
     core_planning_district_level = None
     core_car_ownership_district_level = None
@@ -314,18 +313,21 @@ def run_step2(input_dir: str,
 
         geodef_df, planning_df, ca_df = read_input_files(
             input_dir=input_dir,
-            scenario=scenario
+            scenario=scenario,
+            years=selected_years
         )
 
         planning = convert_population_to_zonepfsh(
             msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
             working_data=planning_df,
-            intersection_df=intersection_df
+            intersection_df=intersection_df,
+            years=selected_years
         )
 
         planning_district_level = aggregate_population_to_districts(
             zonepfsh_level_data=planning,
-            geodef_df=geodef_df
+            geodef_df=geodef_df,
+            years=selected_years
         )
 
         planning_csv_filename = scenario + "_planning.csv"
@@ -343,12 +345,14 @@ def run_step2(input_dir: str,
         car_ownership = convert_car_to_zonepfsh(
             msoa_zonepfsh_lookup=msoa_zonepfsh_lookup,
             working_data=ca_df,
-            intersection_df=intersection_df
+            intersection_df=intersection_df,
+            years=selected_years
         )
 
         car_ownership_district_level = aggregate_car_to_districts(
             zonepfsh_level_data=car_ownership,
-            geodef_df=geodef_df
+            geodef_df=geodef_df,
+            years=selected_years
         )
 
         car_ownership_csv_filename = scenario + "_co.csv"
@@ -362,7 +366,7 @@ def run_step2(input_dir: str,
             export_df_as_csv(
                 csv_name=car_ownership_csv_filename,
                 table=car_ownership_district_level,
-                output_folder=step_4_input_dir
+                output_folder=output_dir
             )
             print(f"{car_ownership_csv_filename} exported successfully!")
         except Exception as e:
@@ -386,7 +390,8 @@ def run_step2(input_dir: str,
 
             planning_difference = subtract_dataframes(
                 df1=planning_district_level,
-                df2=core_planning_district_level
+                df2=core_planning_district_level,
+                years=selected_years
             )
             planning_difference_csv_filename = scenario + "_planning_difference.csv"
 
@@ -402,7 +407,8 @@ def run_step2(input_dir: str,
 
             car_ownership_difference = subtract_dataframes(
                 df1=car_ownership_district_level,
-                df2=core_car_ownership_district_level
+                df2=core_car_ownership_district_level,
+                years=selected_years
             )
             car_ownership_difference_csv_filename = scenario + "_co_difference.csv"
 
@@ -505,13 +511,3 @@ def export_category_difference_csvs(scenario_df: pd.DataFrame,
         )
 
         print(f"{csv_name} exported successfully!")
-
-
-
-if __name__ == "__main__":
-
-    # run the proces and export as CSVs for each scenario
-    run_step2(input_dir=input_dir,
-                output_dir=output_dir,
-                scenarios=scenarios,
-                selected_years=years)

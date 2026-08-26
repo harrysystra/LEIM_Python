@@ -9,15 +9,25 @@ with open("config.yaml", "r") as f:
 def run_tool():
 
     if config['general']['run_step2']:
+
         input_directory = config['step2_config']['input_directory']
         output_directory = config['step2_config']['output_directory']
         years = config['step2_config']['years']
         scenarios = config['step2_config']['scenarios']
 
-    run_step2(input_dir=input_directory,
-              output_dir=output_directory,
-              scenarios=scenarios,
-              selected_years=years) 
+        run_step2(input_dir=input_directory,
+                output_dir=output_directory,
+                scenarios=scenarios,
+                selected_years=years) 
+
+
+    if config['general']['run_step3']:
+        input_directory = config['step3_config']['input_directory']
+        output_directory = config['step3_config']['output_directory']
+
+    if config['general']['run_step4']:
+        input_directory = config['step4_config']['input_directory']
+        output_directory = config['step4_config']['output_directory']
 
 if __name__ == "__main__":
     run_tool()
