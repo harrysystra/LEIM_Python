@@ -3,7 +3,6 @@ import numpy as np
 import os
 from io import StringIO
 
-#CONFIGURATION
 max_iterations = 10
 tolerance = 0.1
 
@@ -354,7 +353,6 @@ def first_adjustment(avzn_cozn_df, scaling_factors_df, avzn_df, geodef_df):
         output_cols.append("Actv")
     output_cols += ["Zone", "District"] + colevel_cols + ["TotalHH", "TotalHHAVZN", "ScalingFactor"]
 
-    print(ac[output_cols].copy())
     return ac[output_cols].copy()
 
 
@@ -464,9 +462,9 @@ def calculate_new_cozn(adjustment_2_df, cozn_init):
 
 
 
-def iterate_for_fixed_i(input_dir: str,
+def run_step4(input_dir: str,
                         iter_limit: int,
-                        output_path: str):
+                        output_dir: str):
     cozn_df = read_cozn(path=input_dir)
     cozn_init = read_cozn(path=input_dir)
     avzn_df = read_avzn_temp(path=input_dir)
@@ -494,11 +492,11 @@ def iterate_for_fixed_i(input_dir: str,
         print(f"COMPLETED LOOP: {i}")
         i+=1
 
-    cozn_df.to_csv(os.path.join(output_path, "OUTPUT_COZN_TEST.csv"),index=None)
+    cozn_df.to_csv(os.path.join(output_dir, "OUTPUT_COZN_TEST.csv"),index=None)
 
 
 
 if __name__ == "__main__":
-    iterate_for_fixed_i(input_dir=input_dir,
-                        iter_limit=15,
-                        output_path='C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Outputs')
+    run_step4(input_dir=input_dir,
+              iter_limit=15,
+              output_dir=output_dir)

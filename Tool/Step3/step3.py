@@ -2,20 +2,20 @@ import pandas as pd
 import numpy as np
 import os
 from io import StringIO
+from Tool.Step3.avzn_csv_to_dat_copy import output_to_dat
 
 
-def read_geodef(path):
-        
-        geodef_df = pd.read_csv(os.path.join(path, 'geodef_GISCorrect.csv'))
 
-        return geodef_df
-
-def read_avzn(path):
+def read_avzn(input_directory, 
+              year,
+              geodef_path):
     """Reads AVZN from standard format and returns DataFrame with district added (district info from Geodef file)"""
 
     columns = ["Actv", "Zone", "Quantity", "Category1", "Category2", "Category3", "Category4"]
 
-    with open(os.path.join(path, "avzn31ft.txt"), "r", encoding="utf-8") as f:
+    year_code = str(year)[2:4]
+
+    with open(os.path.join(input_directory, f"avzn{year_code}ft.txt"), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     header_idx = next(i for i, line in enumerate(lines) if "Actv Zone Quantity" in line)
@@ -41,7 +41,7 @@ def read_avzn(path):
     df["Sum"] = df["Category1"] + df["Category2"] + df["Category3"] + df["Category4"]
     df["Adults"] = df["Category2"] + df["Category3"] + df["Category4"]
 
-    geodef_df = read_geodef(path="C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Step2//Inputs")
+    geodef_df = pd.read_csv(geodef_path)
     df["District"] = df["Zone"].map(geodef_df.set_index("Zone")["D30_Districts ID"])
 
     return df
@@ -88,10 +88,10 @@ def calculate_additional_hhs_and_emp(df,
 
 
 
-def add_extra_people_by_pt_on_hh(df):
+def add_extra_people_by_pt_on_hh(df, activity_class_path):
     df = df.copy()
 
-    activity_classifications_df = pd.read_csv('Step3//Inputs//activity_classifications.csv')
+    activity_classifications_df = pd.read_csv(activity_class_path)
     lookup = activity_classifications_df.set_index("Actv")["Classification1"]
     df["Classification1"] = df["Actv"].map(lookup)
 
@@ -104,7 +104,7 @@ def add_extra_people_by_pt_on_hh(df):
 
 
 
-def check_children_at_district_level_ntem(df, high_planning_under16_difference_df, year):
+def check_children_at_district_level_ntem(df, planning_under16_difference_df, year):
 
     out = pd.DataFrame({"District": range(1, 30)})
 
@@ -129,7 +129,7 @@ def check_children_at_district_level_ntem(df, high_planning_under16_difference_d
     out["Difference"] = out["ChildrenAfter"] - out["ChildrenBefore"]
 
     lookup_col = f"Sum of {year}"
-    ntem_lookup = high_planning_under16_difference_df.set_index("District")[lookup_col]
+    ntem_lookup = planning_under16_difference_df.set_index("District")[lookup_col]
     out["NTEM Target"] = out["District"].map(ntem_lookup)
 
     out["Remaining"] = out["NTEM Target"] - out["Difference"]
@@ -353,7 +353,6 @@ def create_final_avzn(redistributed_adults_df,
     for i in range(1, 5):
         out.drop(labels=f"Classification{i}", axis=1, inplace=True)
 
-    print(out)
     return out
 
 
@@ -370,41 +369,58 @@ def export_df_as_csv(csv_name: str, table: pd.DataFrame, output_folder: str):
     table.to_csv(output_path, index=None, header=True)
 
 
+def run_step3(input_dir,
+              output_dir,
+              geodef_path,
+              activity_class_path,
+              years,
+              scenarios):
 
-if __name__ == "__main__":
-    avzn_df = read_avzn(path="C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Step3//Inputs")
-    planning_hh_difference_df = pd.read_csv('Outputs//2_Extended_NTEM_Targets//High_planning_HHs_difference.csv')
-    planning_jobs_difference_df = pd.read_csv('Outputs//2_Extended_NTEM_Targets//High_planning_jobs_difference.csv')
-    additional_hh_emp_df = append_ntem_target_column(avzn_df=avzn_df,
-                                                     planning_hhs_difference_df=planning_hh_difference_df,
-                                                     planning_jobs_difference_df=planning_jobs_difference_df,
-                                                     year=2031)
-    extra_hhs_emp = calculate_additional_hhs_and_emp(df=additional_hh_emp_df,
-                                                     year=2031)
-    extra_ppl_df = add_extra_people_by_pt_on_hh(extra_hhs_emp)
-    high_under16_df = pd.read_csv('Outputs//2_Extended_NTEM_Targets//High_planning_under16_difference.csv')
-    district_df = check_children_at_district_level_ntem(df=extra_ppl_df,
-                                                        high_planning_under16_difference_df=high_under16_df,
-                                                        year=2031)
-    activity_class_df = pd.read_csv("Step3//Inputs//activity_classifications.csv")
-    distributed_children = distribute_remaining_children_to_hh_with_child(df=extra_ppl_df,
-                                                                          activity_classifications_df=activity_class_df,
-                                                                          district_children_df=district_df)
-    updated_avzn = create_updated_avzn(df=distributed_children)
-    population_table = sum_population_tables("Outputs//2_Extended_NTEM_Targets//High_planning_under16_difference.csv",
-                                             "Outputs//2_Extended_NTEM_Targets//High_planning_75plus_difference.csv",
-                                             "Outputs//2_Extended_NTEM_Targets//High_planning_16-74_difference.csv"
-                                             )
-    under16_table = pd.read_csv("Outputs//2_Extended_NTEM_Targets//High_planning_under16_difference.csv")
-    population_checker_df = check_population_at_district_level_ntem_vs_step3(new_avzn_df=updated_avzn,
-                                                                             old_avzn_df=avzn_df,
-                                                                             population_target_df=population_table,
-                                                                             under16_target_df=under16_table,
-                                                                             year=2031)
-    redistributed_adults = redistribute_adults_to_multi_adult_households(df=updated_avzn,
-                                                                         population_check_df=population_checker_df)
-    final_avzn = create_final_avzn(redistributed_adults_df=redistributed_adults,
-                                   updated_avzn=updated_avzn)
-    export_df_as_csv(csv_name="avzn_updated",
-                     table=final_avzn,
-                     output_folder="Outputs//3_Scale_AVZN")
+    for year in years:
+        for scenario in scenarios:
+
+            
+            avzn_df = read_avzn(input_directory=input_dir, year=year, geodef_path=geodef_path)
+            activity_class_df = pd.read_csv(activity_class_path)
+            planning_hh_difference_df = pd.read_csv(f'Outputs//Step2//{scenario}_planning_HHs_difference.csv')    
+            planning_jobs_difference_df = pd.read_csv(f'Outputs//Step2//{scenario}_planning_jobs_difference.csv')
+            under16_df = pd.read_csv(f'Outputs//Step2//{scenario}_planning_under16_difference.csv')
+            population_table = sum_population_tables(f"Outputs//Step2//{scenario}_planning_under16_difference.csv",
+                                                     f"Outputs//Step2//{scenario}_planning_75plus_difference.csv",
+                                                     f"Outputs//Step2//{scenario}_planning_16-74_difference.csv")
+
+            
+            additional_hh_emp_df = append_ntem_target_column(avzn_df=avzn_df,
+                                                                 planning_hhs_difference_df=planning_hh_difference_df,
+                                                                 planning_jobs_difference_df=planning_jobs_difference_df,
+                                                                 year=year)
+            extra_hhs_emp = calculate_additional_hhs_and_emp(df=additional_hh_emp_df,
+                                                             year=year)
+            extra_ppl_df = add_extra_people_by_pt_on_hh(extra_hhs_emp, activity_class_path=activity_class_path)
+            district_df = check_children_at_district_level_ntem(df=extra_ppl_df,
+                                                                planning_under16_difference_df=under16_df,
+                                                                year=year)
+            distributed_children = distribute_remaining_children_to_hh_with_child(df=extra_ppl_df,
+                                                                                  activity_classifications_df=activity_class_df,
+                                                                                  district_children_df=district_df)
+            updated_avzn = create_updated_avzn(df=distributed_children)
+            population_checker_df = check_population_at_district_level_ntem_vs_step3(new_avzn_df=updated_avzn,
+                                                                                     old_avzn_df=avzn_df,
+                                                                                     population_target_df=population_table,
+                                                                                     under16_target_df=under16_df,
+                                                                                     year=year)
+            redistributed_adults = redistribute_adults_to_multi_adult_households(df=updated_avzn,
+                                                                                 population_check_df=population_checker_df)
+            final_avzn = create_final_avzn(redistributed_adults_df=redistributed_adults,
+                                           updated_avzn=updated_avzn)
+            try:
+                export_df_as_csv(csv_name=f"avzn_{scenario}_{year}",
+                                table=final_avzn,
+                                output_folder="Outputs//Step3")
+                
+                output_to_dat(df=final_avzn, 
+                            path=output_dir,
+                            output_file_name=f"avzn_{scenario}_{year}")
+                print("AVZN exported successfully :)")
+            except Exception as e:
+                print(f"Error with export! {e}")

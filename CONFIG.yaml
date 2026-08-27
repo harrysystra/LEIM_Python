@@ -1,21 +1,37 @@
 general:
-  run_step2: True
+# Allowed Values: True or False 
+  run_step2: False
   run_step3: False
-  run_step4: False
+  run_step4: True
 
 
 step2_config:
-  input_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Inputs//Step2"
-  output_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Outputs//Step2"
-  years: ['2019', '2026', '2031', '2036', '2046'] 
-  scenarios: ['Core', 'Low', 'Behavioural','High'] 
+  input_directory: "Inputs//Step2"
+  output_directory: "Outputs//Step2"
+  years: ['2019', '2026', '2031', '2036', '2046']
+  scenarios: ['Core', 'Low', 'Behavioural','High']
 
 
 step3_config:
-  input_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Inputs//Step3"
-  output_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Outputs//Step3"
+  input_directory: "Inputs//Step3"
+  output_directory: "Outputs//Step3"
+  years: ['2031'] 
+  scenarios: ['Low', 'Behavioural','High'] 
+
+  geodef_path: "Inputs//Step2//geodef_GISCorrect.csv"
+  activity_class_path: "Inputs//Step3//activity_classifications.csv"
 
 
 step4_config:
-  input_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Inputs//Step4"
-  output_directory: "C://Users//hmackenzie//OneDrive - SystraGroup//LEIM_Python//New_Tool//Outputs//Step4"
+  input_directory: "Inputs//Step4"
+  output_directory: "Outputs//Step4"  
+  scenarios: ['Low', 'Behavioural', 'High']
+  years: [2031]
+
+  max_iterations: 10
+  tolerance: 0.1
+
+  input_dir: "Inputs//Step4"
+  output_dir: 'Outputs//Step4'
+
+  step2_output_dir: 'Outputs//Step2'
