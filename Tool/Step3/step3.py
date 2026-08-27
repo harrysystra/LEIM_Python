@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 from io import StringIO
-from Tool.Step3.avzn_csv_to_dat_copy import output_to_dat
+from Tool.Step3.avzn_csv_to_dat import output_to_dat
 
 
 
@@ -374,7 +374,9 @@ def run_step3(input_dir,
               geodef_path,
               activity_class_path,
               years,
-              scenarios):
+              scenarios,
+              export_csv,
+              export_dat):
 
     for year in years:
         for scenario in scenarios:
@@ -414,13 +416,15 @@ def run_step3(input_dir,
             final_avzn = create_final_avzn(redistributed_adults_df=redistributed_adults,
                                            updated_avzn=updated_avzn)
             try:
-                export_df_as_csv(csv_name=f"avzn_{scenario}_{year}",
-                                table=final_avzn,
-                                output_folder="Outputs//Step3")
+                if export_csv:
+                    export_df_as_csv(csv_name=f"avzn_{scenario}_{year}.csv",
+                                    table=final_avzn,
+                                    output_folder="Outputs//Step3")
                 
-                output_to_dat(df=final_avzn, 
-                            path=output_dir,
-                            output_file_name=f"avzn_{scenario}_{year}")
-                print("AVZN exported successfully :)")
+                if export_dat:
+                    output_to_dat(df=final_avzn, 
+                                path=output_dir,
+                                output_file_name=f"avzn_{scenario}_{year}")
+                    print(f"avzn_{scenario}_{year} exported successfully")
             except Exception as e:
                 print(f"Error with export! {e}")

@@ -82,7 +82,6 @@ def define_splits(inputs,
         - intersection_df: DataFrame containing the intersection data"""
 
     filename = inputs['Intersection'][0]
-    print(os.path.join(input_dir, filename))
     intersection_df = pd.read_csv(os.path.join(input_dir, filename))
     intersection_df.rename(columns={'Proportions MSOA/Zones': 'Proportion'}, inplace=True)
 

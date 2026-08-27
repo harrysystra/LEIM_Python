@@ -3,32 +3,13 @@ import numpy as np
 import os
 from io import StringIO
 
-max_iterations = 10
-tolerance = 0.1
 
-input_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Inputs'
-output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step4\\Outputs'
-
-step2_output_dir = 'C:\\Users\\hmackenzie\\OneDrive - SystraGroup\\LEIM_Python\\New_Tool\\Step2\\Outputs'
-
-test_scenarios = ['Low', 'Behavioural', 'High']
-
-year = "2031"
-
-def read_step2_outputs(path,
-                        test_scenario):
-    test_scenario_co_df = pd.read_csv(os.path.join(path, f'{test_scenario}_co.csv'))
-    core_scenario_co_df = pd.read_csv(os.path.join(path, 'Core_co.csv'))
-
-    test_scenario_co_df = test_scenario_co_df.drop(columns=[col for col in test_scenario_co_df.columns if '20' in col and year not in col])
-    core_scenario_co_df = core_scenario_co_df.drop(columns=[col for col in core_scenario_co_df.columns if '20' in col and year not in col])
-
-    return test_scenario_co_df, core_scenario_co_df
-
-def read_cozn(path):
+def read_cozn(path, year):
     columns = ["Actv", "Zone", "COLevel1", "COLevel2", "COLevel3", "COLevel4"]
 
-    with open(os.path.join(path, "cozn31ft.txt"), "r", encoding="utf-8") as f:
+    year_code = str(year)[2:4]
+
+    with open(os.path.join(path, f"cozn{year_code}ft.dat"), "r", encoding="utf-8") as f:
         lines = f.readlines()
     dash_lines = [i for i, line in enumerate(lines) if line.strip().startswith("-----")]
 
@@ -57,9 +38,44 @@ def read_geodef(path):
 
     return geo_df
 
+"""
+def read_avzn(path, year):
 
-def read_avzn_temp(path):
-    df = pd.read_csv(os.path.join(path, 'avzn31ft.csv'))
+    year_code = str(year)[2:4]
+    df = pd.read_csv(os.path.join(path, f'avzn{year_code}ft.csv'))
+
+    return df"""
+
+def read_avzn(path, 
+              year):
+    """Reads AVZN from standard format and returns DataFrame with district added (district info from Geodef file)"""
+
+    columns = ["Actv", "Zone", "Quantity", "Category1", "Category2", "Category3", "Category4"]
+
+    year_code = str(year)[2:4]
+
+    with open(os.path.join(path, f"avzn{year_code}ft.dat"), "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    header_idx = next(i for i, line in enumerate(lines) if "Actv Zone Quantity" in line)
+
+    data_start = None
+    for i in range(header_idx + 1, len(lines)):
+        if lines[i].strip().startswith("-----"):
+            data_start = i + 1
+            break
+
+    data_lines = []
+    for line in lines[data_start:]:
+        parts = line.split()
+        if len(parts) == 7:
+            data_lines.append(line)
+        elif data_lines:
+            break
+
+    data = "".join(data_lines)
+
+    df = pd.read_csv(StringIO(data), sep=r"\s+", header=None, names=columns, engine="python")
 
     return df
 
@@ -123,8 +139,9 @@ def aggregate_to_district_level(multiplied_df: pd.DataFrame,
 
 
 
-def format_scenario_co_data(path, target_year=2031):
-    df = pd.read_csv(os.path.join(path, "High_co.csv"))
+def format_scenario_co_data(path, scenario, target_year=2031):
+
+    df = pd.read_csv(os.path.join(path, f"{scenario}_co.csv"))
 
     year_col = str(target_year)
 
@@ -463,40 +480,49 @@ def calculate_new_cozn(adjustment_2_df, cozn_init):
 
 
 def run_step4(input_dir: str,
-                        iter_limit: int,
-                        output_dir: str):
-    cozn_df = read_cozn(path=input_dir)
-    cozn_init = read_cozn(path=input_dir)
-    avzn_df = read_avzn_temp(path=input_dir)
-    geodef_df = read_geodef(path=input_dir)
+              step2_input_dir: str,
+              step2_output_dir: str,
+              iter_limit: int,
+              output_dir: str,
+              years: list,
+              scenarios):
+        
+    geodef_df = read_geodef(path=step2_input_dir)
 
-    for i in range(iter_limit):
-        print(f"BEGINNING LOOP: {i}")
-        multiplied_df = multiply_avzn_and_cozn(avzn_df=avzn_df,
-                                               cozn_df=cozn_df)
-        avzn_cozn = aggregate_to_district_level(multiplied_df=multiplied_df,
+    for scenario in scenarios:
+    
+        for year in years:
+            cozn_init = read_cozn(path=input_dir,
+                                  year=year)
+            cozn_df = read_cozn(path=input_dir,
+                                year=year)
+            avzn_df = read_avzn(path=input_dir,
+                                year=year)
+            year_code = str(year)[2:4]
+
+
+            for i in range(iter_limit):
+
+                print(f"BEGINNING LOOP: {i}")
+
+                multiplied_df = multiply_avzn_and_cozn(avzn_df=avzn_df,
+                                                    cozn_df=cozn_df)
+                avzn_cozn = aggregate_to_district_level(multiplied_df=multiplied_df,
+                                                        geodef_df=geodef_df)
+                test_scenario_co = format_scenario_co_data(path=step2_output_dir, scenario=scenario)
+                scaled_avzn_total = scale_totals_to_avzn_total(avzn_cozn_df=avzn_cozn,
+                                                            scenario_df=test_scenario_co)
+                scaling_factors = calculate_scaling_factors(scaled_avzn_total_df=scaled_avzn_total,
+                                                            avzn_cozn_df=avzn_cozn)
+                adjustment_1 = first_adjustment(avzn_cozn_df=multiplied_df,
+                                                scaling_factors_df=scaling_factors,
+                                                avzn_df=avzn_df,
                                                 geodef_df=geodef_df)
-        test_scenario_co = format_scenario_co_data(path=input_dir)
-        scaled_avzn_total = scale_totals_to_avzn_total(avzn_cozn_df=avzn_cozn,
-                                                       scenario_df=test_scenario_co)
-        scaling_factors = calculate_scaling_factors(scaled_avzn_total_df=scaled_avzn_total,
-                                                    avzn_cozn_df=avzn_cozn)
-        adjustment_1 = first_adjustment(avzn_cozn_df=multiplied_df,
-                                        scaling_factors_df=scaling_factors,
-                                        avzn_df=avzn_df,
-                                        geodef_df=geodef_df)
-        adjustment_2 = second_adjustment(adjustment_1_df=adjustment_1,
-                                         avzn_df=avzn_df)
-        cozn_df = calculate_new_cozn(adjustment_2_df=adjustment_2,
-                                     cozn_init=cozn_init)
-        print(f"COMPLETED LOOP: {i}")
-        i+=1
+                adjustment_2 = second_adjustment(adjustment_1_df=adjustment_1,
+                                                avzn_df=avzn_df)
+                cozn_df = calculate_new_cozn(adjustment_2_df=adjustment_2,
+                                            cozn_init=cozn_init)
+                
+                print(f"COMPLETED LOOP: {i}")
 
-    cozn_df.to_csv(os.path.join(output_dir, "OUTPUT_COZN_TEST.csv"),index=None)
-
-
-
-if __name__ == "__main__":
-    run_step4(input_dir=input_dir,
-              iter_limit=15,
-              output_dir=output_dir)
+            cozn_df.to_csv(os.path.join(output_dir, f"cozn{year_code}ft.csv"),index=None)
