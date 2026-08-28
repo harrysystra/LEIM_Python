@@ -5,39 +5,31 @@ general:
   run_step4: True
 
   test_code: "ft"
-  years: [2031, 2046] # For Steps 3 and 4 - Step 2 can have different years configured below
+  years: [2031] # For Steps 3 and 4 - Step 2 years configured seperately in the below step2_config section
+  scenarios: ['Low', 'Behavioural','High'] # List all scenarios except Core 
+  geodef_path: "Inputs//Step2//geodef_GISCorrect.csv"
 
 
 step2_config:
   input_directory: "Inputs//Step2"
   output_directory: "Outputs//Step2"
   years: ['2019', '2026', '2031', '2036', '2046']
-  scenarios: ['Core', 'Low', 'Behavioural','High'] # Core always first
-  geodef_path: "Inputs//Step2//geodef_GISCorrect.csv"
+  scenarios: ['Core', 'Low', 'Behavioural','High'] # Core should be always first in the list to allow other runs to produce comparison files!
 
 
 step3_config:
   input_directory: "Inputs//Step3"
   output_directory: "Outputs//Step3"
-  years: ['2031'] 
-  scenarios: ['Low', 'Behavioural','High'] 
   export_csv: True
   export_dat: True
-
-  geodef_path: "Inputs//Step2//geodef_GISCorrect.csv"
   activity_class_path: "Inputs//Step3//activity_classifications.csv"
 
 
 step4_config:
   input_directory: "Inputs//Step4"
   output_directory: "Outputs//Step4"  
-  scenarios: ['Low', 'Behavioural', 'High']
-  years: [2031, 2046]
   export_csv: True
   export_dat: True
 
   max_iterations: 10
   tolerance: 0.1
-
-  input_dir: "Inputs//Step4"
-  output_dir: 'Outputs//Step4'

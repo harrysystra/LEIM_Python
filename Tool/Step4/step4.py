@@ -4,12 +4,12 @@ import os
 from io import StringIO
 
 
-def read_cozn(path, year):
+def read_cozn(path, year, test_code):
     columns = ["Actv", "Zone", "COLevel1", "COLevel2", "COLevel3", "COLevel4"]
 
     year_code = str(year)[2:4]
 
-    with open(os.path.join(path, f"cozn{year_code}ft.dat"), "r", encoding="utf-8") as f:
+    with open(os.path.join(path, f"cozn{year_code}{test_code}.dat"), "r", encoding="utf-8") as f:
         lines = f.readlines()
     dash_lines = [i for i, line in enumerate(lines) if line.strip().startswith("-----")]
 
@@ -34,27 +34,20 @@ def read_cozn(path, year):
 def read_geodef(path):
     columns = ["Zone", "D30_Districts ID"]
 
-    geo_df = pd.read_csv(os.path.join(path, 'geodef_GISCorrect.csv'))
+    geo_df = pd.read_csv(os.path.join(path))
 
     return geo_df
 
-"""
-def read_avzn(path, year):
 
-    year_code = str(year)[2:4]
-    df = pd.read_csv(os.path.join(path, f'avzn{year_code}ft.csv'))
-
-    return df"""
-
-def read_avzn(path, 
-              year):
+def read_avzn(path,
+              scenario, 
+              year,
+              test_code):
     """Reads AVZN from standard format and returns DataFrame with district added (district info from Geodef file)"""
 
     columns = ["Actv", "Zone", "Quantity", "Category1", "Category2", "Category3", "Category4"]
 
-    year_code = str(year)[2:4]
-
-    with open(os.path.join(path, f"avzn{year_code}ft.dat"), "r", encoding="utf-8") as f:
+    with open(os.path.join(path, f"avzn_{scenario}_{year}_{test_code}.dat"), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     header_idx = next(i for i, line in enumerate(lines) if "Actv Zone Quantity" in line)
@@ -482,23 +475,29 @@ def calculate_new_cozn(adjustment_2_df, cozn_init):
 def run_step4(input_dir: str,
               step2_input_dir: str,
               step2_output_dir: str,
+              step3_output_dir: str,
               iter_limit: int,
               output_dir: str,
               years: list,
-              scenarios):
+              scenarios,
+              test_code,
+              geodef_path):
         
-    geodef_df = read_geodef(path=step2_input_dir)
+    geodef_df = read_geodef(path=geodef_path)
 
     for scenario in scenarios:
     
         for year in years:
             cozn_init = read_cozn(path=input_dir,
-                                  year=year)
+                                  year=year,
+                                  test_code=test_code)
             cozn_df = read_cozn(path=input_dir,
-                                year=year)
-            avzn_df = read_avzn(path=input_dir,
-                                year=year)
-            year_code = str(year)[2:4]
+                                year=year,
+                                test_code=test_code)
+            avzn_df = read_avzn(path=step3_output_dir,
+                                year=year,
+                                scenario=scenario,
+                                test_code=test_code)
 
 
             for i in range(iter_limit):
@@ -525,4 +524,4 @@ def run_step4(input_dir: str,
                 
                 print(f"COMPLETED LOOP: {i}")
 
-            cozn_df.to_csv(os.path.join(output_dir, f"cozn{year_code}ft.csv"),index=None)
+            cozn_df.to_csv(os.path.join(output_dir, f"cozn_{scenario}_{year}_{test_code}.csv"),index=None)

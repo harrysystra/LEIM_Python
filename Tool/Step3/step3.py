@@ -8,14 +8,15 @@ from Tool.Step3.avzn_csv_to_dat import output_to_dat
 
 def read_avzn(input_directory, 
               year,
-              geodef_path):
+              geodef_path,
+              test_code):
     """Reads AVZN from standard format and returns DataFrame with district added (district info from Geodef file)"""
 
     columns = ["Actv", "Zone", "Quantity", "Category1", "Category2", "Category3", "Category4"]
 
     year_code = str(year)[2:4]
 
-    with open(os.path.join(input_directory, f"avzn{year_code}ft.txt"), "r", encoding="utf-8") as f:
+    with open(os.path.join(input_directory, f"avzn{year_code}{test_code}.txt"), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     header_idx = next(i for i, line in enumerate(lines) if "Actv Zone Quantity" in line)
@@ -376,13 +377,14 @@ def run_step3(input_dir,
               years,
               scenarios,
               export_csv,
-              export_dat):
+              export_dat,
+              test_code):
 
     for year in years:
         for scenario in scenarios:
 
             
-            avzn_df = read_avzn(input_directory=input_dir, year=year, geodef_path=geodef_path)
+            avzn_df = read_avzn(input_directory=input_dir, year=year, geodef_path=geodef_path, test_code=test_code)
             activity_class_df = pd.read_csv(activity_class_path)
             planning_hh_difference_df = pd.read_csv(f'Outputs//Step2//{scenario}_planning_HHs_difference.csv')    
             planning_jobs_difference_df = pd.read_csv(f'Outputs//Step2//{scenario}_planning_jobs_difference.csv')
@@ -417,14 +419,14 @@ def run_step3(input_dir,
                                            updated_avzn=updated_avzn)
             try:
                 if export_csv:
-                    export_df_as_csv(csv_name=f"avzn_{scenario}_{year}.csv",
+                    export_df_as_csv(csv_name=f"avzn_{scenario}_{year}_{test_code}.csv",
                                     table=final_avzn,
                                     output_folder="Outputs//Step3")
                 
                 if export_dat:
                     output_to_dat(df=final_avzn, 
                                 path=output_dir,
-                                output_file_name=f"avzn_{scenario}_{year}")
+                                output_file_name=f"avzn_{scenario}_{year}_{test_code}")
                     print(f"avzn_{scenario}_{year} exported successfully")
             except Exception as e:
                 print(f"Error with export! {e}")

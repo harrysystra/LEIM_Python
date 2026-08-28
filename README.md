@@ -20,9 +20,3 @@ Output Formats:
 
 Step 2: everything is .csv 
 Step 3 and Step 4: .dat and optionally .csv format (choose to include or exclude in the CONFIG.yaml file)
-
-
-Directory Structure:
-
-For the tool to work, it is important that the directory structure remains consistend and the program can find the correct folders
-It should look like this (if it doesn't then rename/create the necessary folders):
