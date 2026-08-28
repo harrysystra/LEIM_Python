@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np 
 import os
 from io import StringIO
+from Tool.Step4.cozn_csv_to_dat import output_to_dat
 
 
 def read_cozn(path, year, test_code):
@@ -481,7 +482,9 @@ def run_step4(input_dir: str,
               years: list,
               scenarios,
               test_code,
-              geodef_path):
+              geodef_path,
+              export_csv,
+              export_dat):
         
     geodef_df = read_geodef(path=geodef_path)
 
@@ -502,8 +505,6 @@ def run_step4(input_dir: str,
 
             for i in range(iter_limit):
 
-                print(f"BEGINNING LOOP: {i}")
-
                 multiplied_df = multiply_avzn_and_cozn(avzn_df=avzn_df,
                                                     cozn_df=cozn_df)
                 avzn_cozn = aggregate_to_district_level(multiplied_df=multiplied_df,
@@ -523,5 +524,17 @@ def run_step4(input_dir: str,
                                             cozn_init=cozn_init)
                 
                 print(f"COMPLETED LOOP: {i}")
-
-            cozn_df.to_csv(os.path.join(output_dir, f"cozn_{scenario}_{year}_{test_code}.csv"),index=None)
+            if export_csv:
+                try:
+                    cozn_df.to_csv(os.path.join(output_dir, f"cozn_{scenario}_{year}_{test_code}.csv"),index=None)
+                    print(f"cozn_{scenario}_{year}_{test_code}.csv exported successfully")
+                except Exception as e:
+                    print(e)
+            if export_dat:
+                try:
+                    output_to_dat(df=cozn_df,
+                               path=output_dir,
+                               output_file_name=f"cozn_{scenario}_{year}_{test_code}")
+                    print(f"cozn_{scenario}_{year}_{test_code}.dat exported successfully")
+                except Exception as e:
+                    print(e)

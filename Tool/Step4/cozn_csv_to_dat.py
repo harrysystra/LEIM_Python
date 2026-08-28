@@ -6,11 +6,10 @@ import os
 def output_to_dat(
     df, path, output_file_name
 ):
-    df["Category1"] = df["Category1"].map("{:.5e}".format)
-    df["Category2"] = df["Category2"].map("{:.5e}".format)
-    df["Category3"] = df["Category3"].map("{:.5e}".format)
-    df["Category4"] = df["Category4"].map("{:.5e}".format)
-    df["Quantity"] = df["Quantity"].map("{:.5e}".format)
+    df["COLevel1"] = df["COLevel1"].map("{:.5e}".format)
+    df["COLevel2"] = df["COLevel2"].map("{:.5e}".format)
+    df["COLevel3"] = df["COLevel3"].map("{:.5e}".format)
+    df["COLevel4"] = df["COLevel4"].map("{:.5e}".format)
 
     df = df.sort_values(by=["Actv", "Zone"])
 
@@ -28,12 +27,9 @@ def output_to_dat(
         file.write(
             f" ------------------------------------------------------------------------\n"
         )
-        file.write(f" AVZN01: Output activity data by zone\n")
+        file.write(f" COZN01: Output activity data by zone\n")
         file.write(
-            f" .... .... Total...... ...Category ...Category ...Category ...Category\n"
-        )
-        file.write(
-            f" Actv Zone Quantity... ..........1 ..........2 ..........3 ..........4\n"
+            f" .... .... Total...... ...COLevel1 ...COLevel2 ...COLevel3 ...COLevel4\n"
         )
         file.write(
             f" ------------------------------------------------------------------------\n"
@@ -41,13 +37,12 @@ def output_to_dat(
         for i in range(len(df)):
             actv_str = str(int(df.iloc[i]["Actv"])).rjust(4)
             zone_str = str(int(df.iloc[i]["Zone"])).rjust(4)
-            quantity_str = str(df.iloc[i]["Quantity"]).ljust(11)
-            cat_1_str = str(df.iloc[i]["Category1"]).ljust(11)
-            cat_2_str = str(df.iloc[i]["Category2"]).ljust(11)
-            cat_3_str = str(df.iloc[i]["Category3"]).ljust(11)
-            cat_4_str = str(df.iloc[i]["Category4"]).ljust(11)
+            cat_1_str = str(df.iloc[i]["COLevel1"]).ljust(11)
+            cat_2_str = str(df.iloc[i]["COLevel2"]).ljust(11)
+            cat_3_str = str(df.iloc[i]["COLevel3"]).ljust(11)
+            cat_4_str = str(df.iloc[i]["COLevel4"]).ljust(11)
             file.write(
-                f" {actv_str} {zone_str} {quantity_str} {cat_1_str} {cat_2_str} {cat_3_str} {cat_4_str}\n"
+                f" {actv_str} {zone_str} {cat_1_str} {cat_2_str} {cat_3_str} {cat_4_str}\n"
             )
         file.write(
             f" 000000000000000000000000000000000000000000000000000000000000000000000000\n"

@@ -56,6 +56,8 @@ def run_tool():
         scenarios = config['general']['scenarios']
         test_code = config['general']['test_code']
         geodef_path = config['general']['geodef_path']
+        export_csv = config['step4_config']['export_csv']
+        export_dat = config['step4_config']['export_dat']
 
         run_step4(input_dir=input_directory,
                   iter_limit=max_iterations,
@@ -66,7 +68,9 @@ def run_tool():
                   step2_output_dir=step2_output_directory,
                   test_code=test_code,
                   step3_output_dir=step3_output_directory,
-                  geodef_path=geodef_path)
+                  geodef_path=geodef_path,
+                  export_csv=export_csv,
+                  export_dat=export_dat,)
         
 
 if __name__ == "__main__":

@@ -1,11 +1,10 @@
 general:
 # Allowed Values: True or False 
-  run_step2: False
+  run_step2: True
   run_step3: True
   run_step4: True
-
   test_code: "ft"
-  years: [2031] # For Steps 3 and 4 - Step 2 years configured seperately in the below step2_config section
+  years: [2031, 2046] # For Steps 3 and 4 - Step 2 years configured seperately in the below step2_config section
   scenarios: ['Low', 'Behavioural','High'] # List all scenarios except Core 
   geodef_path: "Inputs//Step2//geodef_GISCorrect.csv"
 
@@ -13,7 +12,7 @@ general:
 step2_config:
   input_directory: "Inputs//Step2"
   output_directory: "Outputs//Step2"
-  years: ['2019', '2026', '2031', '2036', '2046']
+  years: [2019, 2026, 2031, 2036, 2046]
   scenarios: ['Core', 'Low', 'Behavioural','High'] # Core should be always first in the list to allow other runs to produce comparison files!
 
 

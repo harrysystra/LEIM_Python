@@ -62,6 +62,9 @@ def read_input_files(input_dir,
 
     geodef_df = pd.read_csv(os.path.join(input_dir, 'geodef_GISCorrect.csv'))
 
+    for i in range(len(years)):
+        years[i] = str(years[i])
+
     for filename in inputs[scenario]:
         if 'planning' in filename:
             planning_df = pd.read_csv(os.path.join(input_dir, filename))[['msoa_zone_id', 'population'] + years]

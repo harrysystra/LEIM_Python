@@ -16,7 +16,7 @@ def read_avzn(input_directory,
 
     year_code = str(year)[2:4]
 
-    with open(os.path.join(input_directory, f"avzn{year_code}{test_code}.txt"), "r", encoding="utf-8") as f:
+    with open(os.path.join(input_directory, f"avzn{year_code}{test_code}.dat"), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     header_idx = next(i for i, line in enumerate(lines) if "Actv Zone Quantity" in line)
